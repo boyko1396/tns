@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .donate-layout
+                .row.donate-layout__row
+                  .row__col-8.donate-layout__col.donate-layout__col--info-main
+                    .box.box--theme-white-gradient.box--mobile-full-md.donate-layout__block
+                      h1.donate-layout__block-title Заголовок
+                      .content.donate-layout__block-text
+                        p Нам очень приятно представить Вашему вниманию интернет-портал AiTNS.ru - крупнейшее информационное сетевое издание о теннисе в России. Наша аудитория составляет 7 000 000 уникальных посетителей в год (данные на 2018 год). Мы предоставляем полноценный  набор информационных услуг, способный удовлетворить интересы широкого круга пользователей.
+                    .box.box--theme-white.box--mobile-full-md.donate-layout__block
+                      h2.donate-layout__block-title Форма для оплаты
+                      form(action="#").donate-layout__block-form
+                        .input-area-el.donate-layout__block-input
+                          input(type="number" name="amount" required placeholder="")#donate-amount.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+                          label(for="donate-amount").input-area-el__label Ваша сумма
+                        .input-area-el.donate-layout__block-input
+                          textarea(name="message" style="min-height: 120rem;")#donate-message.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-textarea.input-area-el__input
+                          label(for="donate-message").input-area-el__label Ваше сообщение
+                        .donate-layout__block-payments-wrap
+                          .donate-layout__block-payments
+                            .donate-layout__block-payments-item
+                              label.payment-label.payment-label--size-sm
+                                input(type="radio" name="payment-method" checked value="master card").payment-label__control
+                                span.payment-label__inner
+                                  picture.payment-label__picture
+                                    img(src="images/payment-method-1.svg" alt="master card")
+                            .donate-layout__block-payments-item
+                              label.payment-label.payment-label--size-sm
+                                input(type="radio" name="payment-method" value="maestro").payment-label__control
+                                span.payment-label__inner
+                                  picture.payment-label__picture
+                                    img(src="images/payment-method-2.svg" alt="maestro")
+                            .donate-layout__block-payments-item
+                              label.payment-label.payment-label--size-sm
+                                input(type="radio" name="payment-method" value="visa").payment-label__control
+                                span.payment-label__inner
+                                  picture.payment-label__picture
+                                    img(src="images/payment-method-3.svg" alt="visa")
+                            .donate-layout__block-payments-item
+                              label.payment-label.payment-label--size-sm
+                                input(type="radio" name="payment-method" value="paypal").payment-label__control
+                                span.payment-label__inner
+                                  picture.payment-label__picture
+                                    img(src="images/payment-method-4.svg" alt="paypal")
+                            .donate-layout__block-payments-item
+                              label.payment-label.payment-label--size-sm
+                                input(type="radio" name="payment-method" value="bitcoin").payment-label__control
+                                span.payment-label__inner
+                                  picture.payment-label__picture
+                                    img(src="images/payment-method-5.svg" alt="bitcoin")
+                            .donate-layout__block-payments-item
+                              label.payment-label.payment-label--size-sm
+                                input(type="radio" name="payment-method" value="qiwi").payment-label__control
+                                span.payment-label__inner
+                                  picture.payment-label__picture
+                                    img(src="images/payment-method-6.svg" alt="qiwi")
+                            .donate-layout__block-payments-item
+                              label.payment-label.payment-label--size-sm
+                                input(type="radio" name="payment-method" value="yandex").payment-label__control
+                                span.payment-label__inner
+                                  picture.payment-label__picture
+                                    img(src="images/payment-method-7.svg" alt="yandex")
+                        button(type="submit").btn.btn--size-md.btn--theme-accent.donate-layout__block-btn
+                          span.btn__inner
+                            span.btn__title Отправить
+                        .donate-layout__block-btn
+                  .d-lg-none.row__col-4.donate-layout__col.donate-layout__col--info-aside
+                    aside.box.box--theme-white-gradient.donate-layout__aside
+                      .donate-layout__aside-header
+                        svg.icon.donate-layout__aside-quote-icon
+                          use(xlink:href='images/sprite.svg#quote')
+                        .donate-layout__aside-title Здесь только самые успешные&nbsp;ставки
+                      picture.donate-layout__aside-picture
+                        img(src="images/donate-img-1.jpg" alt="Здесь только самые успешные ставки")
+
+        include includes/footer.pug
+    include includes/foot.pug

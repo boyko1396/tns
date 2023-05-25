@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .shop
+                .row.shop__row
+                  .row__col-9.shop__row-col.shop__row-col--main
+                    .box.box--theme-white.box--mobile-full
+                      .shop-main
+                        .shop-main__header
+                          .title-size-5.shop-main__title Добавьте новые возможности
+                        .shop-main__list
+                          .good-card.shop-main__list-card
+                            .good-card__inner
+                              .good-card__col.good-card__col--main
+                                .good-card__control-wrap
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.good-card__control
+                                    input(type="checkbox" name="shop-1" value="Показатели опыта").u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                  picture.good-card__picture
+                                    img(src="images/shop-card-1.svg" alt="Показатели опыта")
+                                .good-card__info
+                                  .good-card__info-name Показатели опыта
+                                  .good-card__info-list
+                                    button(type="button" data-title-normal="Подробнее" data-title-active="Скрыть").js-btn-moore-toggle.js-shop-btn-toggle.btn-moore.btn-moore--theme-gray.btn-moore--size-sm.good-card__info-moore Подробнее
+                                    .tick-time.tick-time--theme-green.tick-time--size-sm.good-card__info-appeal Осталось 5 дней
+                              .good-card__col.good-card__col--price
+                                .good-card__day-price 10 ₽ / день
+                                .good-card__terms
+                                  .select-el.select-el--theme-white-gray.select-el--size-md
+                                    .select-el__label На какой срок?
+                                    .select-el__body
+                                      .select-el__selected
+                                      ul.select-el__dropdown
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title 5 дней
+                                          .select-el__dropdown-line-subtitle ≈ 9,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Неделя
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Месяц
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Год
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                .good-card__price 0 ₽
+                              .good-card__col.good-card__col--content
+                                .content.good-card__content
+                                  p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                                  ol
+                                    li Первый параметр
+                                    li Второй параметр
+                                    li 3 параметр
+                                    li Четвертый чет параметр
+                          .good-card.good-card.shop-main__list-card
+                            .good-card__inner
+                              .good-card__col.good-card__col--main
+                                .good-card__control-wrap
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.good-card__control
+                                    input(type="checkbox" name="shop-2" value="Таланты игрока").u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                  picture.good-card__picture
+                                    img(src="images/shop-card-2.svg" alt="Таланты игрока")
+                                .good-card__info
+                                  .good-card__info-name Таланты игрока
+                                  .good-card__info-list
+                                    button(type="button" data-title-normal="Подробнее" data-title-active="Скрыть").js-btn-moore-toggle.js-shop-btn-toggle.btn-moore.btn-moore--theme-gray.btn-moore--size-sm.good-card__info-moore Подробнее
+                              .good-card__col.good-card__col--price
+                                .good-card__day-price 15 ₽ / день
+                                .good-card__terms
+                                  .select-el.select-el--theme-white-gray.select-el--size-md
+                                    .select-el__label На какой срок?
+                                    .select-el__body
+                                      .select-el__selected
+                                      ul.select-el__dropdown
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title 5 дней
+                                          .select-el__dropdown-line-subtitle ≈ 9,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Неделя
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Месяц
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Год
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                .good-card__price 0 ₽
+                              .good-card__col.good-card__col--content
+                                .content.good-card__content
+                                  p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                                  ol
+                                    li Первый параметр
+                                    li Второй параметр
+                                    li 3 параметр
+                                    li Четвертый чет параметр
+                          .good-card.good-card.good-card--is-active.shop-main__list-card
+                            .good-card__inner
+                              .good-card__col.good-card__col--main
+                                .good-card__control-wrap
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.good-card__control
+                                    input(type="checkbox" name="shop-3" value="Мотивация игрока").u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                  picture.good-card__picture
+                                    img(src="images/shop-card-3.svg" alt="Мотивация игрока")
+                                .good-card__info
+                                  .good-card__info-name Мотивация игрока
+                                  .good-card__info-list
+                                    button(type="button" data-title-normal="Подробнее" data-title-active="Скрыть").js-btn-moore-toggle.js-shop-btn-toggle.btn-moore.btn-moore--theme-gray.btn-moore--size-sm.good-card__info-moore Подробнее
+                              .good-card__col.good-card__col--price
+                                .good-card__day-price 15 ₽ / день
+                                .good-card__terms
+                                  .select-el.select-el--theme-white-gray.select-el--size-md
+                                    .select-el__label На какой срок?
+                                    .select-el__body
+                                      .select-el__selected
+                                        .select-el__dropdown-line
+                                          .select-el__dropdown-line-title &nbsp;
+                                          .select-el__dropdown-line-subtitle &nbsp;
+                                      ul.select-el__dropdown
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title 5 дней
+                                          .select-el__dropdown-line-subtitle ≈ 9,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Неделя
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Месяц
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Год
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                .good-card__price 0 ₽
+                              .good-card__col.good-card__col--content
+                                .content.good-card__content
+                                  p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                                  ol
+                                    li Первый параметр
+                                    li Второй параметр
+                                    li 3 параметр
+                                    li Четвертый чет параметр
+                          .good-card.good-card.shop-main__list-card
+                            .good-card__inner
+                              .good-card__col.good-card__col--main
+                                .good-card__control-wrap
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.good-card__control
+                                    input(type="checkbox" name="shop-4" checked value="Стабильность игрока").u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                  picture.good-card__picture
+                                    img(src="images/shop-card-4.svg" alt="Стабильность игрока")
+                                .good-card__info
+                                  .good-card__info-name Стабильность игрока
+                                  .good-card__info-list
+                                    button(type="button" data-title-normal="Подробнее" data-title-active="Скрыть").js-btn-moore-toggle.js-shop-btn-toggle.btn-moore.btn-moore--theme-gray.btn-moore--size-sm.good-card__info-moore Подробнее
+                              .good-card__col.good-card__col--price
+                                .good-card__day-price 15 ₽ / день
+                                .good-card__terms
+                                  .select-el.select-el--theme-white-gray.select-el--size-md
+                                    .select-el__label На какой срок?
+                                    .select-el__body
+                                      .select-el__selected
+                                        .select-el__dropdown-line
+                                          .select-el__dropdown-line-title &nbsp;
+                                          .select-el__dropdown-line-subtitle &nbsp;
+                                      ul.select-el__dropdown
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title 5 дней
+                                          .select-el__dropdown-line-subtitle ≈ 9,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Неделя
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Месяц
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Год
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                .good-card__price 0 ₽
+                              .good-card__col.good-card__col--content
+                                .content.good-card__content
+                                  p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                                  ol
+                                    li Первый параметр
+                                    li Второй параметр
+                                    li 3 параметр
+                                    li Четвертый чет параметр
+                          .good-card.good-card.shop-main__list-card
+                            .good-card__inner
+                              .good-card__col.good-card__col--main
+                                .good-card__control-wrap
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.good-card__control
+                                    input(type="checkbox" name="shop-5" value="Личные рекомендации").u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                  picture.good-card__picture
+                                    img(src="images/shop-card-5.svg" alt="Личные рекомендации")
+                                .good-card__info
+                                  .good-card__info-name Личные рекомендации
+                                  .good-card__info-list
+                                    button(type="button" data-title-normal="Подробнее" data-title-active="Скрыть").js-btn-moore-toggle.js-shop-btn-toggle.btn-moore.btn-moore--theme-gray.btn-moore--size-sm.good-card__info-moore Подробнее
+                              .good-card__col.good-card__col--price
+                                .good-card__day-price 15 ₽ / день
+                                .good-card__terms
+                                  .select-el.select-el--theme-white-gray.select-el--size-md
+                                    .select-el__label На какой срок?
+                                    .select-el__body
+                                      .select-el__selected
+                                        .select-el__dropdown-line
+                                          .select-el__dropdown-line-title &nbsp;
+                                          .select-el__dropdown-line-subtitle &nbsp;
+                                      ul.select-el__dropdown
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title 5 дней
+                                          .select-el__dropdown-line-subtitle ≈ 9,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Неделя
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Месяц
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Год
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                .good-card__price 0 ₽
+                              .good-card__col.good-card__col--content
+                                .content.good-card__content
+                                  p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                                  ol
+                                    li Первый параметр
+                                    li Второй параметр
+                                    li 3 параметр
+                                    li Четвертый чет параметр
+                          .good-card.good-card.shop-main__list-card
+                            .good-card__inner
+                              .good-card__col.good-card__col--main
+                                .good-card__control-wrap
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.good-card__control
+                                    input(type="checkbox" name="shop-6" value="Умные голосования").u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                  picture.good-card__picture
+                                    img(src="images/shop-card-6.svg" alt="Умные голосования")
+                                .good-card__info
+                                  .good-card__info-name Умные голосования
+                                  .good-card__info-list
+                                    button(type="button" data-title-normal="Подробнее" data-title-active="Скрыть").js-btn-moore-toggle.js-shop-btn-toggle.btn-moore.btn-moore--theme-gray.btn-moore--size-sm.good-card__info-moore Подробнее
+                              .good-card__col.good-card__col--price
+                                .good-card__day-price 12 ₽ / день
+                                .good-card__terms
+                                  .select-el.select-el--theme-white-gray.select-el--size-md
+                                    .select-el__label На какой срок?
+                                    .select-el__body
+                                      .select-el__selected
+                                        .select-el__dropdown-line
+                                          .select-el__dropdown-line-title &nbsp;
+                                          .select-el__dropdown-line-subtitle &nbsp;
+                                      ul.select-el__dropdown
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title 5 дней
+                                          .select-el__dropdown-line-subtitle ≈ 9,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Неделя
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Месяц
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                        li.select-el__dropdown-line
+                                          .select-el__dropdown-line-title Год
+                                          .select-el__dropdown-line-subtitle ≈ 36,000 матчей
+                                .good-card__price 0 ₽
+                              .good-card__col.good-card__col--content
+                                .content.good-card__content
+                                  p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                                  ol
+                                    li Первый параметр
+                                    li Второй параметр
+                                    li 3 параметр
+                                    li Четвертый чет параметр
+                    button(type="button").js-shop-btn-open-basket.d-lg-block.btn.btn--size-md.btn--theme-accent.shop__btn-buy-mobile
+                      span.btn__inner
+                        span.btn__title Перейти в корзину 1033 ₽
+                  .row__col-3.shop__row-col.shop__row-col--aside
+                    .shop-aside
+                      .shop-aside__overlay-mobile
+                      form(action="#").box.box--theme-white.shop-aside__form
+                        .shop-aside__form-header
+                          .title-size-5.shop-aside__form-title Корзина
+                        .shop-aside__form-good-list
+                          .shop-aside__form-good-card
+                            .shop-aside__form-good-card-header
+                              .shop-aside__form-good-card-name Мотивация игрока
+                              button(type="button").btn-close.btn-close--theme-gray.btn-close--size-sm.shop-aside__form-good-card-btn-remove
+                                svg.icon.btn-close__icon
+                                  use(xlink:href='images/sprite.svg#close')
+                            .shop-aside__form-good-card-footer
+                              .shop-aside__form-good-card-price 300 ₽
+                              .shop-aside__form-good-card-terms на 30 дн.
+                          .shop-aside__form-good-card
+                            .shop-aside__form-good-card-header
+                              .shop-aside__form-good-card-name Мотивация игрока
+                              button(type="button").btn-close.btn-close--theme-gray.btn-close--size-sm.shop-aside__form-good-card-btn-remove
+                                svg.icon.btn-close__icon
+                                  use(xlink:href='images/sprite.svg#close')
+                            .shop-aside__form-good-card-footer
+                              .shop-aside__form-good-card-price 300 ₽
+                              .shop-aside__form-good-card-terms на 5 дн.
+                        label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-black.shop-aside__form-bonuses
+                          input(type="checkbox" name="bonuses" checked value="Я хочу использовать бонусы").u-checkbox__control
+                          span.u-checkbox__inner
+                            .u-checkbox__icon
+                              svg.icon
+                                use(xlink:href='images/sprite.svg#checked')
+                            .u-checkbox__title Я хочу использовать бонусы
+                        .shop-aside__form-price
+                          .shop-aside__form-price-title К оплате:
+                          .shop-aside__form-price-old 1500 ₽
+                          .shop-aside__form-price-new 1033 ₽
+                        .select-el.select-el--theme-white-gray.select-el--size-md.shop-aside__form-payments-method
+                          .select-el__label Способ оплаты:
+                          .select-el__body
+                            .select-el__selected
+                            ul.select-el__dropdown
+                              li.select-el__dropdown-line
+                                .select-el__dropdown-line-title MasterCard
+                              li.select-el__dropdown-line.is-selected
+                                .select-el__dropdown-line-title Maestro
+                              li.select-el__dropdown-line
+                                .select-el__dropdown-line-title VISA
+                              li.select-el__dropdown-line
+                                .select-el__dropdown-line-title PayPal
+                              li.select-el__dropdown-line
+                                .select-el__dropdown-line-title Bitcoin
+                              li.select-el__dropdown-line
+                                .select-el__dropdown-line-title QIWI
+                              li.select-el__dropdown-line
+                                .select-el__dropdown-line-title Яндекс Деньги
+                        button(type="submit").btn.btn--size-md.btn--theme-accent.shop-aside__form-btn
+                          span.btn__inner
+                            span.btn__title Оплатить
+                      .shop-aside__appeal
+                        button(type="button").js-card-appeal-close.d-lg-block.btn-close.btn-close--theme-gray.btn-close--size-sm.shop-aside__appeal-close
+                          svg.icon.btn-close__icon
+                            use(xlink:href='images/sprite.svg#close')
+                        .shop-aside__appeal-content
+                          .shop-aside__appeal-title Скидка 10%
+                          .content.shop-aside__appeal-text
+                            p По каждой позиции до конца зимы
+                          .group-control.group-control--size-sm.shop-aside__appeal-group
+                            .group-control__inner
+                              .group-control__item.d-lg-none
+                                button(type="button").js-card-appeal-close.btn.btn--size-md.btn--theme-white-gray
+                                  span.btn__inner
+                                    span.btn__title Закрыть
+                              .group-control__item
+                                button(type="button").btn.btn--size-md.btn--theme-accent
+                                  span.btn__inner
+                                    span.btn__title Подробнее
+                        picture.shop-aside__appeal-picture
+                          img(src="images/shop-aside-appeal-img.png" alt="Скидка 10%")
+
+
+
+        include includes/footer.pug
+    include includes/foot.pug
+
+    script(src='js/select.js?v=568532623346')
+
+    script.
+      // shop btn toggle
+      const shopBtnMoore = document.querySelectorAll('.js-shop-btn-toggle');
+
+      shopBtnMoore.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const block = this.closest('.good-card');
+          if (block) {
+            block.classList.toggle('is-active');
+          }
+        });
+      });
+
+    script.
+      // good card checked
+      const goodCards = document.querySelectorAll('.good-card');
+
+      goodCards.forEach((card) => {
+        const checkbox = card.querySelector('input[type="checkbox"]');
+        
+        checkbox.addEventListener('change', function() {
+          if (this.checked) {
+            card.classList.add('is-choose');
+          } else {
+            card.classList.remove('is-choose');
+          }
+        });
+
+        if (checkbox.checked) {
+          card.classList.add('is-choose');
+        }
+      });
+
+    script.
+      // aside appeal close mobile
+      const asideAppealBtnClose = document.querySelectorAll('.js-card-appeal-close');
+
+      asideAppealBtnClose.forEach(button => {
+        button.addEventListener('click', () => {
+          const appeal = button.closest('.shop-aside__appeal');
+          appeal.classList.add('is-hidden');
+        });
+      });
+
+    script.
+      // basket open mobile
+      const btnShopMobile = document.querySelector('.js-shop-btn-open-basket');
+      const basketMobile = document.querySelector('.shop-aside__form');
+      const basketOverlay = document.querySelector('.shop-aside__overlay-mobile');
+
+      function showBlock() {
+        basketMobile.classList.add('is-show');
+        basketOverlay.classList.add('is-show');
+        document.addEventListener('click', handleClickOutside);
+      }
+
+      function hideBlock() {
+        basketMobile.classList.remove('is-show');
+        basketOverlay.classList.remove('is-show');
+        document.removeEventListener('click', handleClickOutside);
+      }
+
+      function handleClickOutside(event) {
+        if (!basketMobile.contains(event.target) && !btnShopMobile.contains(event.target)) {
+          hideBlock();
+        }
+      }
+
+      btnShopMobile.addEventListener('click', showBlock);

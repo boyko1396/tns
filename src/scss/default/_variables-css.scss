@@ -1,0 +1,50 @@
+:root {
+    --fs-default: 14rem;
+    --fs-1: 40rem;
+    --fs-2: 32rem;
+    --fs-3: 24rem;
+    --fs-4: 20rem;
+    --fs-5: 18rem;
+    --fs-6: 16rem;
+    --fs-7: 10rem;
+    --fs-8: 12rem;
+    --fs-9: 22rem;
+    --fs-10: 15rem;
+
+    --gap: 16rem;
+    --gap-: -16rem;
+    --gap-fluid: 32rem;
+    --gap-fluid-: -32rem;
+
+    --color-black-1: #575F70;
+    --color-black-2: #283442;
+    --color-white-1: #fff;
+    --color-gray-1: #ABB0BA;
+    --color-gray-2: #E9EEF4;
+    --color-gray-3: #E5E9F1;
+    --color-gray-4: #ABB2BE;
+    --color-gray-5: #EEEFF1;
+    --color-gray-6: #999999;
+    --color-gray-7: #F7F7F7;
+    --color-gray-8: #77889B;
+    --color-green-1: #4CBB6B;
+    --color-green-2: #93CE47;
+    --color-pink-1: #8459DF;
+    --color-orange-1: #FF8800;
+    --color-orange-2: #F39E3A;
+    --color-yellow-1: #FFCC00;
+    --color-purple-1: #B88BE5;
+    --color-red-1: #EE5252;
+    --color-red-2: #FC8171;
+    --color-blue-1: #6F8AE8;
+    --color-blue-light-1: #EEF4FC;
+    --color-blue-light-2: #17C6D2;
+}
+
+@media (max-width: $lg) {
+    :root {
+        --fs-default: 12rem;
+        --fs-6: 14rem;
+        --fs-9: 18rem;
+    }
+}

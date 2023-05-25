@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .about-layout
+                .row.about-layout__row
+                  .row__col-7.about-layout__col.about-layout__col--info-main
+                    .box.box--theme-white-gradient.box--mobile-full-md.about-layout__info
+                      h1.about-layout__info-title Весь теннис в ваших руках
+                      .about-layout__info-list
+                        .about-layout__info-list-col
+                          .info-benefit-card.info-benefit-card--theme-green.about-layout__info-list-card
+                            .info-benefit-card__title ТОП 20
+                            .info-benefit-card__text По версии LiveInternet.ru в&nbsp;категории Спорт
+                        .about-layout__info-list-col
+                          .info-benefit-card.info-benefit-card--theme-green.about-layout__info-list-card
+                            .info-benefit-card__title 60,000
+                            .info-benefit-card__text Ежесуточно посещают наш&nbsp;сайт
+                        .about-layout__info-list-col
+                          .info-benefit-card.info-benefit-card--theme-green.about-layout__info-list-card
+                            .info-benefit-card__title 1,000,000
+                            .info-benefit-card__text Месячная аудитория нашего&nbsp;сайта
+                        .about-layout__info-list-col
+                          .info-benefit-card.info-benefit-card--theme-green.about-layout__info-list-card
+                            .info-benefit-card__title 2,000,000
+                            .info-benefit-card__text За месяц просматривается страниц
+                      .content.about-layout__info-text
+                        p Нам очень приятно представить Вашему вниманию интернет-портал AiTNS.ru - крупнейшее информационное сетевое издание о теннисе в России. Наша аудитория составляет 7 000 000 уникальных посетителей в год (данные на 2018 год). Мы предоставляем полноценный  набор информационных услуг, способный удовлетворить интересы широкого круга пользователей.
+                        p Успехи российских теннисистов в начале 2000-х вызвали небывалый рост популярности тенниса в России. С их лёгкой подачи интерес к теннису шагнул далеко за пределы столицы, формируя армию новых поклонников и устойчивый спрос на оперативную и достоверную информацию с мест теннисных событий. Однако решение вопроса её доставки обычными печатными средствами стало неактуальным. В России назревала цифровая революция.
+                  .row__col-5.about-layout__col.about-layout__col--info-aside
+                    aside.about-layout__info-aside
+                      .info-card.info-card--theme-blue-light.about-layout__info-aside-card
+                        .info-card__inner
+                          picture.info-card__picture
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#info-card-1')
+                          .info-card__content
+                            .info-card__title Делимся опытом более 10 лет<span>в спортивной аналитике и выработке стратегий прогнозов</span>
+                            .info-card__text Вы найдёте всё, что нужно для успешной ставки на <a href="#">текущую игру</a>. Анализируй и побеждай вместе с нами! Открывай <a href="#">максимальные возможности</a>
+                      .info-card.info-card--theme-red.about-layout__info-aside-card
+                        .info-card__inner
+                          picture.info-card__picture
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#info-card-2')
+                          .info-card__content
+                            .info-card__title Постоянно совершенствуем<span>алгоритмы обработки и анализа информации о событиях в теннисе</span>
+                            .info-card__text Публикуем актуальные новости и обзоры из мира тенниса. Рассчитываем уникальные важные показатели для успешных ставок, разработанные командой наших аналитиков.
+
+        include includes/footer.pug
+    include includes/foot.pug

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .box.box--theme-white.box--mobile-full.box--mobile-p-sm
+                .rating-layout
+                  .u-overlay.rating-layout__overlay
+                  header.rating-layout__header
+                    .rating-layout__header-text
+                      h1.rating-layout__header-title Рейтинги игроков
+                      span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.rating-layout__header-badge
+                        button(type="button").badge-info__btn ?
+                        span.badge-info__dropdown
+                          p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
+                    .group-control.group-control--size-sm.rating-layout__header-filter-group
+                      .group-control__inner
+                        .group-control__item
+                          button(type="button").js-rating-btn-open.btn-action.btn-action--size-sm.btn-action--theme-gray.rating-layout__filter-btn
+                            span.btn-action__inner-show
+                              svg.icon.btn-action__icon
+                                use(xlink:href='images/sprite.svg#filter')
+                          .rating-layout__filter-dropdown
+                            .select-el.select-el--theme-white-gray.select-el--size-md(style="width: 180rem")
+                              .select-el__label Игроки
+                              .select-el__body
+                                .select-el__selected
+                                ul.select-el__dropdown
+                                  li.select-el__dropdown-line.is-selected
+                                    .select-el__dropdown-line-title Все
+                                  li.select-el__dropdown-line
+                                    .select-el__dropdown-line-title Мужчины
+                                  li.select-el__dropdown-line
+                                    .select-el__dropdown-line-title Женщины
+                                  li.select-el__dropdown-line
+                                    .select-el__dropdown-line-title Топ 10 мужчин
+                                  li.select-el__dropdown-line
+                                    .select-el__dropdown-line-title Топ 10 женщин
+                        .group-control__item
+                          button(type="button").js-rating-btn-open.btn-action.btn-action--size-sm.btn-action--theme-gray.rating-layout__filter-btn
+                            span.btn-action__inner-show
+                              svg.icon.btn-action__icon
+                                use(xlink:href='images/sprite.svg#search')
+                          .rating-layout__filter-dropdown
+                            form(action="#").search-form
+                              .input-area-el.search-form__input
+                                input(type="search" name="q" required value="")#search-input.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+                                label(for="search-input").input-area-el__label Быстрый поиск
+                              button(type="submit").search-form__btn
+                                svg.icon
+                                  use(xlink:href='images/sprite.svg#search')
+                  .rating-layout__filter-mobile
+                    .rating-layout__filter-mobile-list
+                      button(type="button" data-table-cell=".table-cell-4").js-rating-filter.rating-layout__filter-mobile-btn.is-active ATP/WTA
+                      button(type="button" data-table-cell=".table-cell-5").js-rating-filter.rating-layout__filter-mobile-btn Камбеки
+                      button(type="button" data-table-cell=".table-cell-6").js-rating-filter.rating-layout__filter-mobile-btn Тайбрейки
+                      button(type="button" data-table-cell=".table-cell-7").js-rating-filter.rating-layout__filter-mobile-btn Решающ. сет
+                      button(type="button" data-table-cell=".table-cell-8").js-rating-filter.rating-layout__filter-mobile-btn Быстр. подачи
+                      button(type="button" data-table-cell=".table-cell-9").js-rating-filter.rating-layout__filter-mobile-btn Андердог
+                  .u-table-block.rating-layout__table
+                    .u-table-block__inner
+                      table.u-table
+                        thead
+                          tr
+                            th.table-cell-1
+                              button(type="button").js-btn-sort.btn-sort.u-table__btn-sort №
+                            th.table-cell-2
+                              button(type="button").js-btn-sort.btn-sort.u-table__btn-sort Страна
+                            th.table-cell-3
+                              button(type="button").js-btn-sort.btn-sort.u-table__btn-sort Спортсмен
+                            th.table-cell-4.is-show
+                              button(type="button").js-btn-sort.btn-sort.btn-sort--max-min.u-table__btn-sort
+                                | ATP/WTA
+                                svg.icon
+                                  use(xlink:href='images/sprite.svg#arrow-type-4')
+                            th.table-cell-5
+                              button(type="button").js-btn-sort.btn-sort.btn-sort--min-max.u-table__btn-sort
+                                | Камбеки
+                                svg.icon
+                                  use(xlink:href='images/sprite.svg#arrow-type-4')
+                            th.table-cell-6
+                              button(type="button").js-btn-sort.btn-sort.u-table__btn-sort Тайбрейки
+                            th.table-cell-7
+                              button(type="button").js-btn-sort.btn-sort.u-table__btn-sort Решающ. сет
+                            th.table-cell-8
+                              button(type="button").js-btn-sort.btn-sort.u-table__btn-sort Быстр. подачи
+                            th.table-cell-9
+                              button(type="button").js-btn-sort.btn-sort.u-table__btn-sort Андердог
+                        tbody
+                          tr
+                            td.table-cell-1 1
+                            td.table-cell-2
+                              img(src="images/flags/ai.svg" alt="Новак Джокович").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Новак Джокович
+                                .table-player-card__icon
+                                  span.icon-achievement-1.is-active
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 2
+                            td.table-cell-2
+                              img(src="images/flags/ru.svg" alt="Рафаэль Надаль").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Рафаэль Надаль
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2.is-active
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 9850
+                            td.table-cell-5 9850
+                            td.table-cell-6 9850
+                            td.table-cell-7 9850
+                            td.table-cell-8 9850
+                            td.table-cell-9 9850
+                          tr
+                            td.table-cell-1 3
+                            td.table-cell-2
+                              img(src="images/flags/ao.svg" alt="Доминик Тим").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Доминик Тим
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3.is-active
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 9125
+                            td.table-cell-5 9125
+                            td.table-cell-6 9125
+                            td.table-cell-7 9125
+                            td.table-cell-8 9125
+                            td.table-cell-9 9125
+                          tr
+                            td.table-cell-1 4
+                            td.table-cell-2
+                              img(src="images/flags/bi.svg" alt="Даниил Медведев").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Даниил Медведев
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4.is-active
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 8470
+                            td.table-cell-5 8470
+                            td.table-cell-6 8470
+                            td.table-cell-7 8470
+                            td.table-cell-8 8470
+                            td.table-cell-9 8470
+                          tr
+                            td.table-cell-1 5
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Роджер Федерер").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Роджер Федерер
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5.is-active
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 6630
+                            td.table-cell-5 6630
+                            td.table-cell-6 6630
+                            td.table-cell-7 6630
+                            td.table-cell-8 6630
+                            td.table-cell-9 6630
+                          tr
+                            td.table-cell-1 6
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Стефанос Циципас").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Стефанос Циципас
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6.is-active
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 7
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Александр Зверев").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Александр Зверев
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 8
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Андрей Рублёв").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Андрей Рублёв
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 9
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Диего Шварцман").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Диего Шварцман
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 10
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Маттео Берреттини").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Маттео Берреттини
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 11
+                            td.table-cell-2
+                              img(src="images/flags/tr.svg" alt="Гаэль Монфис").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Гаэль Монфис
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 12
+                            td.table-cell-2
+                              img(src="images/flags/no.svg" alt="Денис Шаповалов").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Денис Шаповалов
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 12030
+                            td.table-cell-5 12030
+                            td.table-cell-6 12030
+                            td.table-cell-7 12030
+                            td.table-cell-8 12030
+                            td.table-cell-9 12030
+                          tr
+                            td.table-cell-1 13
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Роберто Баутиста-Агут").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Роберто Баутиста-Агут
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 2710
+                            td.table-cell-5 2710
+                            td.table-cell-6 2710
+                            td.table-cell-7 2710
+                            td.table-cell-8 2710
+                            td.table-cell-9 2710
+                          tr
+                            td.table-cell-1 14
+                            td.table-cell-2
+                              img(src="images/flags/ea.svg" alt="Милош Раонич").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Милош Раонич
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 2580
+                            td.table-cell-5 2580
+                            td.table-cell-6 2580
+                            td.table-cell-7 2580
+                            td.table-cell-8 2580
+                            td.table-cell-9 2580
+                          tr
+                            td.table-cell-1 15
+                            td.table-cell-2
+                              img(src="images/flags/cv.svg" alt="Маттео Берреттини").u-table__flags
+                            td.table-cell-3
+                              .table-player-card.u-table__card
+                                .table-player-card__name Маттео Берреттини
+                                .table-player-card__icon
+                                  span.icon-achievement-1
+                                  span.icon-achievement-2
+                                  span.icon-achievement-3
+                                  span.icon-achievement-4
+                                  span.icon-achievement-5
+                                  span.icon-achievement-6
+                            td.table-cell-4.is-show 3075
+                            td.table-cell-5 3075
+                            td.table-cell-6 3075
+                            td.table-cell-7 3075
+                            td.table-cell-8 3075
+                            td.table-cell-9 3075
+                  footer.rating-layout__footer
+                    button(type="submit").btn.btn--size-mdx.btn--theme-gray.rating-layout__footer-btn-moore
+                      span.btn__inner
+                        span.btn__title Показать остальные
+
+        include includes/footer.pug
+    include includes/foot.pug
+
+    script(src='js/select.js?v=568532623346')
+
+    script.
+      // filter dropdown mobile
+      const filterRatingBtns = document.querySelectorAll('.js-rating-btn-open');
+      const ratingOverlay = document.querySelectorAll('.rating-layout__overlay');
+
+      filterRatingBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const dropdown = btn.nextElementSibling;
+          dropdown.classList.add('is-show');
+          ratingOverlay.forEach((overlay) => {
+            overlay.classList.add('is-show');
+          });
+        });
+      });
+
+      ratingOverlay.forEach((overlay) => {
+        overlay.addEventListener('click', () => {
+          filterRatingBtns.forEach((btn) => {
+            const dropdown = btn.nextElementSibling;
+            dropdown.classList.remove('is-show');
+          });
+          ratingOverlay.forEach((overlay) => {
+            overlay.classList.remove('is-show');
+          });
+        });
+      });
+
+    script.
+      // filter table cell mobile
+      const filterTableBtns = document.querySelectorAll('.js-rating-filter');
+
+      function handleClick(event) {
+        const filterTableBtn = event.target;
+
+        filterTableBtns.forEach(btn => btn.classList.remove('is-active'));
+
+        const blocks = document.querySelectorAll('.rating-layout__table td, .rating-layout__table th');
+        blocks.forEach(block => block.classList.remove('is-show'));
+
+        filterTableBtn.classList.add('is-active');
+
+        const tableCell = filterTableBtn.dataset.tableCell;
+
+        const targetBlocks = document.querySelectorAll(tableCell);
+
+        targetBlocks.forEach(block => block.classList.add('is-show'));
+      }
+
+      filterTableBtns.forEach(btn => {
+        btn.addEventListener('click', handleClick);
+      });

@@ -1,0 +1,103 @@
+.donate-layout {
+    &__row {
+    }
+    &__col {
+        &--info-main {
+            @media (max-width: $md) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &--info-aside {
+        }
+    }
+    &__block {
+        & + & {
+            margin-top: 16rem;
+        }
+        &-title {
+            margin: 0 0 16rem;
+            font-weight: normal;
+            font-size: var(--fs-9);
+            @media (max-width: $lg) {
+                margin-bottom: 6rem;
+                font-weight: bold;
+            }
+        }
+        &-text {
+            line-height: 1.6;
+        }
+        &-form {
+            padding-top: 16rem;
+            @media (max-width: $lg) {
+                margin: 0 var(--gap-);
+                padding: 0 var(--gap);
+                padding-top: 10rem;
+                overflow: hidden;
+            }
+        }
+        &-input {
+            margin: 0 0 16rem;
+            @media (max-width: $lg) {
+                margin-bottom: 8rem;
+            }
+        }
+        &-payments-wrap {
+            @media (max-width: $lg) {
+                margin: 0 var(--gap-) 16rem;
+                padding: 0 var(--gap);
+                overflow-y: hidden;
+            }
+        }
+        &-payments {
+            min-height: 64rem;
+            margin: 0 0 32rem;
+            display: flex;
+            align-items: center;
+            @media (max-width: $lg) {
+                min-height: 92rem;
+                margin: 0 var(--gap-) -30rem;
+                padding: 0 var(--gap) 30rem;
+                overflow-x: auto;
+            }
+            &-item {
+                margin-right: 8rem;
+                flex-shrink: 0;
+            }
+        }
+        &-btn {
+        }
+    }
+    &__aside {
+        &-header {
+            margin: 0 0 32rem;
+            @media (max-width: $lg) {
+                margin-bottom: 16rem;
+            }
+        }
+        &-quote-icon {
+            width: 32rem;
+            height: 32rem;
+            margin: 0 0 6rem -4rem;
+            opacity: .2;
+        }
+        &-title {
+            margin: 0 0 12rem;
+            font-weight: 300;
+            font-size: var(--fs-9);
+            text-align: center;
+        }
+        &-picture {
+            max-width: 220rem;
+            margin: 0 auto -32rem;
+            @media (max-width: $lg) {
+                margin-bottom: -16rem;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}

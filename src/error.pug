@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        main(role="main").site__main
+          .error-layout
+            .container.error-layout__container
+              .error-layout__content
+                a(href="/").error-layout__content-logo
+                  img(src="images/logo-brand-type-1.svg" alt="На главную")
+                .error-layout__content-code 404
+                .error-layout__content-text Страница не найдена
+                a(href="/").btn.btn--size-lg.btn--theme-gradient-green.error-layout__content-btn
+                  span.btn__inner
+                    span.btn__title Перейти на главную
+              picture.error-layout__picture
+                img(src="images/error-img.png" alt="404 страница не найдена")

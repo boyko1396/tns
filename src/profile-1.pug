@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .profile-layout
+                .row.profile-layout__row
+                  .row__col-3.profile-layout__col.profile-layout__col--user
+                    .box.box--theme-white
+                      include includes/profile-nav.pug
+                  .row__col-6.profile-layout__col.profile-layout__col--main
+                    .box.box--theme-white.box--mobile-full
+                      .profile-layout__main
+                        .profile-layout__main-header
+                          .title-sup.profile-layout__main-header-title
+                            h1.title-sup__title Мои партнёры
+                            .title-sup__subtitle 103
+                          .profile-layout__main-header-tick-line-wrap
+                            .tick-line.tick-line--size-md.tick-line--theme-black.profile-layout__main-header-tick-line
+                              .tick-line__inner
+                                img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                .tick-line__title 467
+                        .profile-layout__main-partners
+                          table.partners-table.profile-layout__main-partners-card
+                            tbody
+                              tr
+                                td.partners-table__number 103
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +10
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 102
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +1000
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 102
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +2
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 101
+                                td.partners-table__name Marvin McKinney
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +10
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 100
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +10
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 99
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +10
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 98
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +10
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 102
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +10
+                                    time.partners-table__info-date 08.01.2020
+                              tr
+                                td.partners-table__number 102
+                                td.partners-table__name Guy Hawkins
+                                td.partners-table__info
+                                  .partners-table__info-inner
+                                    .tick-line.tick-line--size-md.tick-line--theme-gray.partners-table__info-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +10
+                                    time.partners-table__info-date 08.01.2020
+                  .row__col-3.profile-layout__col.profile-layout__col--aside
+                    .card-appeal.card-appeal--theme-gold.profile-layout__appeal-refferal
+                      .card-appeal__inner
+                        button(type="button").js-card-appeal-close.btn-close.btn-close--theme-white.btn-close--size-sm.card-appeal__close
+                          svg.icon.btn-close__icon
+                            use(xlink:href='images/sprite.svg#close')
+                        picture.card-appeal__picture
+                          img(src="images/card-appeal-1.svg" alt="Приглашайте друзей")
+                        .card-appeal__body
+                          .card-appeal__content
+                            .card-appeal__title Приглашайте друзей
+                            .content.card-appeal__text
+                              p Уловите свое руки мощные дохновениевкл адывает в ваши творческие инструменты
+                            .card-appeal__refferal-link
+                              | Реферальная ссылка:<br><a href="">Http://example/domen/offer1/yandex</a>
+                          button(type="button").btn.btn--size-md.btn--theme-white-orange.card-appeal__btn
+                            span.btn__inner
+                              span.btn__title Пригласить по почте
+
+
+        include includes/footer.pug
+    include includes/foot.pug
+
+    script.
+      // appeal close mobile
+      const asideAppealBtnClose = document.querySelectorAll('.js-card-appeal-close');
+
+      asideAppealBtnClose.forEach(button => {
+        button.addEventListener('click', () => {
+          const appeal = button.closest('.profile-layout__appeal-refferal');
+          appeal.classList.add('is-hidden');
+        });
+      });

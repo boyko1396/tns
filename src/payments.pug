@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .payments-layout
+                .row.payments-layout__row
+                  .row__col-9.payments-layout__col.payments-layout__col--main
+                    .box.box--theme-white-gradient.box--mobile-full-md.payments-layout__main
+                      h1.payments-layout__main-title Доступные способы оплаты
+                      .content.payments-layout__main-text
+                        p Мы предоставляем <a href="#">возможности</a>, для их приобритения мы предоставляем самые популярные платёжные системы:
+                      .row.payments-layout__main-payments-row
+                        .row__col-3.payments-layout__main-payments-row-col
+                          label.payment-label.payment-label--size-full
+                            span.payment-label__inner
+                              picture.payment-label__picture
+                                img(src="images/payment-method-1.svg" alt="master card")
+                        .row__col-3.payments-layout__main-payments-row-col
+                          label.payment-label.payment-label--size-full
+                            span.payment-label__inner
+                              picture.payment-label__picture
+                                img(src="images/payment-method-2.svg" alt="maestro")
+                        .row__col-3.payments-layout__main-payments-row-col
+                          label.payment-label.payment-label--size-full
+                            span.payment-label__inner
+                              picture.payment-label__picture
+                                img(src="images/payment-method-3.svg" alt="visa")
+                        .row__col-3.payments-layout__main-payments-row-col
+                          label.payment-label.payment-label--size-full
+                            span.payment-label__inner
+                              picture.payment-label__picture
+                                img(src="images/payment-method-4.svg" alt="paypal")
+                        .row__col-3.payments-layout__main-payments-row-col
+                          label.payment-label.payment-label--size-full
+                            span.payment-label__inner
+                              picture.payment-label__picture
+                                img(src="images/payment-method-5.svg" alt="bitcoin")
+                        .row__col-3.payments-layout__main-payments-row-col
+                          label.payment-label.payment-label--size-full
+                            span.payment-label__inner
+                              picture.payment-label__picture
+                                img(src="images/payment-method-6.svg" alt="qiwi")
+                        .row__col-3.payments-layout__main-payments-row-col
+                          label.payment-label.payment-label--size-full
+                            span.payment-label__inner
+                              picture.payment-label__picture
+                                img(src="images/payment-method-7.svg" alt="yandex")
+                  .row__col-3.payments-layout__col.payments-layout__col--aside
+                    aside.payments-layout__aside
+                      picture.payments-layout__aside-picture
+                        img(src="images/payments-bitcoin.svg" alt="Так же можно использовать бонусы, для покупки возможностей")
+                      .payments-layout__aside-content
+                        .payments-layout__aside-title Так же можно использовать бонусы, для&nbsp;покупки возможностей
+                        .payments-layout__aside-text
+                          a(href="#") Узнайте как получить бонусы
+
+        include includes/footer.pug
+    include includes/foot.pug

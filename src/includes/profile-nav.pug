@@ -1,0 +1,37 @@
+.profile-layout__user
+  picture.profile-layout__user-avatar
+    img(src="images/avatar-1.jpg" alt="Kasbura")
+  .profile-layout__user-email Lionel@gmail.com
+  .profile-layout__user-login Kasbura
+  .profile-layout__user-info
+    .profile-layout__user-info-item
+      span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.profile-layout__user-info-item-badge
+        button(type="button").badge-info__btn ?
+        span.badge-info__dropdown
+          p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
+      .profile-layout__user-info-item-card.profile-layout__user-info-item-card--theme-gold
+        .tick-line.tick-line--size-md.tick-line--theme-gold
+          .tick-line__inner
+            img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+            .tick-line__title 467
+    .profile-layout__user-info-item
+      .profile-layout__user-info-item-card.profile-layout__user-info-item-card--theme-green
+        .tick-line.tick-line--size-md.tick-line--theme-green
+          .tick-line__inner
+            svg.icon.tick-line__icon
+              use(xlink:href='images/sprite.svg#cup')
+            .tick-line__title 467
+      span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.profile-layout__user-info-item-badge
+        button(type="button").badge-info__btn ?
+        span.badge-info__dropdown
+          p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
+  nav.profile-layout__user-nav
+    ul
+      li
+        a(href="#").is-active Партнерская программа
+      li
+        a(href="#") Мои голосования
+      li
+        a(href="#") Как получить бонусы?
+      li
+        a(href="#") Настройки

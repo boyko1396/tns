@@ -1,0 +1,15 @@
+<svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<rect width="3" height="16" fill="#4CBB6B"/>
+</g>
+<g opacity="0.3">
+<rect width="3" height="6" transform="translate(4 10)" fill="#EE5252"/>
+</g>
+<g opacity="0.3">
+<rect width="3" height="10" transform="translate(8 6)" fill="#4CBB6B"/>
+</g>
+<rect width="3" height="14" transform="translate(12 2)" fill="#4CBB6B"/>
+<g opacity="0.3">
+<rect width="3" height="1" transform="translate(16 15)" fill="#575F70"/>
+</g>
+</svg>

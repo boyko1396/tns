@@ -1,0 +1,61 @@
+// typography
+$ff-default: 'Roboto', Arial, sans-serif;
+
+// pallets
+$color-black-1: #575F70;
+$color-black-2: #283442;
+$color-white-1: #fff;
+$color-gray-1: #ABB0BA;
+$color-gray-2: #E9EEF4;
+$color-gray-3: #E5E9F1;
+$color-gray-4: #ABB2BE;
+$color-gray-5: #EEEFF1;
+$color-gray-6: #999999;
+$color-gray-7: #F7F7F7;
+$color-gray-8: #77889B;
+$color-gray-9: #CDD4E2;
+$color-green-1: #4CBB6B;
+$color-green-2: #93CE47;
+$color-pink-1: #8459DF;
+$color-orange-1: #FF8800;
+$color-orange-2: #F39E3A;
+$color-yellow-1: #FFCC00;
+$color-purple-1: #B88BE5;
+$color-red-1: #EE5252;
+$color-red-2: #FC8171;
+$color-gold-1: #FDD368;
+$color-gold-2: #FC9358;
+$color-gold-3: #FCB360;
+$color-blue-1: #6F8AE8;
+$color-blue-2: #2F80ED;
+$color-blue-light-1: #EEF4FC;
+$color-blue-light-2: #17C6D2;
+$color-blue-light-3: #14B6C1;
+
+$gradient-gray-1: linear-gradient(180deg,$color-blue-light-1 25%,rgba($color-blue-light-1, 0) 100%);
+$gradient-gray-2: linear-gradient(90deg, rgba(238, 244, 252, 0) 0%, $color-blue-light-1 100%);
+$gradient-accent-1: linear-gradient(240.24deg, #FE7E27 0%, #C748F3 100%);
+$gradient-accent-2: linear-gradient(180deg, $color-blue-light-1 25%, rgba(238, 244, 252, 0) 100%);
+$gradient-orange-1:  linear-gradient(12.44deg, $color-gold-2 0%, $color-gold-1 100%);
+$gradient-red-1: linear-gradient(269.86deg, #B12A5B 0.65%, #CF556C 60.16%, #FF8177 100%);
+$gradient-red-2: linear-gradient(180deg, rgba(252,129,113, .12) 25%, rgba(252,129,113, 0) 100%);
+$gradient-green-1: linear-gradient(269.86deg, #1AA183 0.65%, #EBCE42 100%);
+$gradient-white-light-1: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50rem);
+$gradient-purple-1: linear-gradient(225deg, #FF057C 0%, #8D0B93 50.51%, #321575 100%);
+$gradient-gold-1: linear-gradient(12.44deg, $color-gold-2 0%, $color-gold-1 100%);;
+
+// breakpoint
+$xl: 1440px;
+$xl-mf: $xl + 1;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs;

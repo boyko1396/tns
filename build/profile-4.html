@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>TScore</title><link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="shortcut icon" href="images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/styles.css?v=568532623346"/>
+  </head>
+  <body>
+    <div class="site" id="root">
+      <div class="site__inner">
+        <header class="header header--position-sticky site__header">
+          <div class="header__top">
+            <div class="container header__top-container"><a class="header__top-logo" href="/"><img src="images/logo-brand-type-1.svg" alt="Tscore"/></a>
+              <div class="header__top-dropdown">
+                <nav class="u-nav u-nav--main header__top-nav">
+                  <ul class="u-nav__list">
+                    <li class="u-nav__item"><a class="u-nav__link is-active" href="#">Игры</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">Рейтинги</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">Хелпер</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">О нас</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">Донат</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__top-aside"><a class="header__top-aside-btn-appeal" href="#">
+                  <svg class="icon">
+                    <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                  </svg><span>Go to pro</span></a>
+                <div class="header__top-aside-notification-wrap">
+                  <button class="header__top-aside-notification header__top-aside-notification--new" type="button">
+                    <svg class="icon">
+                      <use xlink:href="images/sprite.svg#notification"></use>
+                    </svg><span></span>
+                  </button>
+                </div>
+                <div class="header__top-aside-profile">
+                  <div class="header__top-aside-profile-inner">
+                    <div class="header__top-aside-profile-tick-list">
+                      <div class="tick-line tick-line--size-sm tick-line--theme-gray header__top-aside-tick-line">
+                        <div class="tick-line__inner"><img class="tick-line__icon" src="images/sprite/star-type-1-gradient.svg"/>
+                          <div class="tick-line__title">51</div>
+                        </div>
+                      </div>
+                      <div class="tick-line tick-line--size-sm tick-line--theme-gray header__top-aside-tick-line">
+                        <div class="tick-line__inner"><img class="tick-line__icon" src="images/sprite/coin-type-1-gradient.svg"/>
+                          <div class="tick-line__title">467</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header__top-aside-profile-nav">
+                      <button class="js-profile-nav header__top-aside-profile-nav-button" type="button">
+                        <picture class="header__top-aside-profile-nav-button-picture"><img src="images/avatar-1.jpg"/></picture><span></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="header__top-aside-profile-dropdown">
+                    <ul>
+                      <li><a href="#">Партнерка</a></li>
+                      <li><a href="#">Мои голосования</a></li>
+                      <li><a href="#">Как получить бонусы?</a></li>
+                      <li><a href="#">Настройки</a></li>
+                      <li><a href="#">Выйти</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="container header__bottom-container">
+              <nav class="u-nav u-nav--sub header__bottom-nav">
+                <ul class="u-nav__list">
+                  <li class="u-nav__item"><a class="u-nav__link is-active" href="#">Сейчас</a></li>
+                  <li class="u-nav__item"><a class="u-nav__link" href="#">Будущие</a></li>
+                  <li class="u-nav__item"><a class="u-nav__link" href="#">Прошедшие</a></li>
+                  <li class="u-nav__item"><a class="u-nav__link" href="#">Закладки</a></li>
+                </ul>
+              </nav>
+              <div class="header__bottom-filter">
+                <div class="header__list">
+                  <div class="header__list-item">
+                    <div class="header__bottom-filter-accent">
+                      <label class="u-switcher u-switcher--size-sm u-switcher--theme-gray">
+                        <input class="u-switcher__control" type="checkbox" name="accent" value="Акцент"/><span class="u-switcher__inner"><span class="u-switcher__title">Акцент</span><span class="u-switcher__icon"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="header__list-item">
+                    <div class="header__bottom-filter-association">
+                      <div class="group-control group-control--size-md">
+                        <div class="group-control__inner">
+                          <div class="group-control__item">
+                            <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray">
+                              <input class="u-checkbox__control" type="checkbox" name="ATP" value="ATP" checked="checked"/><span class="u-checkbox__inner">
+                                <div class="u-checkbox__icon">
+                                  <svg class="icon">
+                                    <use xlink:href="images/sprite.svg#checked"></use>
+                                  </svg>
+                                </div><span class="u-checkbox__title">ATP</span></span>
+                            </label>
+                          </div>
+                          <div class="group-control__item">
+                            <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray">
+                              <input class="u-checkbox__control" type="checkbox" name="WTA" value="WTA" checked="checked"/><span class="u-checkbox__inner">
+                                <div class="u-checkbox__icon">
+                                  <svg class="icon">
+                                    <use xlink:href="images/sprite.svg#checked"></use>
+                                  </svg>
+                                </div><span class="u-checkbox__title">WTA</span></span>
+                            </label>
+                          </div>
+                          <div class="group-control__item">
+                            <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray">
+                              <input class="u-checkbox__control" type="checkbox" name="ITF" value="ITF"/><span class="u-checkbox__inner">
+                                <div class="u-checkbox__icon">
+                                  <svg class="icon">
+                                    <use xlink:href="images/sprite.svg#checked"></use>
+                                  </svg>
+                                </div><span class="u-checkbox__title">ITF</span></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__list-item">
+                    <div class="header__bottom-filter-btn-action">
+                      <div class="group-control group-control--size-xs">
+                        <div class="group-control__inner">
+                          <div class="group-control__item">
+                            <div class="modal-action">
+                              <div class="modal-action__inner">
+                                <button class="js-modal-action-init btn-action btn-action--modal-overlay btn-action--size-sm btn-action--theme-gray modal-action__btn" type="button"><span class="btn-action__inner-show">
+                                    <svg class="icon btn-action__icon">
+                                      <use xlink:href="images/sprite.svg#tennis"></use>
+                                    </svg><span class="btn-action__count btn-action__count--theme-red">2</span></span><span class="btn-action__inner-hide">
+                                    <svg class="icon btn-action__icon">
+                                      <use xlink:href="images/sprite.svg#close"></use>
+                                    </svg></span></button>
+                                <div class="modal-action__dropdown modal-action__dropdown--width-sm modal-action__dropdown--position-right-top scrollbar scrollbar--white-gray scrollbar--dir-y scrollbar--height-530">
+                                  <div class="modal-action__dropdown-players">
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--status-red players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-1.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-2.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark is-active" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--status-red players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--status-red players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--status-red players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--status-red players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-blue-light">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-card player-card--dir-1 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-players-item">
+                                      <div class="players-versus players-versus--theme-white">
+                                        <div class="players-versus__inner">
+                                          <div class="player-1card player-card--dir- player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Роджер Федерер"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Роджер<br>Федерер</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="player-card player-card--dir-2 player-card--size-sm players-versus__card">
+                                            <div class="player-card__inner">
+                                              <picture class="player-card__img"><img src="images/player-4.jpg" alt="Новак Джокович"/></picture>
+                                              <div class="player-card__content">
+                                                <div class="player-card__name">Новак<br>Джокович</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray players-versus__btn-bookmark" type="button">
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                              <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="group-control__item">
+                            <div class="modal-action">
+                              <div class="modal-action__inner">
+                                <button class="js-modal-action-init btn-action btn-action--modal-overlay btn-action--size-sm btn-action--theme-gray modal-action__btn" type="button"><span class="btn-action__inner-show">
+                                    <svg class="icon btn-action__icon">
+                                      <use xlink:href="images/sprite.svg#people"></use>
+                                    </svg><span class="btn-action__count btn-action__count--theme-red">5</span></span><span class="btn-action__inner-hide">
+                                    <svg class="icon btn-action__icon">
+                                      <use xlink:href="images/sprite.svg#close"></use>
+                                    </svg></span></button>
+                                <div class="modal-action__dropdown modal-action__dropdown--width-sm modal-action__dropdown--position-right-top scrollbar scrollbar--white-gray scrollbar--dir-y scrollbar--height-530">
+                                  <div class="modal-action__dropdown-tournament">
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--status-red tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--status-red tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark is-active" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-blue-light">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-tournament-item">
+                                      <div class="tournament-card tournament-card--theme-white">
+                                        <div class="tournament-card__inner">
+                                          <div class="tournament-card__content">
+                                            <p class="tournament-card__name">Millenium Estoril Open.</p>
+                                            <div class="tournament-card__location">Estoril. Portugal. Singles. Round of 16</div>
+                                            <time class="tournament-card__date" datetime="2020-04-29">29 апр - 30 апр 2020</time>
+                                          </div>
+                                          <div class="tournament-card__aside">
+                                            <picture class="tournament-card__association"><img src="images/atp-logo.png" alt="Estoril. Portugal. Singles. Round of 16"/></picture>
+                                            <button class="js-bookmark-btn bookmark-btn bookmark-btn--size-sm bookmark-btn--theme-gray tournament-card__btn-bookmark" type="button">
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                                              </svg>
+                                              <svg class="icon">
+                                                <use xlink:href="images/sprite.svg#bookmark-fill"></use>
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="site__main" role="main">
+          <div class="layout-page">
+            <div class="container layout-page__container">
+              <div class="profile-layout">
+                <div class="row profile-layout__row">
+                  <div class="row__col-3 profile-layout__col profile-layout__col--user">
+                    <div class="box box--theme-white">
+                      <div class="profile-layout__user">
+                        <picture class="profile-layout__user-avatar"><img src="images/avatar-1.jpg" alt="Kasbura"/></picture>
+                        <div class="profile-layout__user-email">Lionel@gmail.com</div>
+                        <div class="profile-layout__user-login">Kasbura</div>
+                        <div class="profile-layout__user-info">
+                          <div class="profile-layout__user-info-item"><span class="badge-info badge-info--position-top-right badge-info--theme-gray badge-info--size-md profile-layout__user-info-item-badge">
+                              <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
+                                <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
+                            <div class="profile-layout__user-info-item-card profile-layout__user-info-item-card--theme-gold">
+                              <div class="tick-line tick-line--size-md tick-line--theme-gold">
+                                <div class="tick-line__inner"><img class="tick-line__icon" src="images/sprite/coin-type-1-gradient.svg"/>
+                                  <div class="tick-line__title">467</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="profile-layout__user-info-item">
+                            <div class="profile-layout__user-info-item-card profile-layout__user-info-item-card--theme-green">
+                              <div class="tick-line tick-line--size-md tick-line--theme-green">
+                                <div class="tick-line__inner">
+                                  <svg class="icon tick-line__icon">
+                                    <use xlink:href="images/sprite.svg#cup"></use>
+                                  </svg>
+                                  <div class="tick-line__title">467</div>
+                                </div>
+                              </div>
+                            </div><span class="badge-info badge-info--position-top-right badge-info--theme-gray badge-info--size-md profile-layout__user-info-item-badge">
+                              <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
+                                <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
+                          </div>
+                        </div>
+                        <nav class="profile-layout__user-nav">
+                          <ul>
+                            <li><a class="is-active" href="#">Партнерская программа</a></li>
+                            <li><a href="#">Мои голосования</a></li>
+                            <li><a href="#">Как получить бонусы?</a></li>
+                            <li><a href="#">Настройки</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col-6 profile-layout__col profile-layout__col--main">
+                    <div class="box box--theme-white box--mobile-full">
+                      <div class="profile-layout__main">
+                        <div class="profile-layout__main-header">
+                          <div class="title-sup profile-layout__main-header-title">
+                            <h1 class="title-sup__title">Настройки</h1>
+                          </div>
+                        </div>
+                        <form class="profile-layout__main-settings" action="#">
+                          <div class="input-area-el profile-layout__main-settings-login">
+                            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="text" name="login" required="required" value="Kasbura" id="settings-login"/>
+                            <label class="input-area-el__label" for="settings-login">Ваш ник</label>
+                          </div>
+                          <div class="select-el select-el--theme-white-gray select-el--size-md profile-layout__main-settings-time">
+                            <div class="select-el__label">Ваш часовой пояс</div>
+                            <div class="select-el__body">
+                              <div class="select-el__selected">
+                                <div class="select-el__dropdown-line">
+                                  <div class="select-el__dropdown-line-title">&nbsp;</div>
+                                </div>
+                              </div>
+                              <ul class="select-el__dropdown">
+                                <li class="select-el__dropdown-line">
+                                  <div class="select-el__dropdown-line-title">+1</div>
+                                </li>
+                                <li class="select-el__dropdown-line">
+                                  <div class="select-el__dropdown-line-title">+2</div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="group-control group-control--size-lg profile-layout__main-settings-group">
+                            <div class="group-control__inner">
+                              <div class="group-control__item">
+                                <button class="btn btn--size-sm btn--theme-green-light rating-layout__footer-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Сменить пароль</span></span></button>
+                              </div>
+                              <div class="group-control__item">
+                                <button class="btn btn--size-sm btn--theme-green-light rating-layout__footer-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Сменить эл. почту</span></span></button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-lg-none row__col-3 profile-layout__col profile-layout__col--aside">
+                    <div class="card-appeal card-appeal--theme-gold profile-layout__appeal-refferal">
+                      <div class="card-appeal__inner">
+                        <picture class="card-appeal__picture"><img src="images/card-appeal-1.svg" alt=""/></picture>
+                        <div class="card-appeal__body">
+                          <div class="card-appeal__content">
+                            <div class="card-appeal__title">Приглашайте<br>друзей</div>
+                            <div class="content card-appeal__text">
+                              <p>Уловите свое руки мощные дохновениевкл адывает в ваши творческие инструменты</p>
+                            </div>
+                            <div class="card-appeal__refferal-link">Реферальная ссылка:<br><a href="">Http://example/domen/offer1/yandex</a></div>
+                          </div>
+                          <button class="btn btn--size-md btn--theme-white-orange card-appeal__btn" type="button"><span class="btn__inner"><span class="btn__title">Пригласить по почте</span></span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer site__footer">
+          <div class="footer__top">
+            <div class="container footer__top-container">
+              <div class="footer__top-col-aside footer__top-col-aside--logo"><a class="footer__top-logo" href="/"><img src="images/logo-brand-type-1.svg" alt="Tscore"/></a>
+                <nav class="u-nav u-nav--main footer__top-language">
+                  <ul class="u-nav__list">
+                    <li class="u-nav__item"><a class="u-nav__link is-active" href="#">Ru</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">En</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <button class="btn-router btn-router--size-sm btn-router--theme-gray footer__top-scroll-to-top" type="button">
+                <svg class="icon btn-router__icon">
+                  <use xlink:href="images/sprite.svg#arrow-type-3"></use>
+                </svg>
+              </button>
+              <div class="footer__top-col-aside footer__top-col-aside--sc">
+                <div class="sc-block sc-block--theme-gray footer__top-sc-block">
+                  <ul class="sc-block__list">
+                    <li class="sc-block__item"><a class="sc-block__link" href="#" target="_blank">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg></a></li>
+                    <li class="sc-block__item"><a class="sc-block__link" href="#" target="_blank">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#telegram"></use>
+                        </svg></a></li>
+                    <li class="sc-block__item"><a class="sc-block__link" href="#" target="_blank">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg></a></li>
+                    <li class="sc-block__item"><a class="sc-block__link" href="#" target="_blank">
+                        <svg class="icon sc-block__icon">
+                          <use xlink:href="images/sprite.svg#vk"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="container footer__bottom-container">
+              <div class="footer__bottom-privacy"><a href="#">Пользовательское соглашение</a></div>
+              <div class="footer__bottom-copyright">Все права защищены © 2021 AiTNS</div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/main.js?v=568532623346"></script>
+    <script src="js/select.js?v=568532623346"></script>
+    <script>
+      // appeal close mobile
+      const asideAppealBtnClose = document.querySelectorAll('.js-card-appeal-close');
+      
+      asideAppealBtnClose.forEach(button => {
+        button.addEventListener('click', () => {
+          const appeal = button.closest('.profile-layout__appeal-refferal');
+          appeal.classList.add('is-hidden');
+        });
+      });
+    </script>
+  </body>
+</html>

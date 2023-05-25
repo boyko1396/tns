@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .profile-layout
+                .row.profile-layout__row
+                  .row__col-3.profile-layout__col.profile-layout__col--user
+                    .box.box--theme-white
+                      include includes/profile-nav.pug
+                  .row__col-6.profile-layout__col.profile-layout__col--main
+                    .box.box--theme-white.box--mobile-full
+                      .profile-layout__main-header
+                        .title-sup.profile-layout__main-header-title
+                          h1.title-sup__title Мои голосования
+                        .profile-layout__main-header-tick-line-wrap
+                          .tick-line.tick-line--size-md.tick-line--theme-gray.profile-layout__main-header-tick-line
+                            .tick-line__inner
+                              svg.icon.tick-line__icon
+                                use(xlink:href='images/sprite.svg#star-type-1')
+                              .tick-line__title 51
+                          .tick-line.tick-line--size-md.tick-line--theme-gray.profile-layout__main-header-tick-line
+                            .tick-line__inner
+                              svg.icon.tick-line__icon
+                                use(xlink:href='images/sprite.svg#coin-type-1')
+                              .tick-line__title 467
+                          .color-green.profile-layout__main-header-profit 78%
+                      .js-tab-nav.tab-nav.tab-nav--theme-gray.tab-nav--size-md.profile-layout__main-tab-nav
+                        ul.tab-nav__list
+                          li.tab-nav__item
+                            a(href="#tab-all").tab-nav__link.is-active Все
+                          li.tab-nav__item
+                            a(href="#tab-win").tab-nav__link Выигравшие <strong>412</strong>
+                          li.tab-nav__item
+                            a(href="#tab-lose").tab-nav__link Проигравшие <strong>47</strong>
+                      .js-tab-content.tab-content.tab-content
+                        #tab-all.tab-content__item.is-show
+                          .profile-layout__vote
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +8
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +4
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +16
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +8
+                            .vote-card.vote-card--theme-red.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 5:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title -8
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-red.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title -8
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +16
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +8
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +16
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +8
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +16
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +8
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +16
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +8
+                          footer.profile-layout__footer
+                            button(type="submit").btn.btn--size-mdx.btn--theme-gray.profile-layout__footer-btn
+                              span.btn__inner
+                                span.btn__title Показать еще 50
+                        #tab-win.tab-content__item
+                          .profile-layout__vote
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +8
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +4
+                            .vote-card.vote-card--theme-accent.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 1:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title +16
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-green.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title +8
+                        #tab-lose.tab-content__item
+                          .profile-layout__vote
+                            .vote-card.vote-card--theme-red.profile-layout__vote-card
+                              .vote-card__inner
+                                .vote-card__header
+                                  .player-card.player-card--dir-1.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-1.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-green 78%
+                                        .player-card__name Роджер Федерер
+                                  .vote-card__header-result
+                                    .vote-card__header-result-major 5:0
+                                    .vote-card__header-result-set (5:7) (40:15)
+                                  .player-card.player-card--dir-2.player-card--size-sm.vote-card__header-player
+                                    .player-card__inner
+                                      picture.player-card__img
+                                        img(src="images/player-3.jpg" alt="Роджер Федерер")
+                                      .player-card__content
+                                        .player-card__percent.player-card__percent--theme-red 22%
+                                        .player-card__name Роджер Федерер
+                                .vote-card__info
+                                  picture.vote-card__info-picture
+                                    img(src="images/atp-logo.png" alt="Millenium Estoril Open.")
+                                  .vote-card__info-text
+                                    time.vote-card__info-text-date 29 апр - 30 апр 2020
+                                    .vote-card__info-text-title Millenium Estoril Open.
+                                    .vote-card__info-text-subtitle Estoril. Portugal. Singles. Round of 16
+                                  .vote-card__info-profit
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-gold.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                                        .tick-line__title -8
+                                    .tick-line.tick-line--size-mdx.tick-line--theme-red.vote-card__info-profit-tick-line
+                                      .tick-line__inner
+                                        svg.icon.tick-line__icon
+                                          use(xlink:href='images/sprite.svg#cup')
+                                        .tick-line__title -8
+                  .d-lg-none.row__col-3.profile-layout__col.profile-layout__col--aside
+                    .card-appeal.card-appeal--theme-gold.profile-layout__appeal-refferal
+                      .card-appeal__inner
+                        picture.card-appeal__picture
+                          img(src="images/card-appeal-1.svg" alt="")
+                        .card-appeal__content
+                          .card-appeal__title Приглашайте<br>друзей
+                          .content.card-appeal__text
+                            p Уловите свое руки мощные дохновениевкл адывает в ваши творческие инструменты
+                          .card-appeal__refferal-link
+                            | Реферальная ссылка:<br><a href="">Http://example/domen/offer1/yandex</a>
+                        button(type="button").btn.btn--size-md.btn--theme-white-orange.card-appeal__btn
+                          span.btn__inner
+                            span.btn__title Пригласить по почте
+
+
+        include includes/footer.pug
+    include includes/foot.pug
+
+    script.
+      var tabNavList = document.querySelector('.js-tab-nav');
+      var tabNavItems = tabNavList.querySelectorAll('a');
+      var tabContentItems = document.querySelectorAll('.js-tab-content > div');
+
+      tabNavItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          if (this.classList.contains('is-active')) {
+            return;
+          } else {
+            tabNavItems.forEach(function(navItem) {
+              navItem.classList.remove('is-active');
+            });
+            this.classList.add('is-active');
+
+            tabContentItems.forEach(function(contentItem) {
+              contentItem.classList.remove('is-show');
+            });
+
+            var activeTab = this.getAttribute('href');
+            document.querySelector(activeTab).classList.add('is-show');
+          }
+        });
+      });

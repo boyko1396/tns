@@ -1,0 +1,152 @@
+.about-layout {
+    &__row {
+    }
+    &__col {
+        &--main {
+            @media (max-width: $md) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &--aside {
+            @media (max-width: $md) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &--info-main {
+            @media (max-width: $md) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &--info-aside {
+            @media (max-width: $md) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+    &__block {
+        & + & {
+            margin-top: 8rem;
+        }
+        &-title {
+            margin: 0 0 32rem;
+            font-weight: bold;
+            font-size: var(--fs-5);
+            @media (max-width: $sm) {
+                margin-bottom: 16rem;
+            }
+        }
+        &-card {
+            & + & {
+                margin-top: 2rem;
+            }
+        }
+        &-contacts-list {
+            margin: -8rem;
+            padding: 0 0 40rem;
+            display: flex;
+            @media (max-width: $md) {
+                margin: -4rem;
+                padding-bottom: 16rem;
+            }
+            @media (max-width: $xs) {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            &-item {
+                margin: 8rem;
+                flex: 1;
+                @media (max-width: $md) {
+                    margin: 4rem;
+                    flex: auto;
+                }
+            }
+        }
+    }
+    &__aside {
+        @media (max-width: $md) {
+            margin-top: 16rem;
+        }
+        &-title {
+            margin: 0 0 4rem;
+            font-weight: bold;
+            font-size: var(--fs-5);
+            @media (max-width: $sm) {
+                font-size: 16rem;
+            }
+        }
+        &-subtitle {
+            margin: 0 0 32rem;
+            font-size: var(--fs-6);
+            color: $color-green-1;
+            @media (max-width: $sm) {
+                margin-bottom: 16rem;
+                font-size: 14rem;
+            }
+        }
+        &-form {
+            &-login {
+                margin: 0 0 16rem;
+            }
+            &-message {
+                margin: 0 0 32rem;
+                @media (max-width: $sm) {
+                    margin-bottom: 24rem;
+                }
+            }
+            &-btn {
+            }
+        }
+    }
+    &__info {
+        @media (max-width: $md) {
+            margin-bottom: 16rem;
+        }
+        &-title {
+            margin: 0 0 24rem;
+            font-weight: normal;
+            font-size: var(--fs-9);
+            @media (max-width: $lg) {
+                margin-bottom: 16rem;
+            }
+        }
+        &-list {
+            margin: 0 -4rem -8rem;
+            padding-bottom: 24rem;
+            display: flex;
+            flex-wrap: wrap;
+            @media (max-width: $lg) {
+                padding-bottom: 16rem;
+            }
+            &-col {
+                max-width: 25%;
+                margin-bottom: 8rem;
+                padding: 0 4rem;
+                flex: 0 0 25%;
+                @media (max-width: $lg) {
+                    max-width: 50%;
+                    flex-basis: 50%;
+                }
+            }
+            &-card {
+                height: 100%;
+            }
+        }
+        &-text {
+            line-height: 1.6;
+        }
+        &-aside {
+            &-card {
+                & + & {
+                    margin-top: 8rem;
+                    @media (max-width: $md) {
+                        margin-top: 16rem;
+                    }
+                }
+            }
+        }
+    }
+}

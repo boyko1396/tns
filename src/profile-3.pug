@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .profile-layout
+                .row.profile-layout__row
+                  .row__col-3.profile-layout__col.profile-layout__col--user
+                    .box.box--theme-white
+                      include includes/profile-nav.pug
+                  .row__col-9.profile-layout__col.profile-layout__col--appeal-bonuses
+                    .row.profile-layout__row-appeal-bonuses
+                      .row__col-4.profile-layout__col-bonuses
+                        .card-appeal.card-appeal--size-md.card-appeal--theme-green.profile-layout__appeal-bonuses
+                          .card-appeal__inner
+                            picture.card-appeal__picture
+                              img(src="images/card-appeal-2.svg" alt="")
+                            .card-appeal__body
+                              .card-appeal__content
+                                .card-appeal__title Угадывайте<br>исход матча
+                                .content.card-appeal__text
+                                  p Уловите свое руки мощные  дохновениевкл адывает в ваши  творческие инструменты, которые обеспечивают абсолютный контроль над текстом
+                              footer.card-appeal__footer
+                                .tick-line.tick-line--size-lg.tick-line--theme-white.card-appeal__footer-tick-line
+                                  .tick-line__inner
+                                    svg.icon.tick-line__icon
+                                      use(xlink:href='images/sprite.svg#coin-type-1')
+                                    .tick-line__title +20
+                      .row__col-4.profile-layout__col-bonuses
+                        .card-appeal.card-appeal--size-md.card-appeal--theme-red.profile-layout__appeal-bonuses
+                          .card-appeal__inner
+                            picture.card-appeal__picture
+                              img(src="images/card-appeal-3.svg" alt="")
+                            .card-appeal__body
+                              .card-appeal__content
+                                .card-appeal__title Угадывайте серию<br>исходов матчей
+                                .content.card-appeal__text
+                                  p Уловите свое руки мощные  дохновениевкл адывает в ваши  творческие инструменты, которые обеспечивают абсолютный контроль над текстом. их помощью в
+                              footer.card-appeal__footer
+                                .tick-line.tick-line--size-lg.tick-line--theme-white.card-appeal__footer-tick-line
+                                  .tick-line__inner
+                                    svg.icon.tick-line__icon
+                                      use(xlink:href='images/sprite.svg#coin-type-1')
+                                    .tick-line__title +20
+                      .row__col-4.profile-layout__col-bonuses
+                        .card-appeal.card-appeal--size-md.card-appeal--theme-gold.profile-layout__appeal-bonuses
+                          .card-appeal__inner
+                            picture.card-appeal__picture
+                              img(src="images/card-appeal-1.svg" alt="")
+                            .card-appeal__body
+                              .card-appeal__content
+                                .card-appeal__title Приглашайте<br>друзей
+                                .content.card-appeal__text
+                                  p Уловите свое руки мощные дохновениевкл адывает в ваши творческие инструменты
+                                .card-appeal__refferal-link
+                                  | Реферальная ссылка:<br><a href="">Http://example/domen/offer1/yandex</a>
+                              button(type="button").btn.btn--size-md.btn--theme-white-orange.card-appeal__btn
+                                span.btn__inner
+                                  span.btn__title Пригласить по почте
+                              footer.card-appeal__footer
+                                .tick-line.tick-line--size-lg.tick-line--theme-white.card-appeal__footer-tick-line
+                                  .tick-line__inner
+                                    svg.icon.tick-line__icon
+                                      use(xlink:href='images/sprite.svg#coin-type-1')
+                                    .tick-line__title +20
+
+
+        include includes/footer.pug
+    include includes/foot.pug
+    script

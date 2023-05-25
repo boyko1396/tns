@@ -1,0 +1,45 @@
+.privacy-layout {
+    max-width: 768rem;
+    margin: 0 auto;
+    padding: 32rem 0;
+    @media (max-width: $lg) {
+        padding: 20rem 0;
+    }
+    &__container {
+    }
+    &__title {
+        margin: 0 0 32rem;
+        font-weight: normal;
+        font-size: var(--fs-9);
+        @media (max-width: $lg) {
+            margin-bottom: 16rem;
+            font-size: 22rem;
+        }
+        @media (max-width: $sm) {
+            font-size: 18rem;
+        }
+    }
+    &__list {
+        &-card {
+            & + & {
+                margin-top: 16rem;
+                @media (max-width: $lg) {
+                    margin-top: 0;
+                }
+            }
+            &-title {
+                margin: 0 0 16rem;
+                font-weight: bold;
+                font-size: var(--fs-5);
+                color: $color-green-1;
+                @media (max-width: $lg) {
+                    margin-bottom: 8rem;
+                    font-size: 16rem;
+                }
+            }
+            &-text {
+                line-height: 1.4;
+            }
+        }
+    }
+}

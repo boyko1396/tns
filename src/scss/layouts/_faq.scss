@@ -1,0 +1,126 @@
+.faq-layout {
+    &__row {
+    }
+    &__col {
+        &--aside {
+            @media (max-width: $sm) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &--main {
+            @media (max-width: $sm) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+    &__aside {
+        @media (max-width: $sm) {
+            background: $color-white-1;
+            margin: -16rem var(--gap-) 8rem;
+            padding: var(--gap);
+        }
+        &-title {
+            margin: 0 0 12rem;
+            font-weight: normal;
+            font-size: var(--fs-9);
+            color: $color-black-1;
+        }
+        &-nav {
+            background: $color-white-1;
+            padding: 20rem 0;
+            font-size: 14rem;
+            color: $color-gray-4;
+            border-radius: 8rem;
+            @media (max-width: $sm) {
+                background: transparent;
+                margin: 0 var(--gap-);
+                padding: 0 var(--gap);
+                border-radius: 0;
+                overflow: hidden;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                @media (max-width: $sm) {
+                    margin: 0 var(--gap-) -30rem;
+                    padding: 0 var(--gap) 30rem;
+                    display: flex;
+                    overflow-x: auto;
+                }
+            }
+            li {
+                margin: 0;
+                padding: 0;
+                @media (max-width: $sm) {
+                    flex-shrink: 0;
+                }
+                &:not(:last-child) {
+                    @media (max-width: $sm) {
+                        margin-right: 16rem;
+                    }
+                }
+            }
+            a {
+                padding: 12rem 16rem;
+                display: block;
+                transition: all .22s;
+                @media (max-width: $sm) {
+                    padding: 0;
+                }
+                &.is-active {
+                    color: $color-green-1;
+                    pointer-events: none;
+                    cursor: default;
+                    @media (max-width: $sm) {
+                        color: $color-black-1;
+                    }
+                }
+                &:hover {
+                    text-decoration: none;
+                    @media (min-width: $lg-mf) {
+                        color: $color-black-1;
+                    }
+                }
+            }
+        }
+        &-popular {
+            margin-top: 16rem;
+            padding: 16rem;
+            &-title {
+                margin: 0 0 16rem;
+                font-weight: bold;
+                font-size: var(--fs-5);
+            }
+            &-list {
+                margin: 0;
+                padding: 0;
+                color: $color-gray-1;
+                list-style-type: none;
+                li {
+                    margin: 0;
+                    padding: 0;
+                }
+                a {
+                    padding: 10rem 0;
+                    display: block;
+                    transition: all .22s;
+                    &:hover {
+                        text-decoration: none;
+                        @media (min-width: $lg-mf) {
+                            color: $color-black-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__card {
+        line-height: 1.55;
+        & + & {
+            margin-top: 8rem;
+        }
+    }
+}

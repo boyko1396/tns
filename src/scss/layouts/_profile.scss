@@ -1,0 +1,238 @@
+.profile-layout {
+    &__row {
+    }
+    &__col {
+        &--user {
+            align-self: flex-start;
+            @media (max-width: $lg) {
+                display: none;
+            }
+        }
+        &--main {
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        &--aside {
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+                order: -1;
+            }
+        }
+        &--appeal-bonuses {
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+    &__row-appeal-bonuses {
+        --gap: 8rem;
+        --gap-: -8rem;
+    }
+    &__col-bonuses {
+        & + & {
+            @media (max-width: $md) {
+                margin-top: 16rem;
+            }
+        }
+        @media (max-width: $md) {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+    }
+    &__user {
+        text-align: center;
+        &-avatar {
+            @extend .img-cover;
+            width: 140rem;
+            height: 140rem;
+            margin: 0 auto 32rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-email {
+            margin: 0 0 8rem;
+            font-weight: bold;
+            font-size: var(--fs-8);
+            color: $color-gray-1;
+        }
+        &-login {
+            margin: 0 0 32rem;
+            font-size: var(--fs-10);
+        }
+        &-info {
+            margin: -4rem -8rem 28rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--fs-8);
+            flex-wrap: wrap;
+            &-item {
+                margin: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                &-badge {
+                    flex-shrink: 0;
+                }
+                &-card {
+                    padding: 7rem 8rem;
+                    border-radius: 8rem;
+                    position: relative;
+                    z-index: 0;
+                    &--theme {
+                        &-gold {
+                            color: $color-gold-3;
+                            &:before {
+                                background: $gradient-orange-1;
+                                width: 100%;
+                                height: 100%;
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                border-radius: inherit;
+                                opacity: .08;
+                                pointer-events: none;
+                                z-index: -1;
+                            }
+                        }
+                        &-green {
+                            background: rgba($color-green-1, .08);
+                            color: $color-green-1;
+                        }
+                    }
+                }
+                &-badge + &-card,
+                &-card + &-badge {
+                    margin-left: 12rem;
+                }
+            }
+        }
+        &-nav {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            li {
+                margin: 0;
+                padding: 0;
+            }
+            a {
+                padding: 17rem 0 16rem;
+                display: block;
+                color: $color-gray-1;
+                text-align: center;
+                border-bottom: 2rem solid transparent;
+                user-select: none;
+                transition: all .22s;
+                &:hover {
+                    text-decoration: none;
+                    @media (min-width: $lg-mf) {
+                        color: $color-black-1;
+                    }
+                }
+                &.is-active {
+                    color: $color-black-1;
+                    border-bottom-color: $color-green-1;
+                    user-select: none;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    &__main {
+        &-header {
+            margin: 0 0 28rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: $lg) {
+                margin-bottom: 16rem;
+            }
+            &-title {
+            }
+            &-tick-line-wrap {
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+            }
+            &-tick-line {
+                margin-right: 12rem;
+                flex-shrink: 0;
+                @media (max-width: $lg) {
+                    margin-right: 8rem;
+                }
+            }
+            &-profit {
+                margin-left: 12rem;
+                flex-shrink: 0;
+                font-weight: bold;
+                font-size: var(--fs-5);
+                color: $color-green-1;
+                text-align: right;
+                @media (max-width: $lg) {
+                    margin-left: 4rem;
+                    font-size: 16rem;
+                }
+            }
+        }
+        &-tab-nav {
+            margin: -4rem 0 26rem;
+            @media (max-width: $lg) {
+                margin-bottom: 20rem;
+            }
+        }
+        &-partners {
+            &-card {
+            }
+        }
+        &-settings {
+            padding-top: 4rem;
+            &-login {
+                width: 100%;
+                margin: 0 0 16rem;
+            }
+            &-time {
+                width: 100%;
+                margin: 0 0 32rem;
+                @media (max-width: $lg) {
+                    margin-bottom: 16rem;
+                }
+            }
+            &-group {
+            }
+        }
+    }
+    &__vote {
+        &-card {
+            & + & {
+                margin-top: 8rem;
+            }
+        }
+    }
+    &__appeal-refferal {
+        @media (max-width: $lg) {
+            margin-bottom: 16rem;
+        }
+        &.is-hidden {
+            @media (max-width: $lg) {
+                display: none;
+            }
+        }
+    }
+    &__footer {
+        margin-top: 16rem;
+        &-btn {
+            width: 100%;
+        }
+    }
+    &__appeal-bonuses {
+        height: 100%;
+    }
+}

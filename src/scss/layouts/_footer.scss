@@ -1,0 +1,87 @@
+.footer {
+    background: $color-white-1;
+    color: $color-gray-1;
+    box-shadow: 0 -15rem 20rem 4rem rgba($color-gray-1, .1);
+    &__top {
+        &-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-col-aside {
+            max-width: calc(50% - 16rem);
+            flex: 0 0 calc(50% - 16rem);
+            &--logo {
+                min-height: 52rem;
+                display: flex;
+                align-items: center;
+            }
+            &--sc {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        &-logo {
+            max-width: 62rem;
+            margin-right: 20rem;
+            display: block;
+            font-size: 0;
+            flex: 0 0 62rem;
+            align-self: center;
+            filter: grayscale(1);
+            transition: all .4s;
+            @media (max-width: $xs) {
+                margin-right: 16rem;
+            }
+            &:hover {
+                text-decoration: none;
+                @media (min-width: $lg-mf) {
+                    filter: grayscale(0);
+                }
+            }
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+        &-language {
+            height: 100%;
+        }
+        &-scroll-to-top {
+            margin: 0 auto;
+            flex-shrink: 0;
+            align-self: center;
+        }
+        &-sc-block {
+            align-self: center;
+        }
+    }
+    &__bottom {
+        background: $color-gray-3;
+        padding: 12rem 0;
+        font-weight: 500;
+        font-size: var(--fs-8);
+        @media (max-width: $lg) {
+            font-size: 10rem;
+        }
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-privacy {
+            a {
+                box-shadow: inset 0 -1rem 0 currentColor;
+                transition: all .24s;
+                &:hover {
+                    text-decoration: none;
+                    @media (min-width: $lg-mf) {
+                        color: $color-black-1;
+                    }
+                }
+            }
+        }
+        &-copyright {
+        }
+    }
+}

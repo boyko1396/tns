@@ -1,0 +1,85 @@
+.error-layout {
+    min-height: 100vh;
+    padding: 40rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $sm) {
+            flex-direction: column;
+        }
+    }
+    &__content {
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        text-align: center;
+        @media (max-width: $sm) {
+            width: 100%;
+            max-width: 100%;
+        }
+        &-logo {
+            width: 120rem;
+            margin: 0 0 80rem;
+            display: block;
+            transition: all .2s;
+            transition-property: opacity;
+            @media (max-width: $sm) {
+                width: 62rem;
+                margin-bottom: 40rem;
+            }
+            &:hover {
+                text-decoration: none;
+                @media (min-width: $lg-mf) {
+                    opacity: .6;
+                }
+            }
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+        &-code {
+            background: linear-gradient(269.86deg, #1AA183 0.65%, #EBCE42 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-stroke: 3px transparent;
+            width: 100%;
+            margin: 0 0 20rem;
+            font-weight: 900;
+            font-size: 120rem;
+            line-height: 1;
+            color: $color-gray-2;
+            text-align: center;
+            white-space: nowrap;
+        }
+        &-text {
+            width: 100%;
+            margin: 0 0 60rem;
+            font-weight: 300;
+            font-size: var(--fs-9);
+        }
+        &-btn {
+        }
+    }
+    &__picture {
+        width: 100%;
+        max-width: 640rem;
+        pointer-events: none;
+        user-select: none;
+        @media (max-width: $sm) {
+            margin: 20rem 0 -20rem;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}

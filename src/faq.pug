@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+        include includes/header-type-1.pug
+
+        main(role="main").site__main
+          .layout-page
+            .container.layout-page__container
+              .faq-layout
+                .row.faq-layout__row
+                  .row__col-3.faq-layout__col.faq-layout__col--aside
+                    aside.faq-layout__aside
+                      h1.d-sm-block.faq-layout__aside-title Хелпер
+                      nav.faq-layout__aside-nav
+                        ul
+                          li
+                            a(href="#").is-active Общие вопросы
+                          li
+                            a(href="#") Прогнозы
+                          li
+                            a(href="#") Бонусы
+                          li
+                            a(href="#") Статистика
+                          li
+                            a(href="#") Гид по сервису
+                      .d-sm-none.faq-layout__aside-popular
+                        .faq-layout__aside-popular-title Популярные темы
+                        ul.faq-layout__aside-popular-list
+                          li
+                            a(href="#") Как добавить прогноз?
+                          li
+                            a(href="#") Прогноз не рассчитался после окончания события
+                          li
+                            a(href="#") Прогноз не опубликовался в моем профиле
+                          li
+                            a(href="#") Как ставить в турнирах?
+                          li
+                            a(href="#") Рассчет прогнозов и ошибки
+                  .row__col-9.faq-layout__col.faq-layout__col--main
+                    .content.box.box--theme-white-gradient.box--mobile-full.faq-layout__card
+                      h2 Весь теннис в ваших руках
+                      p Аловите свое руки мощные  вдохновениевкладывает в ваши  творческие инструменты, которые обеспечивают абсолютный контроль над текстом. их помощью вы любым элементам тени,  эффекты с использованием прозрачности. Они позволят вам создавать элегантные таблицы.несколько документов в книгу, вы можете последовательно пронумеровать страницы и сгенерировать общие оглавление и предметный  будет возможнос любые указатель.
+                      img(src="images/faq-img-1.jpg")
+                    .content.box.box--theme-white-gradient.box--mobile-full.faq-layout__card
+                      h2 Весь теннис в ваших руках
+                      p Аловите свое руки мощные  вдохновениевкладывает в ваши  творческие инструменты, которые обеспечивают абсолютный контроль над текстом. их помощью вы любым элементам тени,  эффекты с использованием прозрачности. Они позволят вам создавать элегантные таблицы.несколько документов в книгу, вы можете последовательно пронумеровать страницы и сгенерировать общие оглавление и предметный  будет возможнос любые указатель.
+                      img(src="images/faq-img-1.jpg")
+
+        include includes/footer.pug
+    include includes/foot.pug
+    script
