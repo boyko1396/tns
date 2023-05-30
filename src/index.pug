@@ -82,6 +82,13 @@ html(lang='ru')
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
                     .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
                       .event-card__row
                         .event-card__col.event-card__col--result.event-card__col--result-career
                           .event-card__stat-imgs.event-card__stat-imgs--theme-red
@@ -233,6 +240,9 @@ html(lang='ru')
                       .event-card__row.event-card__row--middle
                         .event-card__col.event-card__col--graph.event-card__col--graph-stability
                           .event-card__graph
+                            button(type="button").js-event-graph-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
                             .event-card__graph-header
                               .event-card__subtitle Стабильность
                             .event-card__graph-body
@@ -240,6 +250,9 @@ html(lang='ru')
                               #tooltip-container
                         .event-card__col.event-card__col--graph.event-card__col--graph-stat
                           .event-card__versus
+                            button(type="button").js-event-versus-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
                             .event-card__versus-col
                               .event-card__versus-line
                                 .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
@@ -350,13 +363,61 @@ html(lang='ru')
                               .event-card__subtitle Опыт
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 75%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red(style="--stat-graph-progress: 80%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 61%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-talent
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -364,12 +425,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='10%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='90%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-motivation
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -377,12 +486,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-stability
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -390,12 +547,86 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 69%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 91%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-1
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-2
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
                         .event-card__col.event-card__col--graph-person.event-card__col--graph-person-second
                           .event-card__graph-person
                       .event-card__footer-action
@@ -474,6 +705,13 @@ html(lang='ru')
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
                     .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
                       .event-card__row
                         .event-card__col.event-card__col--result.event-card__col--result-career
                           .event-card__stat-imgs.event-card__stat-imgs--theme-red
@@ -630,6 +868,9 @@ html(lang='ru')
                             .event-card__graph-body
                         .event-card__col.event-card__col--graph.event-card__col--graph-stat
                           .event-card__versus
+                            button(type="button").js-event-versus-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
                             .event-card__versus-col
                               .event-card__versus-line
                                 .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
@@ -740,12 +981,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 75%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 61%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-talent
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -753,12 +1042,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-motivation
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -766,12 +1103,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-stability
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -779,12 +1164,86 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 69%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 91%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-1
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-2
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
                         .event-card__col.event-card__col--graph-person.event-card__col--graph-person-second
                           .event-card__graph-person
                       .event-card__footer-action
@@ -870,6 +1329,13 @@ html(lang='ru')
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
                     .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
                       .event-card__row
                         .event-card__col.event-card__col--result.event-card__col--result-career
                           .event-card__stat-imgs.event-card__stat-imgs--theme-red
@@ -1029,12 +1495,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 75%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 61%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-talent
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -1042,12 +1556,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-motivation
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -1055,12 +1617,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-stability
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -1068,12 +1678,86 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 69%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 91%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-1
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-2
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
                         .event-card__col.event-card__col--graph-person.event-card__col--graph-person-second
                           .event-card__graph-person
                       .event-card__footer-action
@@ -1150,6 +1834,13 @@ html(lang='ru')
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
                     .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
                       .event-card__row
                         .event-card__col.event-card__col--result.event-card__col--result-career
                           .event-card__stat-imgs.event-card__stat-imgs--theme-red
@@ -1314,6 +2005,9 @@ html(lang='ru')
                             .event-card__graph-body
                         .event-card__col.event-card__col--graph.event-card__col--graph-stat
                           .event-card__versus
+                            button(type="button").js-event-versus-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
                             .event-card__versus-col
                               .event-card__versus-line
                                 .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
@@ -1424,12 +2118,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 75%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 61%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-talent
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -1437,12 +2179,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-motivation
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -1450,12 +2240,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-stability
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -1463,12 +2301,86 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 69%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 91%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-1
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-2
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
                         .event-card__col.event-card__col--graph-person.event-card__col--graph-person-second
                           .event-card__graph-person
                       .event-card__footer-action
@@ -1545,6 +2457,13 @@ html(lang='ru')
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
                     .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
                       .event-card__row
                         .event-card__col.event-card__col--result.event-card__col--result-career
                           .event-card__stat-imgs.event-card__stat-imgs--theme-red
@@ -1701,6 +2620,9 @@ html(lang='ru')
                             .event-card__graph-body
                         .event-card__col.event-card__col--graph.event-card__col--graph-stat
                           .event-card__versus
+                            button(type="button").js-event-versus-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
                             .event-card__versus-col
                               .event-card__versus-line
                                 .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
@@ -1819,7 +2741,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -1837,7 +2759,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -1860,7 +2782,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -1878,7 +2800,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -1901,7 +2823,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -1919,7 +2841,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -1942,7 +2864,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -1960,7 +2882,7 @@ html(lang='ru')
                                         .stat-graph__lock-dropdown-content
                                           .stat-graph__lock-dropdown-title Умное голосование
                                           .stat-graph__lock-dropdown-text Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы
-                                        button(type="submit").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
+                                        button(type="button").js-prime-modal-init.btn.btn--size-mdxx.btn--theme-gradient-accent.stat-graph__lock-dropdown-btn-moore
                                           span.btn__inner
                                             span.btn__title Показать остальные
                                             svg.icon.btn__icon.btn__icon--dir-rtl
@@ -2068,6 +2990,13 @@ html(lang='ru')
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
                     .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
                       .event-card__row
                         .event-card__col.event-card__col--result.event-card__col--result-career
                           .event-card__stat-imgs.event-card__stat-imgs--theme-red
@@ -2244,6 +3173,9 @@ html(lang='ru')
                             .event-card__graph-body
                         .event-card__col.event-card__col--graph.event-card__col--graph-stat
                           .event-card__versus
+                            button(type="button").js-event-versus-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
                             .event-card__versus-col
                               .event-card__versus-line
                                 .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
@@ -2358,12 +3290,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 75%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 61%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-talent
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -2371,12 +3351,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-motivation
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -2384,12 +3412,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-stability
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -2397,12 +3473,86 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 69%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 91%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-1
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-2
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
                         .event-card__col.event-card__col--graph-person.event-card__col--graph-person-second
                           .event-card__graph-person
                       .event-card__footer-action
@@ -2493,6 +3643,13 @@ html(lang='ru')
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
                     .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
                       .event-card__row
                         .event-card__col.event-card__col--result.event-card__col--result-career
                           .event-card__stat-imgs.event-card__stat-imgs--theme-red
@@ -2649,6 +3806,9 @@ html(lang='ru')
                             .event-card__graph-body
                         .event-card__col.event-card__col--graph.event-card__col--graph-stat
                           .event-card__versus
+                            button(type="button").js-event-versus-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
                             .event-card__versus-col
                               .event-card__versus-line
                                 .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
@@ -2759,12 +3919,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 75%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 61%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-talent
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -2772,12 +3980,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-motivation
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -2785,12 +4041,60 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 45%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 53%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
                         .event-card__col.event-card__col--stat.event-card__col--stat-stability
                           .event-card__person-stat
                             .event-card__person-stat-header
@@ -2798,12 +4102,86 @@ html(lang='ru')
                             .event-card__person-stat-list
                               .event-card__person-stat-list-item
                                 .stat-graph.stat-graph--size-sm.stat-graph--theme-red
-                                  .stat-graph__inner
-                                    .stat-graph__percent 69%
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
                               .event-card__person-stat-list-item
-                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light
-                                  .stat-graph__inner
-                                    .stat-graph__percent 91%
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-1
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-2
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
                         .event-card__col.event-card__col--graph-person.event-card__col--graph-person-second
                           .event-card__graph-person
                       .event-card__footer-action
@@ -2828,63 +4206,9 @@ html(lang='ru')
         include includes/footer.pug
     include includes/foot.pug
 
-    //- <button class="js-modal-login">login</button>
-    //- <br>
-    //- <button class="js-modal-register">register</button>
-
-    .tingle-modal.u-modal--login
-      .u-modal
-
-    .tingle-modal.u-modal--register
-      div register Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in error consequatur eum, quasi expedita facilis, placeat voluptas ipsa hic labore, eius nisi earum culpa? Laboriosam aspernatur, delectus cum asperiores?
-
-
     script(src="js/chart.js?v=568532623346")
+    script(src="js/PieMeister-with-Progress.min.js?v=568532623346")
     script(src="js/tingle.js?v=568532623346")
-    script.
-      // 1 modal
-      var modalLogin = new tingle.modal ({
-        onClose: function () {
-        },
-        onOpen: function () {
-        },
-        beforeOpen: function () {
-        },
-        beforeClose: function () {
-          return true;
-        }
-      });
-
-      var modalLoginBtn = document.querySelector('.js-modal-login');
-
-      modalLoginBtn.addEventListener('click', function () {
-        modalLogin.open();
-      });
-
-      modalLogin.setContent(document.querySelector('.u-modal--login').innerHTML);
-
-      // 2 modal
-      var modalRegister = new tingle.modal ({
-        onClose: function () {
-        },
-        onOpen: function () {
-        },
-        beforeOpen: function () {
-        },
-        beforeClose: function () {
-          return true;
-        }
-      });
-
-      var modalRegisterBtn = document.querySelector('.js-modal-register');
-
-      modalRegisterBtn.addEventListener('click', function () {
-        modalRegister.open();
-      });
-
-      modalRegister.setContent(document.querySelector('.u-modal--register').innerHTML);
-
-
     script.
       // chart 
       var labels = ['Event 1', 'Event 2', 'Event 3', 'Event 4', 'Event 5', 'Event 6', 'Event 7', 'Event 8', 'Event 9', 'Event 10'];
@@ -3056,5 +4380,47 @@ html(lang='ru')
         button.addEventListener('click', function() {
           var eventCard = this.closest('.event-card');
           eventCard.classList.toggle('is-show-stat');
+        });
+      });
+
+      // event card stat show mobile
+      const eventInfoBtnMobile = document.querySelectorAll('.js-event-card-stat-view-mobile');
+
+      eventInfoBtnMobile.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.toggle('is-hidden-mobile');
+          eventCard.classList.toggle('is-show-stat-mobile');
+        });
+      });
+
+      const eventInfoBtnMobileClose = document.querySelectorAll('.js-event-versus-btn-close');
+
+      eventInfoBtnMobileClose.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.remove('is-hidden-mobile');
+          eventCard.classList.remove('is-show-stat-mobile');
+        });
+      });
+
+      // event card graph show mobile
+      const eventGraphBtnMobile = document.querySelectorAll('.js-event-card-graph-mobile');
+
+      eventGraphBtnMobile.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.toggle('is-hidden-mobile');
+          eventCard.classList.toggle('is-show-graph-mobile');
+        });
+      });
+
+      const eventGraphBtnMobileClose = document.querySelectorAll('.js-event-graph-btn-close');
+
+      eventGraphBtnMobileClose.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.remove('is-hidden-mobile');
+          eventCard.classList.remove('is-show-graph-mobile');
         });
       });

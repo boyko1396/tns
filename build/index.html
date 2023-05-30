@@ -18,7 +18,9 @@
       <div class="site__inner">
         <header class="header header--position-sticky site__header">
           <div class="header__top">
-            <div class="container header__top-container"><a class="header__top-logo" href="/"><img src="images/logo-brand-type-1.svg" alt="Tscore"/></a>
+            <div class="container header__top-container">
+              <button class="js-header-toggle header__top-toggle" type="button"><span></span><span></span><span></span></button><a class="header__top-logo" href="/"><img src="images/logo-brand-type-1.svg" alt="Tscore"/></a>
+              <div class="js-header-toggle u-overlay header__top-dropdown-overlay"></div>
               <div class="header__top-dropdown">
                 <nav class="u-nav u-nav--main header__top-nav">
                   <ul class="u-nav__list">
@@ -29,11 +31,19 @@
                     <li class="u-nav__item"><a class="u-nav__link" href="#">Донат</a></li>
                   </ul>
                 </nav>
+                <nav class="u-nav u-nav--main header__top-nav-mobile">
+                  <ul class="u-nav__list">
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">О проекте</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">Помощь</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">Способы оплаты</a></li>
+                    <li class="u-nav__item"><a class="u-nav__link" href="#">Контакты</a></li>
+                  </ul>
+                </nav>
               </div>
-              <div class="header__top-aside"><a class="header__top-aside-btn-appeal" href="#">
-                  <svg class="icon">
-                    <use xlink:href="images/sprite.svg#arrow-type-1"></use>
-                  </svg><span>Go to pro</span></a>
+              <div class="header__top-aside"><a class="btn btn--size-xs btn--theme-purple header__top-aside-btn-appeal" href="#"><span class="btn__inner">
+                    <svg class="icon btn__icon btn__icon--dir-ltr">
+                      <use xlink:href="images/sprite.svg#arrow-type-1"></use>
+                    </svg><span class="btn__title">Go to pro</span></span></a>
                 <div class="header__top-aside-notification-wrap">
                   <button class="header__top-aside-notification header__top-aside-notification--new" type="button">
                     <svg class="icon">
@@ -86,14 +96,14 @@
               </nav>
               <div class="header__bottom-filter">
                 <div class="header__list">
-                  <div class="header__list-item">
+                  <div class="d-md-none header__list-item">
                     <div class="header__bottom-filter-accent">
                       <label class="u-switcher u-switcher--size-sm u-switcher--theme-gray">
                         <input class="u-switcher__control" type="checkbox" name="accent" value="Акцент"/><span class="u-switcher__inner"><span class="u-switcher__title">Акцент</span><span class="u-switcher__icon"></span></span>
                       </label>
                     </div>
                   </div>
-                  <div class="header__list-item">
+                  <div class="d-md-none header__list-item">
                     <div class="header__bottom-filter-association">
                       <div class="group-control group-control--size-md">
                         <div class="group-control__inner">
@@ -831,12 +841,79 @@
                               </div>
                             </div>
                           </div>
+                          <div class="d-md-block group-control__item">
+                            <div class="modal-action">
+                              <div class="modal-action__inner">
+                                <button class="js-modal-action-init btn-action btn-action--modal-overlay btn-action--size-sm btn-action--theme-gray modal-action__btn" type="button"><span class="btn-action__inner-show">
+                                    <svg class="icon btn-action__icon">
+                                      <use xlink:href="images/sprite.svg#filter"></use>
+                                    </svg></span><span class="btn-action__inner-hide">
+                                    <svg class="icon btn-action__icon">
+                                      <use xlink:href="images/sprite.svg#close"></use>
+                                    </svg></span></button>
+                                <div class="modal-action__dropdown modal-action__dropdown--width-sm modal-action__dropdown--position-right-top scrollbar scrollbar--white-gray scrollbar--dir-y scrollbar--height-530">
+                                  <div class="modal-action__dropdown-filter">
+                                    <div class="group-control group-control--size-md modal-action__dropdown-filter-group">
+                                      <div class="group-control__inner">
+                                        <div class="group-control__item">
+                                          <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray">
+                                            <input class="u-checkbox__control" type="checkbox" name="ATP" value="ATP" checked="checked"/><span class="u-checkbox__inner">
+                                              <div class="u-checkbox__icon">
+                                                <svg class="icon">
+                                                  <use xlink:href="images/sprite.svg#checked"></use>
+                                                </svg>
+                                              </div><span class="u-checkbox__title">ATP</span></span>
+                                          </label>
+                                        </div>
+                                        <div class="group-control__item">
+                                          <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray">
+                                            <input class="u-checkbox__control" type="checkbox" name="WTA" value="WTA" checked="checked"/><span class="u-checkbox__inner">
+                                              <div class="u-checkbox__icon">
+                                                <svg class="icon">
+                                                  <use xlink:href="images/sprite.svg#checked"></use>
+                                                </svg>
+                                              </div><span class="u-checkbox__title">WTA</span></span>
+                                          </label>
+                                        </div>
+                                        <div class="group-control__item">
+                                          <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray">
+                                            <input class="u-checkbox__control" type="checkbox" name="ITF" value="ITF"/><span class="u-checkbox__inner">
+                                              <div class="u-checkbox__icon">
+                                                <svg class="icon">
+                                                  <use xlink:href="images/sprite.svg#checked"></use>
+                                                </svg>
+                                              </div><span class="u-checkbox__title">ITF</span></span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-action__dropdown-filter-accent">
+                                      <label class="u-switcher u-switcher--size-sm u-switcher--theme-gray">
+                                        <input class="u-switcher__control" type="checkbox" name="accent" value="Акцент"/><span class="u-switcher__inner"><span class="u-switcher__title">Акцент</span><span class="u-switcher__icon"></span></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <script>
+                // header dropdown toggle mobile
+                const headerBtnToggle = document.querySelectorAll('.js-header-toggle');
+                
+                headerBtnToggle.forEach(function(button) {
+                  button.addEventListener('click', function() {
+                    document.body.classList.toggle('is-hidden-mobile');
+                    document.body.classList.toggle('is-open-menu-mobile');
+                  });
+                });
+              </script>
             </div>
           </div>
         </header>
@@ -949,6 +1026,18 @@
                       </div>
                     </header>
                     <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--result event-card__col--result-career">
                           <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
@@ -1192,6 +1281,11 @@
                       <div class="event-card__row event-card__row--middle">
                         <div class="event-card__col event-card__col--graph event-card__col--graph-stability">
                           <div class="event-card__graph">
+                            <button class="js-event-graph-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
                             <div class="event-card__graph-header">
                               <div class="event-card__subtitle">Стабильность</div>
                             </div>
@@ -1203,6 +1297,11 @@
                         </div>
                         <div class="event-card__col event-card__col--graph event-card__col--graph-stat">
                           <div class="event-card__versus">
+                            <button class="js-event-versus-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
                             <div class="event-card__versus-col">
                               <div class="event-card__versus-line">
                                 <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
@@ -1355,17 +1454,69 @@
                             </div>
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">75%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red" style="--stat-graph-progress: 80%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">61%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -1379,16 +1530,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="10%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="90%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -1402,16 +1605,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -1425,17 +1680,99 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">69%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">91%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-1">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-2">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
                               </div>
                             </div>
                           </div>
@@ -1563,6 +1900,18 @@
                       </div>
                     </header>
                     <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--result event-card__col--result-career">
                           <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
@@ -1814,6 +2163,11 @@
                         </div>
                         <div class="event-card__col event-card__col--graph event-card__col--graph-stat">
                           <div class="event-card__versus">
+                            <button class="js-event-versus-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
                             <div class="event-card__versus-col">
                               <div class="event-card__versus-line">
                                 <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
@@ -1965,16 +2319,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">75%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">61%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -1988,16 +2394,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -2011,16 +2469,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -2034,17 +2544,99 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">69%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">91%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-1">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-2">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
                               </div>
                             </div>
                           </div>
@@ -2186,6 +2778,18 @@
                       </div>
                     </header>
                     <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--result event-card__col--result-career">
                           <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
@@ -2440,16 +3044,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">75%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">61%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -2463,16 +3119,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -2486,16 +3194,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -2509,17 +3269,99 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">69%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">91%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-1">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-2">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
                               </div>
                             </div>
                           </div>
@@ -2646,6 +3488,18 @@
                       </div>
                     </header>
                     <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--result event-card__col--result-career">
                           <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
@@ -2901,6 +3755,11 @@
                         </div>
                         <div class="event-card__col event-card__col--graph event-card__col--graph-stat">
                           <div class="event-card__versus">
+                            <button class="js-event-versus-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
                             <div class="event-card__versus-col">
                               <div class="event-card__versus-line">
                                 <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
@@ -3052,16 +3911,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">75%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">61%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -3075,16 +3986,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -3098,16 +4061,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -3121,17 +4136,99 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">69%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">91%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-1">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-2">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
                               </div>
                             </div>
                           </div>
@@ -3258,6 +4355,18 @@
                       </div>
                     </header>
                     <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--result event-card__col--result-career">
                           <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
@@ -3509,6 +4618,11 @@
                         </div>
                         <div class="event-card__col event-card__col--graph event-card__col--graph-stat">
                           <div class="event-card__versus">
+                            <button class="js-event-versus-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
                             <div class="event-card__versus-col">
                               <div class="event-card__versus-line">
                                 <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
@@ -3668,7 +4782,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -3691,7 +4805,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -3723,7 +4837,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -3746,7 +4860,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -3778,7 +4892,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -3801,7 +4915,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -3833,7 +4947,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -3856,7 +4970,7 @@
                                           <div class="stat-graph__lock-dropdown-title">Умное голосование</div>
                                           <div class="stat-graph__lock-dropdown-text">Показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы</div>
                                         </div>
-                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="submit"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
+                                        <button class="js-prime-modal-init btn btn--size-mdxx btn--theme-gradient-accent stat-graph__lock-dropdown-btn-moore" type="button"><span class="btn__inner"><span class="btn__title">Показать остальные</span>
                                             <svg class="icon btn__icon btn__icon--dir-rtl">
                                               <use xlink:href="images/sprite.svg#arrow-type-5"></use>
                                             </svg></span></button>
@@ -4019,6 +5133,18 @@
                       </div>
                     </header>
                     <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--result event-card__col--result-career">
                           <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
@@ -4280,6 +5406,11 @@
                         </div>
                         <div class="event-card__col event-card__col--graph event-card__col--graph-stat">
                           <div class="event-card__versus">
+                            <button class="js-event-versus-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
                             <div class="event-card__versus-col">
                               <div class="event-card__versus-line">
                                 <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
@@ -4433,16 +5564,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">75%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">61%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -4456,16 +5639,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -4479,16 +5714,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -4502,17 +5789,99 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">69%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">91%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-1">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-2">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
                               </div>
                             </div>
                           </div>
@@ -4660,6 +6029,18 @@
                       </div>
                     </header>
                     <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--result event-card__col--result-career">
                           <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
@@ -4911,6 +6292,11 @@
                         </div>
                         <div class="event-card__col event-card__col--graph event-card__col--graph-stat">
                           <div class="event-card__versus">
+                            <button class="js-event-versus-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
                             <div class="event-card__versus-col">
                               <div class="event-card__versus-line">
                                 <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
@@ -5062,16 +6448,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">75%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">61%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -5085,16 +6523,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -5108,16 +6598,68 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">45%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">53%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                             </div>
@@ -5131,17 +6673,99 @@
                             <div class="event-card__person-stat-list">
                               <div class="event-card__person-stat-list-item">
                                 <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">69%</div>
-                                  </div>
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
                               </div>
                               <div class="event-card__person-stat-list-item">
-                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light">
-                                  <div class="stat-graph__inner">
-                                    <div class="stat-graph__percent">91%</div>
-                                  </div>
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-1">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-2">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
                               </div>
                             </div>
                           </div>
@@ -5238,59 +6862,9 @@
       </div>
     </div>
     <script src="js/main.js?v=568532623346"></script>
-    <div class="tingle-modal u-modal--login">
-      <div class="u-modal"></div>
-    </div>
-    <div class="tingle-modal u-modal--register">
-      <div>register Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in error consequatur eum, quasi expedita facilis, placeat voluptas ipsa hic labore, eius nisi earum culpa? Laboriosam aspernatur, delectus cum asperiores?</div>
-    </div>
     <script src="js/chart.js?v=568532623346"></script>
+    <script src="js/PieMeister-with-Progress.min.js?v=568532623346"></script>
     <script src="js/tingle.js?v=568532623346"></script>
-    <script>
-      // 1 modal
-      var modalLogin = new tingle.modal ({
-        onClose: function () {
-        },
-        onOpen: function () {
-        },
-        beforeOpen: function () {
-        },
-        beforeClose: function () {
-          return true;
-        }
-      });
-      
-      var modalLoginBtn = document.querySelector('.js-modal-login');
-      
-      modalLoginBtn.addEventListener('click', function () {
-        modalLogin.open();
-      });
-      
-      modalLogin.setContent(document.querySelector('.u-modal--login').innerHTML);
-      
-      // 2 modal
-      var modalRegister = new tingle.modal ({
-        onClose: function () {
-        },
-        onOpen: function () {
-        },
-        beforeOpen: function () {
-        },
-        beforeClose: function () {
-          return true;
-        }
-      });
-      
-      var modalRegisterBtn = document.querySelector('.js-modal-register');
-      
-      modalRegisterBtn.addEventListener('click', function () {
-        modalRegister.open();
-      });
-      
-      modalRegister.setContent(document.querySelector('.u-modal--register').innerHTML);
-      
-      
-    </script>
     <script>
       // chart 
       var labels = ['Event 1', 'Event 2', 'Event 3', 'Event 4', 'Event 5', 'Event 6', 'Event 7', 'Event 8', 'Event 9', 'Event 10'];
@@ -5462,6 +7036,48 @@
         button.addEventListener('click', function() {
           var eventCard = this.closest('.event-card');
           eventCard.classList.toggle('is-show-stat');
+        });
+      });
+      
+      // event card stat show mobile
+      const eventInfoBtnMobile = document.querySelectorAll('.js-event-card-stat-view-mobile');
+      
+      eventInfoBtnMobile.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.toggle('is-hidden-mobile');
+          eventCard.classList.toggle('is-show-stat-mobile');
+        });
+      });
+      
+      const eventInfoBtnMobileClose = document.querySelectorAll('.js-event-versus-btn-close');
+      
+      eventInfoBtnMobileClose.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.remove('is-hidden-mobile');
+          eventCard.classList.remove('is-show-stat-mobile');
+        });
+      });
+      
+      // event card graph show mobile
+      const eventGraphBtnMobile = document.querySelectorAll('.js-event-card-graph-mobile');
+      
+      eventGraphBtnMobile.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.toggle('is-hidden-mobile');
+          eventCard.classList.toggle('is-show-graph-mobile');
+        });
+      });
+      
+      const eventGraphBtnMobileClose = document.querySelectorAll('.js-event-graph-btn-close');
+      
+      eventGraphBtnMobileClose.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var eventCard = this.closest('.event-card');
+          document.body.classList.remove('is-hidden-mobile');
+          eventCard.classList.remove('is-show-graph-mobile');
         });
       });
     </script>

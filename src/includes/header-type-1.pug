@@ -1,8 +1,13 @@
 header.header.header--position-sticky.site__header
   .header__top
     .container.header__top-container
+      button(type="button").js-header-toggle.header__top-toggle
+        span
+        span
+        span
       a(href="/").header__top-logo
         img(src="images/logo-brand-type-1.svg" alt="Tscore")
+      .js-header-toggle.u-overlay.header__top-dropdown-overlay
       .header__top-dropdown
         nav.u-nav.u-nav--main.header__top-nav
           ul.u-nav__list
@@ -16,11 +21,22 @@ header.header.header--position-sticky.site__header
               a(href="#").u-nav__link О нас
             li.u-nav__item
               a(href="#").u-nav__link Донат
+        nav.u-nav.u-nav--main.header__top-nav-mobile
+          ul.u-nav__list
+            li.u-nav__item
+              a(href="#").u-nav__link О проекте
+            li.u-nav__item
+              a(href="#").u-nav__link Помощь
+            li.u-nav__item
+              a(href="#").u-nav__link Способы оплаты
+            li.u-nav__item
+              a(href="#").u-nav__link Контакты
       .header__top-aside
-        a(href="#").header__top-aside-btn-appeal
-          svg.icon
-            use(xlink:href='images/sprite.svg#arrow-type-1')
-          span Go to pro
+        a(href="#").btn.btn--size-xs.btn--theme-purple.header__top-aside-btn-appeal
+          span.btn__inner
+            svg.icon.btn__icon.btn__icon--dir-ltr
+              use(xlink:href='images/sprite.svg#arrow-type-1')
+            span.btn__title Go to pro
         .header__top-aside-notification-wrap
           button(type="button").header__top-aside-notification.header__top-aside-notification--new
             svg.icon
@@ -68,14 +84,14 @@ header.header.header--position-sticky.site__header
             a(href="#").u-nav__link Закладки
       .header__bottom-filter
         .header__list
-          .header__list-item
+          .d-md-none.header__list-item
             .header__bottom-filter-accent
               label.u-switcher.u-switcher--size-sm.u-switcher--theme-gray
                 input(type="checkbox" name="accent" value="Акцент").u-switcher__control
                 span.u-switcher__inner
                   span.u-switcher__title Акцент
                   span.u-switcher__icon
-          .header__list-item
+          .d-md-none.header__list-item
             .header__bottom-filter-association
               .group-control.group-control--size-md
                 .group-control__inner
@@ -578,3 +594,58 @@ header.header.header--position-sticky.site__header
                                         use(xlink:href='images/sprite.svg#bookmark-outline')
                                       svg.icon
                                         use(xlink:href='images/sprite.svg#bookmark-fill')
+                  .d-md-block.group-control__item
+                    .modal-action
+                      .modal-action__inner
+                        button(type="button").js-modal-action-init.btn-action.btn-action--modal-overlay.btn-action--size-sm.btn-action--theme-gray.modal-action__btn
+                          span.btn-action__inner-show
+                            svg.icon.btn-action__icon
+                              use(xlink:href='images/sprite.svg#filter')
+                          span.btn-action__inner-hide
+                            svg.icon.btn-action__icon
+                              use(xlink:href='images/sprite.svg#close')
+                        .modal-action__dropdown.modal-action__dropdown--width-sm.modal-action__dropdown--position-right-top.scrollbar.scrollbar--white-gray.scrollbar--dir-y.scrollbar--height-530
+                          .modal-action__dropdown-filter
+                            .group-control.group-control--size-md.modal-action__dropdown-filter-group
+                              .group-control__inner
+                                .group-control__item
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray
+                                    input(type="checkbox" name="ATP" value="ATP" checked).u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                      span.u-checkbox__title ATP
+                                .group-control__item
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray
+                                    input(type="checkbox" name="WTA" value="WTA" checked).u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                      span.u-checkbox__title WTA
+                                .group-control__item
+                                  label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray
+                                    input(type="checkbox" name="ITF" value="ITF").u-checkbox__control
+                                    span.u-checkbox__inner
+                                      .u-checkbox__icon
+                                        svg.icon
+                                          use(xlink:href='images/sprite.svg#checked')
+                                      span.u-checkbox__title ITF
+                            .modal-action__dropdown-filter-accent
+                              label.u-switcher.u-switcher--size-sm.u-switcher--theme-gray
+                                input(type="checkbox" name="accent" value="Акцент").u-switcher__control
+                                span.u-switcher__inner
+                                  span.u-switcher__title Акцент
+                                  span.u-switcher__icon
+
+      script.
+        // header dropdown toggle mobile
+        const headerBtnToggle = document.querySelectorAll('.js-header-toggle');
+
+        headerBtnToggle.forEach(function(button) {
+          button.addEventListener('click', function() {
+            document.body.classList.toggle('is-hidden-mobile');
+            document.body.classList.toggle('is-open-menu-mobile');
+          });
+        });

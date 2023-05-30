@@ -48,3 +48,10 @@
         --fs-9: 18rem;
     }
 }
+
+@media (max-width: $sm) {
+    :root {
+        --gap: 10rem;
+        --gap-: -10rem;
+    }
+}

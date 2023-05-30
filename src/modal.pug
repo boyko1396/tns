@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root.site
+      .site__inner
+
+        div
+          <button class="js-modal-login">login</button>
+          <button class="js-modal-register">register</button>
+          <button class="js-modal-reset">reset</button>
+          <button class="js-modal-change-password">change password</button>
+          <button class="js-modal-change-email">change email</button>
+          <button class="js-modal-referral">referral</button>
+          <button class="js-modal-register-access">register access</button>
+          <button class="js-modal-referral-access">referral access</button>
+          <button class="js-modal-faq-access">faq access</button>
+    .tingle-modal.u-modal--register
+      .u-modal__inner
+        header.u-modal__header
+          ul.u-modal__router
+            li
+              a.js-modal-register.is-active Регистрация
+            li
+              a.js-modal-login Вход
+        form(action="#").u-modal__form
+          .input-area-el.u-modal__form-input
+            input(type="email" name="email" required value="")#register-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="register-email").input-area-el__label Эл. почта
+          .input-area-el.u-modal__form-input
+            input(type="name" name="login" required value="")#register-login.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="register-login").input-area-el__label Ваш ник
+          label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.u-modal__form-privacy
+            input(type="checkbox" name="register-privacy" checked required value="").u-checkbox__control
+            span.u-checkbox__inner
+              .u-checkbox__icon
+                svg.icon
+                  use(xlink:href='images/sprite.svg#checked')
+              .u-checkbox__title Я прочитал и согласен с Условиями обслуживания <a href="#">Условия Tscore</a>
+          footer.u-modal__form-footer
+            button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Зарегистрироваться
+
+    .tingle-modal.u-modal--login
+      .u-modal__inner
+        header.u-modal__header
+          ul.u-modal__router
+            li
+              a.js-modal-register Регистрация
+            li
+              a.js-modal-login.is-active Вход
+        form(action="#").u-modal__form
+          .input-area-el.u-modal__form-input
+            input(type="email" name="email" required value="")#login-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="login-email").input-area-el__label Эл. почта
+          .input-area-el.u-modal__form-input
+            input(type="password" name="password" required value="")#login-password.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="login-password").input-area-el__label Пароль
+          footer.u-modal__form-footer
+            button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Войти
+
+    .tingle-modal.u-modal--reset
+      .u-modal__inner
+        header.u-modal__header
+          .u-modal__title Восстановить пароль
+        form(action="#").u-modal__form
+          .input-area-el.u-modal__form-input
+            input(type="email" name="email" required value="")#reset-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="reset-email").input-area-el__label Эл. почта
+          footer.u-modal__form-footer
+            button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Восстановить пароль
+
+    .tingle-modal.u-modal--change-password
+      .u-modal__inner
+        header.u-modal__header
+          .u-modal__title Сменить пароль
+        form(action="#").u-modal__form
+          .input-area-el.u-modal__form-input
+            input(type="password" name="password_old" required value="")#change-password-old.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="change-password-old").input-area-el__label Старый пароль
+          .input-area-el.u-modal__form-input
+            input(type="password" name="password_new" required value="")#change-password-new.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="change-password-new").input-area-el__label Новый пароль
+          .input-area-el.u-modal__form-input
+            input(type="password" name="password_new_repeat" required value="")#change-password-new-repeat.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="change-password-new-repeat").input-area-el__label Повторите
+          footer.u-modal__form-footer
+            button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Сохранить
+
+    .tingle-modal.u-modal--change-email
+      .u-modal__inner
+        header.u-modal__header
+          .u-modal__title Сменить эл. почту
+        form(action="#").u-modal__form
+          .input-area-el.u-modal__form-input
+            input(type="password" name="password" required value="")#change-email-password.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="change-email-password").input-area-el__label Пароль
+          .input-area-el.u-modal__form-input
+            input(type="email" name="email" required value="")#change-email-new.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="change-email-new").input-area-el__label Новая эл. почта
+          footer.u-modal__form-footer
+            button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Сохранить
+
+    .tingle-modal.u-modal--referral
+      .u-modal__inner
+        header.u-modal__header
+          .u-modal__title Приглашение<br>партнёров по почте
+        .content.u-modal__description
+          p Вы можете посмотреть <a href="#">здесь</a> пример письма, который придёт вашим партнёрам
+        form(action="#").u-modal__form
+          .input-area-el.u-modal__form-input
+            input(type="email" name="email1" required value="")#referral-email-1.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="referral-email-1").input-area-el__label Эл. почта
+          .input-area-el.u-modal__form-input
+            input(type="email" name="email2" required value="")#referral-email-2.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+            label(for="referral-email-2").input-area-el__label Эл. почта
+          button(type="submit").btn.btn--size-md.btn--theme-green-light.u-modal__btn-add
+            span.btn__inner
+              span.btn__title Добавить ещё партнёра
+          footer.u-modal__form-footer
+            button(type="submit").btn.btn--size-sm.btn--theme-accent.btn--width-full.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Отправить приглашение
+
+    .tingle-modal.u-modal--register-access
+      .u-modal__inner
+        .u-modal__block
+          header.u-modal__header
+            .u-modal__title Регистрация<br>завершена
+          picture.u-modal__picture
+            img(src="images/modal-img-1.svg" alt="Регистрация завершена")
+          .content.u-modal__description
+            p Для активации аккаунта перейдите по ссылке, указанной в вашем письме
+          footer.u-modal__block-footer
+            button(type="button").js-modal-btn-close-register-access.btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Закрыть
+
+    .tingle-modal.u-modal--referral-access
+      .u-modal__inner
+        .u-modal__block
+          header.u-modal__header
+            .u-modal__title Приглашения<br>отправлены
+          picture.u-modal__picture
+            img(src="images/modal-img-2.svg" alt="Приглашения отправлены")
+          .content.u-modal__description
+            p При регистрации каждого партнёра<br><span class="color-black">вы получите 100 токенов</span>
+          footer.u-modal__block-footer
+            button(type="button").js-modal-btn-close-referral-access.btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Закрыть
+
+    .tingle-modal.u-modal--faq-access
+      .u-modal__inner
+        .u-modal__block
+          header.u-modal__header
+            .u-modal__title Спасибо<br>за вопрос
+          picture.u-modal__picture
+            img(src="images/modal-img-3.svg" alt="Спасибо за вопрос")
+          .content.u-modal__description
+            p Ответим в течении 30 минут по эл. почте
+          footer.u-modal__block-footer
+            button(type="button").js-modal-btn-close-faq-access.btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Закрыть
+
+    script(src="js/tingle.js?v=568532623346")
+    script.
+      // modal init
+      var modalLogin = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalLoginBtns = document.querySelectorAll('.js-modal-login');
+
+      modalLoginBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.open();
+        });
+      });
+
+      modalLogin.setContent(document.querySelector('.u-modal--login').innerHTML);
+      
+      // modal init
+      var modalRegister = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalRegisterBtns = document.querySelectorAll('.js-modal-register');
+
+      modalRegisterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegister.open();
+        });
+      });
+
+      modalRegister.setContent(document.querySelector('.u-modal--register').innerHTML);
+
+      function switchWindows(e) {
+        e.preventDefault();
+
+        var target = e.target;
+        var isRegisterActive = target.classList.contains('js-modal-register');
+
+        if (isRegisterActive) {
+          modalLogin.close();
+          modalRegister.open();
+        } else {
+          modalLogin.open();
+          modalRegister.close();
+        }
+      }
+
+      var navLinks = document.querySelectorAll('.u-modal__router a');
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', switchWindows);
+      });
+
+      // modal init
+      var modalReset = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalResetBtns = document.querySelectorAll('.js-modal-reset');
+
+      modalResetBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReset.open();
+        });
+      });
+
+      modalReset.setContent(document.querySelector('.u-modal--reset').innerHTML);
+
+      // modal init
+      var modalChangePassword = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalChangePasswordBtns = document.querySelectorAll('.js-modal-change-password');
+
+      modalChangePasswordBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalChangePassword.open();
+        });
+      });
+
+      modalChangePassword.setContent(document.querySelector('.u-modal--change-password').innerHTML);
+
+      // modal init
+      var modalChangeEmail = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalChangeEmailBtns = document.querySelectorAll('.js-modal-change-email');
+
+      modalChangeEmailBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalChangeEmail.open();
+        });
+      });
+
+      modalChangeEmail.setContent(document.querySelector('.u-modal--change-email').innerHTML);
+
+      // modal init
+      var modalReferral = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-md', 'u-modal--theme-white']
+      });
+
+      var modalReferralBtns = document.querySelectorAll('.js-modal-referral');
+
+      modalReferralBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReferral.open();
+        });
+      });
+
+      modalReferral.setContent(document.querySelector('.u-modal--referral').innerHTML);
+
+      // modal init
+      var modalRegisterAccess = new tingle.modal ({
+        closeMethods: ['overlay', 'escape'],
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalRegisterAccessBtns = document.querySelectorAll('.js-modal-register-access');
+
+      modalRegisterAccessBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegisterAccess.open();
+        });
+      });
+
+      modalRegisterAccess.setContent(document.querySelector('.u-modal--register-access').innerHTML);
+
+      var modalRegisterAccessBtnsClose = document.querySelectorAll('.js-modal-btn-close-register-access');
+
+      modalRegisterAccessBtnsClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegisterAccess.close();
+        });
+      });
+
+      // modal init
+      var modalReferralAccess = new tingle.modal ({
+        closeMethods: ['overlay', 'escape'],
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalReferralAccessBtns = document.querySelectorAll('.js-modal-referral-access');
+
+      modalReferralAccessBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReferralAccess.open();
+        });
+      });
+
+      modalReferralAccess.setContent(document.querySelector('.u-modal--referral-access').innerHTML);
+
+      var modalReferralAccessBtnsClose = document.querySelectorAll('.js-modal-btn-close-referral-access');
+
+      modalReferralAccessBtnsClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReferralAccess.close();
+        });
+      });
+
+      // modal init
+      var modalFaqAccess = new tingle.modal ({
+        closeMethods: ['overlay', 'escape'],
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalFaqAccessBtns = document.querySelectorAll('.js-modal-faq-access');
+
+      modalFaqAccessBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalFaqAccess.open();
+        });
+      });
+
+      modalFaqAccess.setContent(document.querySelector('.u-modal--faq-access').innerHTML);
+
+      var modalFaqAccessBtnsClose = document.querySelectorAll('.js-modal-btn-close-faq-access');
+
+      modalFaqAccessBtnsClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalFaqAccess.close();
+        });
+      });
+    
+    include includes/foot.pug

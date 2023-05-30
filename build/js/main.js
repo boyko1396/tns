@@ -1,21 +1,23 @@
-// header profile nav dropdown
-const headerProfileBtn = document.querySelector('.js-profile-nav');
-const headerProfileNav = document.querySelector('.header__top-aside-profile');
+if (document.querySelector('.js-profile-nav')) {
+  // header profile nav dropdown
+  const headerProfileBtn = document.querySelector('.js-profile-nav');
+  const headerProfileNav = document.querySelector('.header__top-aside-profile');
 
-headerProfileBtn.addEventListener('click', function(event) {
-  if (headerProfileNav.classList.contains('is-open')) {
-    headerProfileNav.classList.remove('is-open');
-  } else {
-    headerProfileNav.classList.add('is-open');
-  }
-  event.stopPropagation();
-});
+  headerProfileBtn.addEventListener('click', function(event) {
+    if (headerProfileNav.classList.contains('is-open')) {
+      headerProfileNav.classList.remove('is-open');
+    } else {
+      headerProfileNav.classList.add('is-open');
+    }
+    event.stopPropagation();
+  });
 
-document.addEventListener('click', function() {
-  if (event.target !== headerProfileBtn && !headerProfileBtn.contains(event.target)) {
-    headerProfileNav.classList.remove('is-open');
-  }
-});
+  document.addEventListener('click', function() {
+    if (event.target !== headerProfileBtn && !headerProfileBtn.contains(event.target)) {
+      headerProfileNav.classList.remove('is-open');
+    }
+  });
+}
 
 // btn bookmark toggle
 const bookmarkBtn = document.querySelectorAll('.js-bookmark-btn');

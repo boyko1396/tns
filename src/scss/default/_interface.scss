@@ -24,6 +24,11 @@ body {
             margin-right: 17rem;
         }
     }
+    &.is-hidden-mobile {
+        @media (max-width: $lg) {
+            overflow: hidden;
+        }
+    }
 }
 
 a {

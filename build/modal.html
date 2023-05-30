@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>TScore</title><link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="shortcut icon" href="images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/styles.css?v=568532623346"/>
+  </head>
+  <body>
+    <div class="site" id="root">
+      <div class="site__inner">
+        <div><button class="js-modal-login">login</button>
+<button class="js-modal-register">register</button>
+<button class="js-modal-reset">reset</button>
+<button class="js-modal-change-password">change password</button>
+<button class="js-modal-change-email">change email</button>
+<button class="js-modal-referral">referral</button>
+<button class="js-modal-register-access">register access</button>
+<button class="js-modal-referral-access">referral access</button>
+<button class="js-modal-faq-access">faq access</button>
+        </div>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--register">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <ul class="u-modal__router">
+            <li><a class="js-modal-register is-active">Регистрация</a></li>
+            <li><a class="js-modal-login">Вход</a></li>
+          </ul>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" id="register-email"/>
+            <label class="input-area-el__label" for="register-email">Эл. почта</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="name" name="login" required="required" value="" id="register-login"/>
+            <label class="input-area-el__label" for="register-login">Ваш ник</label>
+          </div>
+          <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray u-modal__form-privacy">
+            <input class="u-checkbox__control" type="checkbox" name="register-privacy" checked="checked" required="required" value=""/><span class="u-checkbox__inner">
+              <div class="u-checkbox__icon">
+                <svg class="icon">
+                  <use xlink:href="images/sprite.svg#checked"></use>
+                </svg>
+              </div>
+              <div class="u-checkbox__title">Я прочитал и согласен с Условиями обслуживания <a href="#">Условия Tscore</a></div></span>
+          </label>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Зарегистрироваться</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--login">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <ul class="u-modal__router">
+            <li><a class="js-modal-register">Регистрация</a></li>
+            <li><a class="js-modal-login is-active">Вход</a></li>
+          </ul>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" id="login-email"/>
+            <label class="input-area-el__label" for="login-email">Эл. почта</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password" required="required" value="" id="login-password"/>
+            <label class="input-area-el__label" for="login-password">Пароль</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Войти</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--reset">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Восстановить пароль</div>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" id="reset-email"/>
+            <label class="input-area-el__label" for="reset-email">Эл. почта</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Восстановить пароль</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--change-password">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Сменить пароль</div>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password_old" required="required" value="" id="change-password-old"/>
+            <label class="input-area-el__label" for="change-password-old">Старый пароль</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password_new" required="required" value="" id="change-password-new"/>
+            <label class="input-area-el__label" for="change-password-new">Новый пароль</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password_new_repeat" required="required" value="" id="change-password-new-repeat"/>
+            <label class="input-area-el__label" for="change-password-new-repeat">Повторите</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Сохранить</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--change-email">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Сменить эл. почту</div>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password" required="required" value="" id="change-email-password"/>
+            <label class="input-area-el__label" for="change-email-password">Пароль</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" id="change-email-new"/>
+            <label class="input-area-el__label" for="change-email-new">Новая эл. почта</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Сохранить</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--referral">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Приглашение<br>партнёров по почте</div>
+        </header>
+        <div class="content u-modal__description">
+          <p>Вы можете посмотреть <a href="#">здесь</a> пример письма, который придёт вашим партнёрам</p>
+        </div>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email1" required="required" value="" id="referral-email-1"/>
+            <label class="input-area-el__label" for="referral-email-1">Эл. почта</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email2" required="required" value="" id="referral-email-2"/>
+            <label class="input-area-el__label" for="referral-email-2">Эл. почта</label>
+          </div>
+          <button class="btn btn--size-md btn--theme-green-light u-modal__btn-add" type="submit"><span class="btn__inner"><span class="btn__title">Добавить ещё партнёра</span></span></button>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-sm btn--theme-accent btn--width-full u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Отправить приглашение</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--register-access">
+      <div class="u-modal__inner">
+        <div class="u-modal__block">
+          <header class="u-modal__header">
+            <div class="u-modal__title">Регистрация<br>завершена</div>
+          </header>
+          <picture class="u-modal__picture"><img src="images/modal-img-1.svg" alt="Регистрация завершена"/></picture>
+          <div class="content u-modal__description">
+            <p>Для активации аккаунта перейдите по ссылке, указанной в вашем письме</p>
+          </div>
+          <footer class="u-modal__block-footer">
+            <button class="js-modal-btn-close-register-access btn btn--size-md btn--theme-accent u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Закрыть</span></span></button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--referral-access">
+      <div class="u-modal__inner">
+        <div class="u-modal__block">
+          <header class="u-modal__header">
+            <div class="u-modal__title">Приглашения<br>отправлены</div>
+          </header>
+          <picture class="u-modal__picture"><img src="images/modal-img-2.svg" alt="Приглашения отправлены"/></picture>
+          <div class="content u-modal__description">
+            <p>При регистрации каждого партнёра<br><span class="color-black">вы получите 100 токенов</span></p>
+          </div>
+          <footer class="u-modal__block-footer">
+            <button class="js-modal-btn-close-referral-access btn btn--size-md btn--theme-accent u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Закрыть</span></span></button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--faq-access">
+      <div class="u-modal__inner">
+        <div class="u-modal__block">
+          <header class="u-modal__header">
+            <div class="u-modal__title">Спасибо<br>за вопрос</div>
+          </header>
+          <picture class="u-modal__picture"><img src="images/modal-img-3.svg" alt="Спасибо за вопрос"/></picture>
+          <div class="content u-modal__description">
+            <p>Ответим в течении 30 минут по эл. почте</p>
+          </div>
+          <footer class="u-modal__block-footer">
+            <button class="js-modal-btn-close-faq-access btn btn--size-md btn--theme-accent u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Закрыть</span></span></button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="js/tingle.js?v=568532623346"></script>
+    <script>
+      // modal init
+      var modalLogin = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalLoginBtns = document.querySelectorAll('.js-modal-login');
+      
+      modalLoginBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.open();
+        });
+      });
+      
+      modalLogin.setContent(document.querySelector('.u-modal--login').innerHTML);
+      
+      // modal init
+      var modalRegister = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalRegisterBtns = document.querySelectorAll('.js-modal-register');
+      
+      modalRegisterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegister.open();
+        });
+      });
+      
+      modalRegister.setContent(document.querySelector('.u-modal--register').innerHTML);
+      
+      function switchWindows(e) {
+        e.preventDefault();
+      
+        var target = e.target;
+        var isRegisterActive = target.classList.contains('js-modal-register');
+      
+        if (isRegisterActive) {
+          modalLogin.close();
+          modalRegister.open();
+        } else {
+          modalLogin.open();
+          modalRegister.close();
+        }
+      }
+      
+      var navLinks = document.querySelectorAll('.u-modal__router a');
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', switchWindows);
+      });
+      
+      // modal init
+      var modalReset = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalResetBtns = document.querySelectorAll('.js-modal-reset');
+      
+      modalResetBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReset.open();
+        });
+      });
+      
+      modalReset.setContent(document.querySelector('.u-modal--reset').innerHTML);
+      
+      // modal init
+      var modalChangePassword = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalChangePasswordBtns = document.querySelectorAll('.js-modal-change-password');
+      
+      modalChangePasswordBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalChangePassword.open();
+        });
+      });
+      
+      modalChangePassword.setContent(document.querySelector('.u-modal--change-password').innerHTML);
+      
+      // modal init
+      var modalChangeEmail = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalChangeEmailBtns = document.querySelectorAll('.js-modal-change-email');
+      
+      modalChangeEmailBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalChangeEmail.open();
+        });
+      });
+      
+      modalChangeEmail.setContent(document.querySelector('.u-modal--change-email').innerHTML);
+      
+      // modal init
+      var modalReferral = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-md', 'u-modal--theme-white']
+      });
+      
+      var modalReferralBtns = document.querySelectorAll('.js-modal-referral');
+      
+      modalReferralBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReferral.open();
+        });
+      });
+      
+      modalReferral.setContent(document.querySelector('.u-modal--referral').innerHTML);
+      
+      // modal init
+      var modalRegisterAccess = new tingle.modal ({
+        closeMethods: ['overlay', 'escape'],
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalRegisterAccessBtns = document.querySelectorAll('.js-modal-register-access');
+      
+      modalRegisterAccessBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegisterAccess.open();
+        });
+      });
+      
+      modalRegisterAccess.setContent(document.querySelector('.u-modal--register-access').innerHTML);
+      
+      var modalRegisterAccessBtnsClose = document.querySelectorAll('.js-modal-btn-close-register-access');
+      
+      modalRegisterAccessBtnsClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegisterAccess.close();
+        });
+      });
+      
+      // modal init
+      var modalReferralAccess = new tingle.modal ({
+        closeMethods: ['overlay', 'escape'],
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalReferralAccessBtns = document.querySelectorAll('.js-modal-referral-access');
+      
+      modalReferralAccessBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReferralAccess.open();
+        });
+      });
+      
+      modalReferralAccess.setContent(document.querySelector('.u-modal--referral-access').innerHTML);
+      
+      var modalReferralAccessBtnsClose = document.querySelectorAll('.js-modal-btn-close-referral-access');
+      
+      modalReferralAccessBtnsClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalReferralAccess.close();
+        });
+      });
+      
+      // modal init
+      var modalFaqAccess = new tingle.modal ({
+        closeMethods: ['overlay', 'escape'],
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalFaqAccessBtns = document.querySelectorAll('.js-modal-faq-access');
+      
+      modalFaqAccessBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalFaqAccess.open();
+        });
+      });
+      
+      modalFaqAccess.setContent(document.querySelector('.u-modal--faq-access').innerHTML);
+      
+      var modalFaqAccessBtnsClose = document.querySelectorAll('.js-modal-btn-close-faq-access');
+      
+      modalFaqAccessBtnsClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalFaqAccess.close();
+        });
+      });
+      
+    </script>
+    <script src="js/main.js?v=568532623346"></script>
+  </body>
+</html>
