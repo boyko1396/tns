@@ -272,6 +272,13 @@
                     transition-property: opacity, visibility;
                     overflow: hidden;
                     z-index: -1;
+                    @media (max-width: $md) {
+                        top: -9rem;
+                    }
+                    @media (max-width: $sm) {
+                        top: -13rem;
+                        border-bottom-right-radius: 0;
+                    }
                     ul {
                         margin: 0;
                         padding: 0;

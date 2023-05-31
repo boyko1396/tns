@@ -5918,6 +5918,17 @@ canvas:not(:hover) ~ #tooltip-container {
   overflow: hidden;
   z-index: -1;
 }
+@media (max-width: 991px) {
+  .header__top-aside-profile-dropdown {
+    top: -9rem;
+  }
+}
+@media (max-width: 767px) {
+  .header__top-aside-profile-dropdown {
+    top: -13rem;
+    border-bottom-right-radius: 0;
+  }
+}
 .header__top-aside-profile-dropdown ul {
   margin: 0;
   padding: 0;
