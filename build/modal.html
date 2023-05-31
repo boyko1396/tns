@@ -25,6 +25,7 @@
 <button class="js-modal-register-access">register access</button>
 <button class="js-modal-referral-access">referral access</button>
 <button class="js-modal-faq-access">faq access</button>
+<button class="js-modal-premium">premium</button>
         </div>
       </div>
     </div>
@@ -79,6 +80,7 @@
           </div>
           <footer class="u-modal__form-footer">
             <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Войти</span></span></button>
+            <button class="js-modal-change-password js-change-password-inner btn btn--size-md btn--theme-simple u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Забыли пароль?</span></span></button>
           </footer>
         </form>
       </div>
@@ -215,6 +217,87 @@
         </div>
       </div>
     </div>
+    <div class="tingle-modal u-modal--premium">
+      <div class="u-modal__inner">
+        <div class="u-modal__premium">
+          <header class="u-modal__premium-header">
+            <div class="u-modal__title">Прогнозируй свою победу вместе&nbsp;с&nbsp;AiTNS</div>
+          </header>
+          <div class="js-tab-init tab-block">
+            <div class="tab-block__inner">
+              <nav class="tab-block__nav">
+                <ul class="tab-block__list">
+                  <li class="tab-block__item">
+                    <button class="tab-link is-active" type="button"><img src="images/shop-card-1.svg" alt="Опыт"/><span data-tab-title="Опыт">Опыт</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-2.svg" alt="Таланты"/><span data-tab-title="Таланты">Таланты</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-3.svg" alt="Мотивация"/><span data-tab-title="Мотивация">Мотивация</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-4.svg" alt="Стабильность"/><span data-tab-title="Стабильность">Стабильность</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-6.svg" alt="Умное голосование"/><span data-tab-title="Умное голосование">Умное голосование</span></button>
+                  </li>
+                </ul>
+              </nav>
+              <div class="tab-block__content">
+                <div class="tab-block__content-item is-show">
+                  <button class="js-tab-link-mobile tab-link is-active tab-block__content-item-tab-link" type="button"><img src="images/shop-card-1.svg" alt="Опыт"/><span data-tab-title="Опыт">Опыт</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:</p>
+                      <ol>
+                        <li>Первый параметр</li>
+                        <li>Второй параметр</li>
+                        <li>3 параметр</li>
+                        <li>Четвертый чет параметр</li>
+                      </ol>
+                    </div>
+                    <button class="btn btn--size-md btn--theme-gradient-accent tab-block__btn" type="submit"><span class="btn__inner"><span class="btn__title">Перейти к разблокировке</span></span></button>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-2.svg" alt="Таланты"/><span data-tab-title="Таланты">Таланты</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-3.svg" alt="Мотивация"/><span data-tab-title="Мотивация">Мотивация</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-4.svg" alt="Стабильность"/><span data-tab-title="Стабильность">Стабильность</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 4</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-6.svg" alt="Умное голосование"/><span data-tab-title="Умное голосование">Умное голосование голосование</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/tingle.js?v=568532623346"></script>
     <script>
       // modal init
@@ -265,6 +348,14 @@
       var navLinks = document.querySelectorAll('.u-modal__router a');
       navLinks.forEach(function(link) {
         link.addEventListener('click', switchWindows);
+      });
+      
+      var modalLoginClose = document.querySelectorAll('.js-change-password-inner');
+      
+      modalLoginClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.close();
+        });
       });
       
       // modal init
@@ -399,7 +490,57 @@
         });
       });
       
+      // modal init
+      var modalPremium = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-mdm', 'u-modal--theme-white']
+      });
+      
+      var modalPremiumBtns = document.querySelectorAll('.js-modal-premium');
+      
+      modalPremiumBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalPremium.open();
+        });
+      });
+      
+      modalPremium.setContent(document.querySelector('.u-modal--premium').innerHTML);
+      
+      // tab init
+      const tabBlocks = document.querySelectorAll('.js-tab-init');
+      
+      tabBlocks.forEach(tabBlock => {
+        const tabLinks = tabBlock.querySelectorAll('.tab-link');
+        const contentItems = tabBlock.querySelectorAll('.tab-block__content-item');
+      
+        tabLinks.forEach((tabLink, index) => {
+          tabLink.addEventListener('click', () => {
+            tabLinks.forEach(link => link.classList.remove('is-active'));
+            contentItems.forEach(item => item.classList.remove('is-show'));
+      
+            tabLink.classList.add('is-active');
+            contentItems[index].classList.add('is-show');
+          });
+        });
+      });
+      
+      const tabLinksMobile = document.querySelectorAll('.js-tab-link-mobile');
+      
+      tabLinksMobile.forEach(tabLink => {
+        tabLink.addEventListener('click', () => {
+          tabLinksMobile.forEach(link => link.classList.remove('is-active'));
+      
+          tabLink.classList.add('is-active');
+      
+          const contentItem = tabLink.closest('.tab-block__content-item');
+      
+          const allContentItems = document.querySelectorAll('.tab-block__content-item');
+          allContentItems.forEach(item => item.classList.remove('is-show'));
+      
+          if (contentItem) {
+            contentItem.classList.add('is-show');
+          }
+        });
+      });
     </script>
-    <script src="js/main.js?v=568532623346"></script>
   </body>
 </html>

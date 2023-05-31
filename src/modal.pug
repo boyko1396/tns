@@ -17,6 +17,7 @@ html(lang='ru')
           <button class="js-modal-register-access">register access</button>
           <button class="js-modal-referral-access">referral access</button>
           <button class="js-modal-faq-access">faq access</button>
+          <button class="js-modal-premium">premium</button>
     .tingle-modal.u-modal--register
       .u-modal__inner
         header.u-modal__header
@@ -63,6 +64,9 @@ html(lang='ru')
             button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
               span.btn__inner
                 span.btn__title Войти
+            button(type="button").js-modal-change-password.js-change-password-inner.btn.btn--size-md.btn--theme-simple.u-modal__form-btn
+              span.btn__inner
+                span.btn__title Забыли пароль?
 
     .tingle-modal.u-modal--reset
       .u-modal__inner
@@ -175,6 +179,80 @@ html(lang='ru')
               span.btn__inner
                 span.btn__title Закрыть
 
+    .tingle-modal.u-modal--premium
+      .u-modal__inner
+        .u-modal__premium
+          header.u-modal__premium-header
+            .u-modal__title Прогнозируй свою победу вместе&nbsp;с&nbsp;AiTNS
+          .js-tab-init.tab-block
+            .tab-block__inner
+              nav.tab-block__nav
+                ul.tab-block__list
+                  li.tab-block__item
+                    button(type="button").tab-link.is-active
+                      img(src="images/shop-card-1.svg" alt="Опыт")
+                      span(data-tab-title="Опыт") Опыт
+                  li.tab-block__item
+                    button(type="button").tab-link
+                      img(src="images/shop-card-2.svg" alt="Таланты")
+                      span(data-tab-title="Таланты") Таланты
+                  li.tab-block__item
+                    button(type="button").tab-link
+                      img(src="images/shop-card-3.svg" alt="Мотивация")
+                      span(data-tab-title="Мотивация") Мотивация
+                  li.tab-block__item
+                    button(type="button").tab-link
+                      img(src="images/shop-card-4.svg" alt="Стабильность")
+                      span(data-tab-title="Стабильность") Стабильность
+                  li.tab-block__item
+                    button(type="button").tab-link
+                      img(src="images/shop-card-6.svg" alt="Умное голосование")
+                      span(data-tab-title="Умное голосование") Умное голосование
+              .tab-block__content
+                .tab-block__content-item.is-show
+                  button(type="button").js-tab-link-mobile.tab-link.is-active.tab-block__content-item-tab-link
+                    img(src="images/shop-card-1.svg" alt="Опыт")
+                    span(data-tab-title="Опыт") Опыт
+                  .tab-block__content-item-inner
+                    .content.tab-block__text
+                      p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                      ol
+                        li Первый параметр
+                        li Второй параметр
+                        li 3 параметр
+                        li Четвертый чет параметр
+                    button(type="submit").btn.btn--size-md.btn--theme-gradient-accent.tab-block__btn
+                      span.btn__inner
+                        span.btn__title Перейти к разблокировке
+                .tab-block__content-item
+                  button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                    img(src="images/shop-card-2.svg" alt="Таланты")
+                    span(data-tab-title="Таланты") Таланты
+                  .tab-block__content-item-inner
+                    .content.tab-block__text
+                      p tab 2
+                .tab-block__content-item
+                  button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                    img(src="images/shop-card-3.svg" alt="Мотивация")
+                    span(data-tab-title="Мотивация") Мотивация
+                  .tab-block__content-item-inner
+                    .content.tab-block__text
+                      p tab 3
+                .tab-block__content-item
+                  button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                    img(src="images/shop-card-4.svg" alt="Стабильность")
+                    span(data-tab-title="Стабильность") Стабильность
+                  .tab-block__content-item-inner
+                    .content.tab-block__text
+                      p tab 4
+                .tab-block__content-item
+                  button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                    img(src="images/shop-card-6.svg" alt="Умное голосование")
+                    span(data-tab-title="Умное голосование") Умное голосование голосование
+                  .tab-block__content-item-inner
+                    .content.tab-block__text
+                      p tab 5
+
     script(src="js/tingle.js?v=568532623346")
     script.
       // modal init
@@ -225,6 +303,14 @@ html(lang='ru')
       var navLinks = document.querySelectorAll('.u-modal__router a');
       navLinks.forEach(function(link) {
         link.addEventListener('click', switchWindows);
+      });
+
+      var modalLoginClose = document.querySelectorAll('.js-change-password-inner');
+
+      modalLoginClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.close();
+        });
       });
 
       // modal init
@@ -358,5 +444,55 @@ html(lang='ru')
           modalFaqAccess.close();
         });
       });
-    
-    include includes/foot.pug
+
+      // modal init
+      var modalPremium = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-mdm', 'u-modal--theme-white']
+      });
+
+      var modalPremiumBtns = document.querySelectorAll('.js-modal-premium');
+
+      modalPremiumBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalPremium.open();
+        });
+      });
+
+      modalPremium.setContent(document.querySelector('.u-modal--premium').innerHTML);
+
+      // tab init
+      const tabBlocks = document.querySelectorAll('.js-tab-init');
+
+      tabBlocks.forEach(tabBlock => {
+        const tabLinks = tabBlock.querySelectorAll('.tab-link');
+        const contentItems = tabBlock.querySelectorAll('.tab-block__content-item');
+
+        tabLinks.forEach((tabLink, index) => {
+          tabLink.addEventListener('click', () => {
+            tabLinks.forEach(link => link.classList.remove('is-active'));
+            contentItems.forEach(item => item.classList.remove('is-show'));
+
+            tabLink.classList.add('is-active');
+            contentItems[index].classList.add('is-show');
+          });
+        });
+      });
+
+      const tabLinksMobile = document.querySelectorAll('.js-tab-link-mobile');
+
+      tabLinksMobile.forEach(tabLink => {
+        tabLink.addEventListener('click', () => {
+          tabLinksMobile.forEach(link => link.classList.remove('is-active'));
+
+          tabLink.classList.add('is-active');
+
+          const contentItem = tabLink.closest('.tab-block__content-item');
+
+          const allContentItems = document.querySelectorAll('.tab-block__content-item');
+          allContentItems.forEach(item => item.classList.remove('is-show'));
+
+          if (contentItem) {
+            contentItem.classList.add('is-show');
+          }
+        });
+      });

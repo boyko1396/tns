@@ -1,4 +1,6 @@
 .tingle-modal {
+  padding-right: var(--gap);
+  padding-left: var(--gap);
   position: fixed;
   top: 0;
   right: 0;
@@ -107,7 +109,8 @@
 
 .tingle-modal--overflow {
   overflow-y: scroll;
-  padding-top: 8vh;
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
 }
 
 /* animations
