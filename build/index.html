@@ -1290,8 +1290,8 @@
                               <div class="event-card__subtitle">Стабильность</div>
                             </div>
                             <div class="event-card__graph-body">
-                              <canvas id="playerChart"></canvas>
-                              <div id="tooltip-container"></div>
+                              <canvas id="playerChart-1"></canvas>
+                              <div id="tooltip-container-1"></div>
                             </div>
                           </div>
                         </div>
@@ -1423,7 +1423,10 @@
                             <div class="event-card__graph-header">
                               <div class="event-card__subtitle">Мастерство</div>
                             </div>
-                            <div class="event-card__graph-body"></div>
+                            <div class="event-card__graph-body">
+                              <canvas id="playerChart-2"></canvas>
+                              <div id="tooltip-container-2"></div>
+                            </div>
                           </div>
                         </div>
                         <div class="event-card__middle-btns">
@@ -1444,7 +1447,7 @@
                       <div class="event-card__row">
                         <div class="event-card__col event-card__col--graph-person event-card__col--graph-person-first">
                           <div class="event-card__graph-person">
-                            <canvas id="playerChartCircle"></canvas>
+                            <canvas id="playerChartCircle1"></canvas>
                           </div>
                         </div>
                         <div class="event-card__col event-card__col--stat event-card__col--stat-experience">
@@ -1778,7 +1781,9 @@
                           </div>
                         </div>
                         <div class="event-card__col event-card__col--graph-person event-card__col--graph-person-second">
-                          <div class="event-card__graph-person"></div>
+                          <div class="event-card__graph-person">
+                            <canvas id="playerChartCircle2"></canvas>
+                          </div>
                         </div>
                       </div>
                       <div class="event-card__footer-action">
@@ -6884,7 +6889,7 @@
       var player1Data = [5, 3, -2, 4, 0, -1, 2, 1, -3, 6];
       var player2Data = [-1, -3, 2, -4, 1, -2, 3, -5, 2, -6];
       
-      var ctx = document.getElementById('playerChart').getContext('2d');
+      var ctx = document.getElementById('playerChart-1').getContext('2d');
       var playerChart = new Chart(ctx, {
           type: 'line',
           data: {
@@ -6935,7 +6940,7 @@
               plugins: {
                   tooltip: {
                       enabled: false,
-                      external: customTooltip
+                      external: customTooltip1
                   },
                   legend: {
                     display: false
@@ -6948,7 +6953,7 @@
           }
       });
       
-      function customTooltip(context) {
+      function customTooltip1(context) {
           var { chart, tooltip } = context;
           var { dataPoints } = tooltip;
       
@@ -6958,7 +6963,7 @@
       
               var { x, y } = chart.getDatasetMeta(dataPoint.datasetIndex).data[index].getCenterPoint();
       
-              var tooltipContainer = document.getElementById('tooltip-container');
+              var tooltipContainer = document.getElementById('tooltip-container-1');
       
               var winClass = player1Data[index] > player2Data[index] ? 'is-win' : '';
               var loseClass = player1Data[index] < player2Data[index] ? 'is-lose' : '';
@@ -6984,14 +6989,123 @@
               tooltipContainer.style.top = chart.canvas.offsetTop + y + 'px';
               tooltipContainer.style.display = 'block';
           } else {
-              document.getElementById('tooltip-container').style.display = 'none';
+              document.getElementById('tooltip-container-1').style.display = 'none';
+              playerChartCircle.update();
+          }
+      }
+      // chart 
+      var labels = ['Event 1', 'Event 2', 'Event 3', 'Event 4', 'Event 5', 'Event 6', 'Event 7', 'Event 8', 'Event 9', 'Event 10'];
+      var player1Data = [-4, 1, 5, 4, 0, -1, 2, 1, -3, 6];
+      var player2Data = [4, -2, -2, -4, 1, -2, 3, -5, 2, -6];
+      
+      var ctx = document.getElementById('playerChart-2').getContext('2d');
+      var playerChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: labels,
+              datasets: [{
+                  label: '',
+                  data: player1Data,
+                  borderColor: '#17C6D2',
+                  backgroundColor: '#17C6D2',
+                  pointStyle: 'circle',
+                  pointRadius: 5,
+                  pointBorderColor: '#ffffff',
+                  pointBorderWidth: 2,
+                  hoverOffset: 14
+              }, {
+                  label: '',
+                  data: player2Data,
+                  borderColor: '#FC8171',
+                  backgroundColor: '#FC8171',
+                  pointStyle: 'circle',
+                  pointRadius: 5,
+                  pointBorderColor: '#ffffff',
+                  pointBorderWidth: 2,
+                  hoverOffset: 14
+              }]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  x: {
+                      display: false
+                  },
+                  y: {
+                      display: true,
+                      position: 'right',
+                      title: {
+                          display: false
+                      },
+                      grid: {
+                          drawBorder: false,
+                          drawOnChartArea: false,
+                          tickWidth: 0
+                      },
+                      suggestedMin: -6,
+                      suggestedMax: 6
+                  }
+              },
+              plugins: {
+                  tooltip: {
+                      enabled: false,
+                      external: customTooltip2
+                  },
+                  legend: {
+                    display: false
+                  }
+              },
+              interaction: {
+                  intersect: false,
+                  mode: 'nearest'
+              }
+          }
+      });
+      
+      function customTooltip2(context) {
+          var { chart, tooltip } = context;
+          var { dataPoints } = tooltip;
+      
+          if (dataPoints && dataPoints.length) {
+              var dataPoint = dataPoints[0];
+              var index = dataPoint.dataIndex;
+      
+              var { x, y } = chart.getDatasetMeta(dataPoint.datasetIndex).data[index].getCenterPoint();
+      
+              var tooltipContainer = document.getElementById('tooltip-container-2');
+      
+              var winClass = player1Data[index] > player2Data[index] ? 'is-win' : '';
+              var loseClass = player1Data[index] < player2Data[index] ? 'is-lose' : '';
+      
+              tooltipContainer.innerHTML = `
+                  <div class="tooltip-result-chart ${winClass} ${loseClass}">
+                      <div class="tooltip-result-chart__inner">
+                          <header class="tooltip-result-chart__header">
+                              <div class="tooltip-result-chart__title">1:0 (5:7) (40:15)</div>
+                              <div class="tooltip-result-chart__title">Выиграл</div>
+                          </header>
+                          <div class="tooltip-result-chart__body">
+                              <picture class="tooltip-result-chart__picture"><img src="images/player-1.jpg" /></picture>
+                              <div class="tooltip-result-chart__content">
+                                  <div class="tooltip-result-chart__title">${labels[index]}</div><time class="tooltip-result-chart__date" datetime="2019-01-24">24.01.19</time>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              `;
+      
+              tooltipContainer.style.left = chart.canvas.offsetLeft + x + 'px';
+              tooltipContainer.style.top = chart.canvas.offsetTop + y + 'px';
+              tooltipContainer.style.display = 'block';
+          } else {
+              document.getElementById('tooltip-container-2').style.display = 'none';
               playerChartCircle.update();
           }
       }
       
       // chart circle
-      var ctx = document.getElementById('playerChartCircle').getContext('2d');
-      var playerChartCircle = new Chart(ctx, {
+      var ctx = document.getElementById('playerChartCircle1').getContext('2d');
+      var playerChartCircle1 = new Chart(ctx, {
         type: 'doughnut',
         data: {
           labels: ['Грунт', 'Трава', 'Ковер', 'Хард'],
@@ -7029,10 +7143,63 @@
                 }
               },
               onHover: function(evt, legendItem) {
-                document.getElementById('playerChartCircle').style.cursor = 'pointer';
+                document.getElementById('playerChartCircle1').style.cursor = 'pointer';
               },
               onLeave: function(evt, legendItem) {
-                document.getElementById('playerChartCircle').style.cursor = 'default';
+                document.getElementById('playerChartCircle1').style.cursor = 'default';
+              }
+            }
+          },
+          tooltips: {
+            enabled: false
+          }
+        }
+      });
+      
+      // chart circle
+      var ctx = document.getElementById('playerChartCircle2').getContext('2d');
+      var playerChartCircle2 = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Грунт', 'Трава', 'Ковер', 'Хард'],
+          datasets: [{
+            data: [10, 50, 25, 15],
+            backgroundColor: ['#F39E3A', '#93CE47', '#6F8AE8', '#B88BE5'],
+          }]
+        },
+        options: {
+          cutoutPercentage: 80,
+          responsive: true,
+          animation: {
+            animateRotate: false,
+            animateScale: true
+          },
+          plugins: {
+            legend: {
+              position: 'right',
+              labels: {
+                generateLabels: function(chart) {
+                  var data = chart.data;
+                  if (data.labels.length && data.datasets.length) {
+                    return data.labels.map(function(label, index) {
+                      var dataset = data.datasets[0];
+                      var backgroundColor = dataset.backgroundColor[index];
+                      return {
+                        text: label,
+                        fillStyle: backgroundColor,
+                        strokeStyle: backgroundColor,
+                        index: index
+                      };
+                    });
+                  }
+                  return [];
+                }
+              },
+              onHover: function(evt, legendItem) {
+                document.getElementById('playerChartCircle2').style.cursor = 'pointer';
+              },
+              onLeave: function(evt, legendItem) {
+                document.getElementById('playerChartCircle2').style.cursor = 'default';
               }
             }
           },

@@ -1740,13 +1740,15 @@ svg,
   visibility: hidden;
 }
 
-#tooltip-container {
+#tooltip-container-1,
+#tooltip-container-2 {
   position: absolute;
   display: none;
   z-index: 6;
 }
 
-canvas:not(:hover) ~ #tooltip-container {
+canvas:not(:hover) ~ #tooltip-container-1,
+canvas:not(:hover) ~ #tooltip-container-2 {
   display: none !important;
 }
 
