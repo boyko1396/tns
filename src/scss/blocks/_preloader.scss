@@ -1,0 +1,34 @@
+.preloader {
+    background: $color-gray-2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .4s;
+    z-index: 10000;
+    &--is-hidden {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &__logo {
+        width: 160rem;
+        height: auto;
+        display: block;
+        flex-shrink: 0;
+        animation: 1s preloader-pulse infinite;
+    }
+}
+
+@keyframes preloader-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.86);
+    }
+}

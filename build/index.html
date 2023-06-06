@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/styles.css?v=568532623346"/>
   </head>
   <body>
+    <div class="preloader" id="preloader"><img class="preloader__logo" src="images/logo-brand-type-1.svg" alt="preloader"/></div>
     <div class="site" id="root">
       <div class="site__inner">
         <header class="header header--position-sticky site__header">
@@ -6880,6 +6881,12 @@
       </div>
     </div>
     <script src="js/main.js?v=568532623346"></script>
+    <script>
+      window.addEventListener('load', function() {
+        var preloader = document.getElementById('preloader');
+        preloader.classList.add('preloader--is-hidden');
+      });
+    </script>
     <script src="js/chart.js?v=568532623346"></script>
     <script src="js/PieMeister-with-Progress.min.js?v=568532623346"></script>
     <script src="js/tingle.js?v=568532623346"></script>
