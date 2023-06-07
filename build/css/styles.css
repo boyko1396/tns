@@ -3048,6 +3048,13 @@ canvas:not(:hover) ~ #tooltip-container-2 {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+@media (max-width: 576px) {
+  .stat-graph__dots {
+    width: 32rem;
+    height: 32rem;
+    margin: -16rem 0 0 -16rem;
+  }
+}
 .stat-graph__dots:before, .stat-graph__dots:after {
   background: #fff;
   width: 8rem;
@@ -3061,6 +3068,13 @@ canvas:not(:hover) ~ #tooltip-container-2 {
   border-radius: 50%;
   offset-path: path("M21,0 A21,21 0 1,1 21,42 A21,21 0 1,1 21,0");
   display: block;
+}
+@media (max-width: 576px) {
+  .stat-graph__dots:before, .stat-graph__dots:after {
+    width: 6rem;
+    height: 6rem;
+    offset-path: path("M16,0 A16,16 0 1,1 16,32 A16,16 0 1,1 16,0");
+  }
 }
 .stat-graph__dots:before {
   offset-distance: 0;

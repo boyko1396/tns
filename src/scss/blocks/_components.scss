@@ -2419,6 +2419,11 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         top: 50%;
         left: 50%;
         transform: scaleX(-1);
+        @media (max-width: $xs) {
+            width: 32rem;
+            height: 32rem;
+            margin: -16rem 0 0 -16rem;
+        }
         &:before,
         &:after {
             background: $color-white-1;
@@ -2433,6 +2438,11 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             border-radius: 50%;
             offset-path: path('M21,0 A21,21 0 1,1 21,42 A21,21 0 1,1 21,0');
             display: block;
+            @media (max-width: $xs) {
+                width: 6rem;
+                height: 6rem;
+                offset-path: path('M16,0 A16,16 0 1,1 16,32 A16,16 0 1,1 16,0');
+            }
         }
         &:before {
             offset-distance: 0;
