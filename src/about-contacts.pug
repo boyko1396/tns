@@ -16,6 +16,8 @@ html(lang='ru')
                   .row__col-8.about-layout__col.about-layout__col--main
                     .box.box--theme-white-gradient.box--mobile-full.about-layout__block
                       h1.about-layout__block-title Контакты и поддержка
+                      .d-md-block.content.about-layout__block-desc
+                        p Мы предоставляем <a href="#">возможности</a>, для их приобритения мы предоставляем самые популярные платёжные системы:
                       .about-layout__block-contacts-list
                         .contacts-card.contacts-card--theme-red.about-layout__block-contacts-list-item
                           .contacts-card__inner
@@ -86,10 +88,10 @@ html(lang='ru')
                       .color-green.about-layout__aside-subtitle Задайте вопрос нам!
                       form(action="#").about-layout__aside-form
                         .input-area-el.about-layout__aside-form-login
-                          input(type="email" name="email" required value="Kasbura@gmail.com")#faq-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+                          input(type="email" name="email" required value="Kasbura@gmail.com" placeholder="Ваша эл. почта")#faq-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
                           label(for="faq-email").input-area-el__label Ваша эл. почта
                         .input-area-el.about-layout__aside-form-message
-                          textarea(name="message" required style="min-height: 120rem;")#faq-message.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-textarea.input-area-el__input
+                          textarea(name="message" required style="min-height: 120rem;" placeholder="Ваш вопрос")#faq-message.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-textarea.input-area-el__input
                           label(for="faq-message").input-area-el__label Ваш вопрос
                         button(type="submit").btn.btn--size-md.btn--theme-accent.about-layout__aside-form-btn
                           span.btn__inner

@@ -11,10 +11,9 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/styles.css?v=568532623346"/>
+    <link rel="stylesheet" href="css/styles.css?v=121361634636364"/>
   </head>
   <body>
-    <div class="preloader" id="preloader"><img class="preloader__logo" src="images/logo-brand-type-1.svg" alt="preloader"/></div>
     <div class="site" id="root">
       <div class="site__inner">
         <header class="header header--position-sticky site__header">
@@ -904,21 +903,18 @@
                   </div>
                 </div>
               </div>
-              <script>
-                // header dropdown toggle mobile
-                const headerBtnToggle = document.querySelectorAll('.js-header-toggle');
-                
-                headerBtnToggle.forEach(function(button) {
-                  button.addEventListener('click', function() {
-                    document.body.classList.toggle('is-hidden-mobile');
-                    document.body.classList.toggle('is-open-menu-mobile');
-                  });
-                });
-              </script>
             </div>
           </div>
         </header>
         <main class="site__main" role="main">
+          <div class="block-b-f">
+            <button class="js-block-b-f-close btn-close btn-close--theme-white btn-close--size-sm block-b-f__close" type="button">
+              <svg class="icon btn-close__icon">
+                <use xlink:href="images/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <picture class="block-b-f__media"><img src="images/block-b-f-1.jpg" alt="Выиграйте деньги!"/></picture><a class="block-b-f__link" href="#" target="_blank"></a>
+          </div>
           <div class="layout-events">
             <div class="container layout-events__container">
               <div class="layout-events__list">
@@ -943,7 +939,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -1013,7 +1009,920 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
+                                  <div class="d-xs-none player-card__info-item">
+                                    <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
+                                  </div>
                                   <div class="player-card__info-item">
+                                    <div class="player-card__info-item-text">R-H</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <div class="event-card__body">
+                      <div class="event-card__header-btns">
+                        <button class="js-event-card-graph-mobile event-card__header-btns-item event-card__header-btns-item--view" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#chart"></use>
+                          </svg>
+                        </button>
+                        <button class="js-event-card-stat-view-mobile event-card__header-btns-item event-card__header-btns-item--info" type="button">
+                          <svg class="icon">
+                            <use xlink:href="images/sprite.svg#info"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="event-card__row">
+                        <div class="event-card__col event-card__col--result event-card__col--result-career">
+                          <div class="event-card__stat-imgs event-card__stat-imgs--theme-red">
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#action-icon-1"></use>
+                            </svg>
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#action-icon-2"></use>
+                            </svg>
+                          </div>
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">Карьера</div>
+                            </div>
+                            <div class="event-card__stat-list">
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">All Matches</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">62%</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">68%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">Decided set</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">69%</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">62%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">Finals</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">54%</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">67%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">Straights sets</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">32%</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">75%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="event-card__stat-imgs event-card__stat-imgs--theme-blue-light">
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#action-icon-2"></use>
+                            </svg>
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#action-icon-3"></use>
+                            </svg>
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#action-icon-4"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--result event-card__col--result-live">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">Live</div>
+                            </div>
+                            <div class="event-card__stat-list">
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">1/4 Finals</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">84%</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">62%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">Power Oppon.</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">57%</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">89%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">Better</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">78%</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">40%</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">STW1</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">59</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">66</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="event-card__stat-list-item">
+                                <div class="player-stat-card">
+                                  <div class="player-stat-card__header">
+                                    <div class="player-stat-card__title">TW2</div>
+                                  </div>
+                                  <div class="player-stat-card__list">
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm">
+                                        <div class="player-stat__count">43</div>
+                                      </div>
+                                    </div>
+                                    <div class="player-stat-card__list-item">
+                                      <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm">
+                                        <div class="player-stat__count">64</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--result event-card__col--result-stability">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-x"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-x"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--result event-card__col--result-mastery">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-x"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-x"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event-card__row event-card__row--middle">
+                        <div class="event-card__col event-card__col--graph event-card__col--graph-stability">
+                          <div class="event-card__graph">
+                            <button class="js-event-graph-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                            <div class="event-card__graph-header">
+                              <div class="event-card__subtitle">Стабильность</div>
+                            </div>
+                            <div class="event-card__graph-body">
+                              <canvas id="playerChart-1" style="height:23%; width:100%"></canvas>
+                              <div id="tooltip-container-1"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--graph event-card__col--graph-stat">
+                          <div class="event-card__versus">
+                            <button class="js-event-versus-btn-close btn-close btn-close--theme-white btn-close--size-sm event-card__versus-btn-close" type="button">
+                              <svg class="icon btn-close__icon">
+                                <use xlink:href="images/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                            <div class="event-card__versus-col">
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">34</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Подачи навылет</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">65</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">1</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Двойные ошибки</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">3</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">126</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>% первой подачи</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">96</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">146</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Очки выигр. на п.п.</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">152</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="event-card__versus-col">
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">34</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Подачи навылет</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">65</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">1</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Двойные ошибки</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">3</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">126</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>% первой подачи</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">96</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">146</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Очки выигр. на п.п.</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">152</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="event-card__versus-col">
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">34</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Подачи навылет</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">65</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">1</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Двойные ошибки</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">3</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">126</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>% первой подачи</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">96</div>
+                                </div>
+                              </div>
+                              <div class="event-card__versus-line">
+                                <div class="player-stat player-stat--theme-red player-stat--result-lose player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">146</div>
+                                </div>
+                                <div class="event-card__versus-line-title"><span>Очки выигр. на п.п.</span></div>
+                                <div class="player-stat player-stat--theme-blue-light player-stat--result-win player-stat--size-sm event-card__versus-line-stat">
+                                  <div class="player-stat__count">152</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--graph event-card__col--graph-mastery">
+                          <div class="event-card__graph">
+                            <div class="event-card__graph-header">
+                              <div class="event-card__subtitle">Мастерство</div>
+                            </div>
+                            <div class="event-card__graph-body">
+                              <canvas id="playerChart-2" style="height:23%; width:100%"></canvas>
+                              <div id="tooltip-container-2"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__middle-btns">
+                          <button class="event-card__middle-btn event-card__middle-btn--view" type="button">
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#view"></use>
+                            </svg>
+                          </button>
+                          <button class="js-event-card-stat-view event-card__middle-btn event-card__middle-btn--info" type="button">
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#info"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <footer class="event-card__footer">
+                      <div class="event-card__row">
+                        <div class="event-card__col event-card__col--graph-person event-card__col--graph-person-first">
+                          <div class="event-card__graph-person">
+                            <canvas id="playerChartCircle1"></canvas>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-experience">
+                          <div class="event-card__person-stat">
+                            <div class="event-card__person-stat-header">
+                              <div class="event-card__subtitle">Опыт</div>
+                            </div>
+                            <div class="event-card__person-stat-list">
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red" style="--stat-graph-progress: 80%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light" style="--stat-graph-progress: 60%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-talent">
+                          <div class="event-card__person-stat">
+                            <div class="event-card__person-stat-header">
+                              <div class="event-card__subtitle">Талант</div>
+                            </div>
+                            <div class="event-card__person-stat-list">
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red" style="--stat-graph-progress: 10%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="10%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light" style="--stat-graph-progress: 90%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="90%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-motivation">
+                          <div class="event-card__person-stat">
+                            <div class="event-card__person-stat-header">
+                              <div class="event-card__subtitle">Мотивация</div>
+                            </div>
+                            <div class="event-card__person-stat-list">
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red" style="--stat-graph-progress: 80%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light" style="--stat-graph-progress: 60%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-stability">
+                          <div class="event-card__person-stat">
+                            <div class="event-card__person-stat-header">
+                              <div class="event-card__subtitle">Стабильность</div>
+                            </div>
+                            <div class="event-card__person-stat-list">
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-red" style="--stat-graph-progress: 80%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="80%" stroke-width="10" stroke="#FC8171">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                              <div class="event-card__person-stat-list-item">
+                                <div class="stat-graph stat-graph--size-sm stat-graph--theme-blue-light" style="--stat-graph-progress: 60%">
+                                  <pie-chart class="stat-graph__progress" offset="top" pull="-250">
+                                    <style>
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    </style>
+                                    <slice size="60%" stroke-width="10" stroke="#17C6D2">
+                                      <tspan x="50%" y="53%">$size</tspan>
+                                    </slice>
+                                  </pie-chart>
+                                  <div class="stat-graph__dots"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-1">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">S</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 70%" data-progress-percent="70%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--stat event-card__col--stat-mobile event-card__col--stat-mobile-2">
+                          <div class="event-card__stat">
+                            <div class="event-card__stat-header">
+                              <div class="event-card__subtitle">R</div>
+                            </div>
+                            <div class="event-card__stat-progress-list">
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-red progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 20%" data-progress-percent="20%"><span></span></span></div>
+                              </div>
+                              <div class="event-card__stat-progress-list-card">
+                                <div class="progress-line progress-line--theme-blue-light progress-line--dir-y"><span class="progress-line__current" style="--progress-percent: 50%" data-progress-percent="50%"><span></span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--graph-person event-card__col--graph-person-second">
+                          <div class="event-card__graph-person">
+                            <canvas id="playerChartCircle2"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event-card__footer-action">
+                        <div class="event-card__footer-action-col event-card__footer-action-col--action event-card__footer-action-col--action-share">
+                          <button class="event-card__action-btn event-card__action-btn--share" type="button">
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#share"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="event-card__footer-action-col event-card__footer-action-col--vote">
+                          <div class="event-card__footer-action-vote">
+                            <button class="btn-router btn-router--size-sm btn-router--theme-red event-card__footer-action-vote-btn event-card__footer-action-vote-btn--prev" type="button">
+                              <svg class="icon btn-router__icon">
+                                <use xlink:href="images/sprite.svg#arrow-type-2-flip-x"></use>
+                              </svg>
+                            </button>
+                            <div class="event-card__footer-action-vote-title">Умное голосование</div>
+                            <button class="btn-router btn-router--size-sm btn-router--theme-blue-light event-card__footer-action-vote-btn event-card__footer-action-vote-btn--next" type="button">
+                              <svg class="icon btn-router__icon">
+                                <use xlink:href="images/sprite.svg#arrow-type-2"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="event-card__footer-action-col event-card__footer-action-col--action event-card__footer-action-col event-card__footer-action-col--action event-card__footer-action-col--action-bookmark">
+                          <button class="js-bookmark-btn event-card__action-btn event-card__action-btn--bookmark" type="button">
+                            <svg class="icon">
+                              <use xlink:href="images/sprite.svg#bookmark-outline"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+                <div class="event-card event-card--theme-white event-card--no-auth layout-events__list-card">
+                  <div class="event-card__auth">
+                    <div class="event-card__auth-center">
+                      <div class="title-size-4 event-card__auth-center-title">Доступно после регистрации</div>
+                      <button class="js-modal-register btn btn--size-md btn--theme-accent event-card__auth-center-btn" type="button"><span class="btn__inner"><span class="btn__title">Зарегистрироваться</span></span></button>
+                    </div>
+                  </div>
+                  <div class="event-card__inner">
+                    <header class="event-card__header">
+                      <div class="event-card__row">
+                        <div class="event-card__col event-card__col--person event-card__col--person-first">
+                          <div class="event-card__header-line-result event-card__header-line-result--first event-card__header-line-result--theme-red"></div>
+                          <div class="player-card player-card--dir-1 player-card--size-md event-card__header-player">
+                            <div class="player-card__inner">
+                              <picture class="player-card__img"><img src="images/player-1.jpg" alt="Роджер Федерер"/></picture>
+                              <div class="player-card__content">
+                                <div class="player-card__name">Роджер Федерер</div>
+                                <div class="player-card__info">
+                                  <div class="player-card__info-item">
+                                    <svg class="icon">
+                                      <use xlink:href="images/sprite.svg#cup"></use>
+                                    </svg>
+                                    <div class="player-card__info-item-text">845<span class="color-green">+4</span></div>
+                                  </div>
+                                  <div class="player-card__info-item">
+                                    <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
+                                  </div>
+                                  <div class="d-xs-none player-card__info-item">
+                                    <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
+                                  </div>
+                                  <div class="player-card__info-item">
+                                    <div class="player-card__info-item-text">R-H</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--description">
+                          <div class="event-card__header-top">
+                            <div class="event-card__header-top-content">
+                              <div class="event-card__header-name">Millenium Estoril Open. Estoril. Portugal. Singles. Round of 16</div>
+                            </div>
+                            <picture class="event-card__header-top-association"><img src="images/atp-logo.png" alt="Millenium Estoril Open. Estoril. Portugal. Singles. Round of 16"/></picture>
+                          </div>
+                          <div class="event-card__header-bottom">
+                            <div class="group-control group-control--size-xxs event-card__header-event-list">
+                              <div class="group-control__inner">
+                                <div class="group-control__item">
+                                  <div class="live-result live-result--rounded-top live-result--size-sm live-result--theme-blue-light">
+                                    <div class="live-result__inner">
+                                      <div class="live-result__text">1:0 (5:7) (*40:15)</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="group-control__item">
+                                  <div class="live-result live-result--rounded-top live-result--size-sm live-result--theme-gray">
+                                    <div class="live-result__inner"><img class="live-result__graph" src="images/graph-1.svg"/>
+                                      <div class="live-result__text">1st%</div><img class="live-result__graph" src="images/graph-2.svg"/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="group-control__item">
+                                  <div class="live-result live-result--rounded-top live-result--size-sm live-result--theme-gray">
+                                    <div class="live-result__inner">
+                                      <div class="live-result__text">1:56 | 2:06</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="group-control__item">
+                                  <div class="live-result live-result--rounded-top live-result--size-sm live-result--theme-gray">
+                                    <div class="live-result__inner">
+                                      <div class="live-result__text">34 | 65 | 65 | 65</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-card__col event-card__col--person event-card__col--person-second">
+                          <div class="event-card__header-line-result event-card__header-line-result--second event-card__header-line-result--theme-blue-light"></div>
+                          <div class="player-card player-card--dir-2 player-card--size-md event-card__header-player">
+                            <div class="player-card__inner">
+                              <picture class="player-card__img"><img src="images/player-3.jpg" alt="Новак Джокович"/></picture>
+                              <div class="player-card__content">
+                                <div class="player-card__name">Новак Джокович</div>
+                                <div class="player-card__info">
+                                  <div class="player-card__info-item">
+                                    <svg class="icon">
+                                      <use xlink:href="images/sprite.svg#cup"></use>
+                                    </svg>
+                                    <div class="player-card__info-item-text">845<span class="color-green">+4</span></div>
+                                  </div>
+                                  <div class="player-card__info-item">
+                                    <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
+                                  </div>
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -1851,7 +2760,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -1900,7 +2809,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -2727,7 +3636,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -2791,7 +3700,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -3448,7 +4357,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -3497,7 +4406,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -3735,7 +4644,7 @@
                         <div class="event-card__col event-card__col--result event-card__col--result-stability">
                           <div class="event-card__stat">
                             <div class="event-card__stat-header">
-                              <div class="event-card__subtitle">S</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">S</div><span class="badge-info badge-info--position-top-left badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -3752,7 +4661,7 @@
                         <div class="event-card__col event-card__col--result event-card__col--result-mastery">
                           <div class="event-card__stat">
                             <div class="event-card__stat-header">
-                              <div class="event-card__subtitle">R</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">R</div><span class="badge-info badge-info--position-top-left badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -4328,7 +5237,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -4377,7 +5286,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -5075,7 +5984,7 @@
                             <div class="player-card__inner">
                               <picture class="player-card__img"><img src="images/player-1.jpg" alt="Роджер Федерер"/></picture>
                               <div class="player-card__content">
-                                <div class="player-card__name">Роджер Федерер<span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md player-card__name-badge">
+                                <div class="player-card__name">Роджер Федерер<span class="badge-info badge-info--position-top-right badge-info--theme-gray badge-info--size-md player-card__name-badge">
                                     <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                       <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span></div>
                                 <div class="player-card__info">
@@ -5088,7 +5997,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -5147,7 +6056,7 @@
                             <div class="player-card__inner">
                               <picture class="player-card__img"><img src="images/player-3.jpg" alt="Новак Джокович"/></picture>
                               <div class="player-card__content">
-                                <div class="player-card__name"><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md player-card__name-badge">
+                                <div class="player-card__name"><span class="badge-info badge-info--position-top-left badge-info--theme-gray badge-info--size-md player-card__name-badge">
                                     <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                       <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>Новак Джокович</div>
                                 <div class="player-card__info">
@@ -5160,7 +6069,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -5198,7 +6107,7 @@
                           </div>
                           <div class="event-card__stat">
                             <div class="event-card__stat-header">
-                              <div class="event-card__subtitle">Карьера</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">Карьера</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -5296,7 +6205,7 @@
                         <div class="event-card__col event-card__col--result event-card__col--result-live">
                           <div class="event-card__stat">
                             <div class="event-card__stat-header">
-                              <div class="event-card__subtitle">Live</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">Live</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -5402,7 +6311,7 @@
                         <div class="event-card__col event-card__col--result event-card__col--result-stability">
                           <div class="event-card__stat">
                             <div class="event-card__stat-header">
-                              <div class="event-card__subtitle">S</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">S</div><span class="badge-info badge-info--position-top-left badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -5419,7 +6328,7 @@
                         <div class="event-card__col event-card__col--result event-card__col--result-mastery">
                           <div class="event-card__stat">
                             <div class="event-card__stat-header">
-                              <div class="event-card__subtitle">R</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">R</div><span class="badge-info badge-info--position-top-left badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -5443,7 +6352,7 @@
                               </svg>
                             </button>
                             <div class="event-card__graph-header">
-                              <div class="event-card__subtitle">Стабильность</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">Стабильность</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -5576,7 +6485,7 @@
                         <div class="event-card__col event-card__col--graph event-card__col--graph-mastery">
                           <div class="event-card__graph">
                             <div class="event-card__graph-header">
-                              <div class="event-card__subtitle">Мастерство</div><span class="badge-info badge-info--position-top-right badge-info--theme-gray-light badge-info--size-md event-card__stat-header-badge">
+                              <div class="event-card__subtitle">Мастерство</div><span class="badge-info badge-info--position-top-left badge-info--theme-gray badge-info--size-md event-card__stat-header-badge">
                                 <button class="badge-info__btn" type="button">?</button><span class="badge-info__dropdown">
                                   <p class="badge-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p></span></span>
                             </div>
@@ -5999,7 +6908,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -6069,7 +6978,7 @@
                                   <div class="player-card__info-item">
                                     <div class="player-card__info-item-text">29 <span class="color-gray">лет</span></div>
                                   </div>
-                                  <div class="player-card__info-item">
+                                  <div class="d-xs-none player-card__info-item">
                                     <div class="player-card__info-item-text">167 <span class="color-gray">см</span></div>
                                   </div>
                                   <div class="player-card__info-item">
@@ -6882,7 +7791,7 @@
         <footer class="footer site__footer">
           <div class="footer__top">
             <div class="container footer__top-container">
-              <div class="footer__top-col-aside footer__top-col-aside--logo"><a class="footer__top-logo" href="/"><img src="images/logo-brand-type-1.svg" alt="Tscore"/></a>
+              <div class="footer__top-col-aside footer__top-col-aside--logo"><a class="footer__top-logo" href="/"><img src="images/logo-brand-type-2.svg" alt="Tscore"/></a>
                 <nav class="u-nav u-nav--main footer__top-language">
                   <ul class="u-nav__list">
                     <li class="u-nav__item"><a class="u-nav__link is-active" href="#">Ru</a></li>
@@ -6928,7 +7837,276 @@
         </footer>
       </div>
     </div>
-    <script src="js/main.js?v=568532623346"></script>
+    <script src="js/main.js?v=121361634636364"></script>
+    <div class="tingle-modal u-modal--register">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <ul class="u-modal__router">
+            <li><a class="js-modal-register is-active">Регистрация</a></li>
+            <li><a class="js-modal-login">Вход</a></li>
+          </ul>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" placeholder="Эл. почта" id="register-email"/>
+            <label class="input-area-el__label" for="register-email">Эл. почта</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="name" name="login" required="required" value="" placeholder="Ваш ник" id="register-login"/>
+            <label class="input-area-el__label" for="register-login">Ваш ник</label>
+          </div>
+          <label class="u-checkbox u-checkbox--size-sm u-checkbox--theme-gray u-modal__form-privacy">
+            <input class="u-checkbox__control" type="checkbox" name="register-privacy" checked="checked" required="required" value=""/><span class="u-checkbox__inner">
+              <div class="u-checkbox__icon">
+                <svg class="icon">
+                  <use xlink:href="images/sprite.svg#checked"></use>
+                </svg>
+              </div>
+              <div class="u-checkbox__title">Я прочитал и согласен с Условиями обслуживания <a href="#">Условия Tscore</a></div></span>
+          </label>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Зарегистрироваться</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--login">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <ul class="u-modal__router">
+            <li><a class="js-modal-register">Регистрация</a></li>
+            <li><a class="js-modal-login is-active">Вход</a></li>
+          </ul>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" placeholder="Эл. почта" id="login-email"/>
+            <label class="input-area-el__label" for="login-email">Эл. почта</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password" required="required" value="" placeholder="Пароль" id="login-password"/>
+            <label class="input-area-el__label" for="login-password">Пароль</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Войти</span></span></button>
+            <button class="js-modal-reset js-change-password-inner btn btn--size-md btn--theme-simple u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Забыли пароль?</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--reset">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Восстановить пароль</div>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" placeholder="Эл. почта" id="reset-email"/>
+            <label class="input-area-el__label" for="reset-email">Эл. почта</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Восстановить пароль</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--change-password">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Сменить пароль</div>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password_old" required="required" value="" placeholder="Старый пароль" id="change-password-old"/>
+            <label class="input-area-el__label" for="change-password-old">Старый пароль</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password_new" required="required" value="" placeholder="Новый пароль" id="change-password-new"/>
+            <label class="input-area-el__label" for="change-password-new">Новый пароль</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password_new_repeat" required="required" value="" placeholder="Повторите" id="change-password-new-repeat"/>
+            <label class="input-area-el__label" for="change-password-new-repeat">Повторите</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Сохранить</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--change-email">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Сменить эл. почту</div>
+        </header>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="password" name="password" required="required" value="" placeholder="Пароль" id="change-email-password"/>
+            <label class="input-area-el__label" for="change-email-password">Пароль</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="" placeholder="Новая эл. почта" id="change-email-new"/>
+            <label class="input-area-el__label" for="change-email-new">Новая эл. почта</label>
+          </div>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-md btn--theme-accent u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Сохранить</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--referral">
+      <div class="u-modal__inner">
+        <header class="u-modal__header">
+          <div class="u-modal__title">Приглашение партнёров по почте</div>
+        </header>
+        <div class="content u-modal__description">
+          <p>Вы можете посмотреть <a href="#">здесь</a> пример письма, который придёт вашим партнёрам</p>
+        </div>
+        <form class="u-modal__form" action="#">
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email1" required="required" value="" placeholder="Эл. почта" id="referral-email-1"/>
+            <label class="input-area-el__label" for="referral-email-1">Эл. почта</label>
+          </div>
+          <div class="input-area-el u-modal__form-input">
+            <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email2" required="required" value="" placeholder="Эл. почта" id="referral-email-2"/>
+            <label class="input-area-el__label" for="referral-email-2">Эл. почта</label>
+          </div>
+          <button class="btn btn--size-md btn--theme-green-light u-modal__btn-add" type="button"><span class="btn__inner"><span class="btn__title">Добавить ещё партнёра</span></span></button>
+          <footer class="u-modal__form-footer">
+            <button class="btn btn--size-sm btn--theme-accent btn--width-full u-modal__form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Отправить приглашение</span></span></button>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--register-access">
+      <div class="u-modal__inner">
+        <div class="u-modal__block">
+          <header class="u-modal__header">
+            <div class="u-modal__title">Регистрация<br>завершена</div>
+          </header>
+          <picture class="u-modal__picture"><img src="images/modal-img-1.svg" alt="Регистрация завершена"/></picture>
+          <div class="content u-modal__description">
+            <p>Для активации аккаунта перейдите по ссылке, указанной в вашем письме</p>
+          </div>
+          <footer class="u-modal__block-footer">
+            <button class="js-modal-btn-close-register-access btn btn--size-md btn--theme-accent u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Закрыть</span></span></button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--referral-access">
+      <div class="u-modal__inner">
+        <div class="u-modal__block">
+          <header class="u-modal__header">
+            <div class="u-modal__title">Приглашения<br>отправлены</div>
+          </header>
+          <picture class="u-modal__picture"><img src="images/modal-img-2.svg" alt="Приглашения отправлены"/></picture>
+          <div class="content u-modal__description">
+            <p>При регистрации каждого партнёра<br><span class="color-black">вы получите 100 токенов</span></p>
+          </div>
+          <footer class="u-modal__block-footer">
+            <button class="js-modal-btn-close-referral-access btn btn--size-md btn--theme-accent u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Закрыть</span></span></button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--faq-access">
+      <div class="u-modal__inner">
+        <div class="u-modal__block">
+          <header class="u-modal__header">
+            <div class="u-modal__title">Спасибо<br>за вопрос</div>
+          </header>
+          <picture class="u-modal__picture"><img src="images/modal-img-3.svg" alt="Спасибо за вопрос"/></picture>
+          <div class="content u-modal__description">
+            <p>Ответим в течении 30 минут по эл. почте</p>
+          </div>
+          <footer class="u-modal__block-footer">
+            <button class="js-modal-btn-close-faq-access btn btn--size-md btn--theme-accent u-modal__form-btn" type="button"><span class="btn__inner"><span class="btn__title">Закрыть</span></span></button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="tingle-modal u-modal--premium">
+      <div class="u-modal__inner">
+        <div class="u-modal__premium">
+          <header class="u-modal__premium-header">
+            <div class="u-modal__title">Прогнозируй свою победу вместе&nbsp;с&nbsp;AiTNS</div>
+          </header>
+          <div class="js-tab-init tab-block">
+            <div class="tab-block__inner">
+              <nav class="tab-block__nav">
+                <ul class="tab-block__list">
+                  <li class="tab-block__item">
+                    <button class="tab-link is-active" type="button"><img src="images/shop-card-1.svg" alt="Опыт"/><span data-tab-title="Опыт">Опыт</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-2.svg" alt="Таланты"/><span data-tab-title="Таланты">Таланты</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-3.svg" alt="Мотивация"/><span data-tab-title="Мотивация">Мотивация</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-4.svg" alt="Стабильность"/><span data-tab-title="Стабильность">Стабильность</span></button>
+                  </li>
+                  <li class="tab-block__item">
+                    <button class="tab-link" type="button"><img src="images/shop-card-6.svg" alt="Умное голосование"/><span data-tab-title="Умное голосование">Умное голосование</span></button>
+                  </li>
+                </ul>
+              </nav>
+              <div class="tab-block__content">
+                <div class="tab-block__content-item is-show">
+                  <button class="js-tab-link-mobile tab-link is-active tab-block__content-item-tab-link" type="button"><img src="images/shop-card-1.svg" alt="Опыт"/><span data-tab-title="Опыт">Опыт</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:</p>
+                      <ol>
+                        <li>Первый параметр</li>
+                        <li>Второй параметр</li>
+                        <li>3 параметр</li>
+                        <li>Четвертый чет параметр</li>
+                      </ol>
+                    </div>
+                    <button class="btn btn--size-md btn--theme-gradient-accent tab-block__btn" type="submit"><span class="btn__inner"><span class="btn__title">Перейти к разблокировке</span></span></button>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-2.svg" alt="Таланты"/><span data-tab-title="Таланты">Таланты</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-3.svg" alt="Мотивация"/><span data-tab-title="Мотивация">Мотивация</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-4.svg" alt="Стабильность"/><span data-tab-title="Стабильность">Стабильность</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 4</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-block__content-item">
+                  <button class="js-tab-link-mobile tab-link tab-block__content-item-tab-link" type="button"><img src="images/shop-card-6.svg" alt="Умное голосование"/><span data-tab-title="Умное голосование">Умное голосование голосование</span></button>
+                  <div class="tab-block__content-item-inner">
+                    <div class="content tab-block__text">
+                      <p>tab 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
       window.addEventListener('load', function() {
         var preloader = document.getElementById('preloader');
@@ -7287,6 +8465,67 @@
           var eventCard = this.closest('.event-card');
           document.body.classList.remove('is-hidden-mobile');
           eventCard.classList.remove('is-show-graph-mobile');
+        });
+      });
+      
+    </script>
+    <script src="js/tingle.js?v=568532623346"></script>
+    <script>
+      // modal init
+      var modalLogin = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalLoginBtns = document.querySelectorAll('.js-modal-login');
+      
+      modalLoginBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.open();
+        });
+      });
+      
+      modalLogin.setContent(document.querySelector('.u-modal--login').innerHTML);
+      
+      // modal init
+      var modalRegister = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+      
+      var modalRegisterBtns = document.querySelectorAll('.js-modal-register');
+      
+      modalRegisterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegister.open();
+        });
+      });
+      
+      modalRegister.setContent(document.querySelector('.u-modal--register').innerHTML);
+      
+      function switchWindows(e) {
+        e.preventDefault();
+      
+        var target = e.target;
+        var isRegisterActive = target.classList.contains('js-modal-register');
+      
+        if (isRegisterActive) {
+          modalLogin.close();
+          modalRegister.open();
+        } else {
+          modalLogin.open();
+          modalRegister.close();
+        }
+      }
+      
+      var navLinks = document.querySelectorAll('.u-modal__router a');
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', switchWindows);
+      });
+      
+      var modalLoginClose = document.querySelectorAll('.js-change-password-inner');
+      
+      modalLoginClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.close();
         });
       });
     </script>

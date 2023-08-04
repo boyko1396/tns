@@ -1,0 +1,234 @@
+.tingle-modal.u-modal--register
+  .u-modal__inner
+    header.u-modal__header
+      ul.u-modal__router
+        li
+          a.js-modal-register.is-active Регистрация
+        li
+          a.js-modal-login Вход
+    form(action="#").u-modal__form
+      .input-area-el.u-modal__form-input
+        input(type="email" name="email" required value="" placeholder="Эл. почта")#register-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="register-email").input-area-el__label Эл. почта
+      .input-area-el.u-modal__form-input
+        input(type="name" name="login" required value="" placeholder="Ваш ник")#register-login.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="register-login").input-area-el__label Ваш ник
+      label.u-checkbox.u-checkbox--size-sm.u-checkbox--theme-gray.u-modal__form-privacy
+        input(type="checkbox" name="register-privacy" checked required value="").u-checkbox__control
+        span.u-checkbox__inner
+          .u-checkbox__icon
+            svg.icon
+              use(xlink:href='images/sprite.svg#checked')
+          .u-checkbox__title Я прочитал и согласен с Условиями обслуживания <a href="#">Условия Tscore</a>
+      footer.u-modal__form-footer
+        button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Зарегистрироваться
+
+.tingle-modal.u-modal--login
+  .u-modal__inner
+    header.u-modal__header
+      ul.u-modal__router
+        li
+          a.js-modal-register Регистрация
+        li
+          a.js-modal-login.is-active Вход
+    form(action="#").u-modal__form
+      .input-area-el.u-modal__form-input
+        input(type="email" name="email" required value="" placeholder="Эл. почта")#login-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="login-email").input-area-el__label Эл. почта
+      .input-area-el.u-modal__form-input
+        input(type="password" name="password" required value="" placeholder="Пароль")#login-password.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="login-password").input-area-el__label Пароль
+      footer.u-modal__form-footer
+        button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Войти
+        button(type="button").js-modal-reset.js-change-password-inner.btn.btn--size-md.btn--theme-simple.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Забыли пароль?
+
+.tingle-modal.u-modal--reset
+  .u-modal__inner
+    header.u-modal__header
+      .u-modal__title Восстановить пароль
+    form(action="#").u-modal__form
+      .input-area-el.u-modal__form-input
+        input(type="email" name="email" required value="" placeholder="Эл. почта")#reset-email.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="reset-email").input-area-el__label Эл. почта
+      footer.u-modal__form-footer
+        button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Восстановить пароль
+
+.tingle-modal.u-modal--change-password
+  .u-modal__inner
+    header.u-modal__header
+      .u-modal__title Сменить пароль
+    form(action="#").u-modal__form
+      .input-area-el.u-modal__form-input
+        input(type="password" name="password_old" required value="" placeholder="Старый пароль")#change-password-old.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="change-password-old").input-area-el__label Старый пароль
+      .input-area-el.u-modal__form-input
+        input(type="password" name="password_new" required value="" placeholder="Новый пароль")#change-password-new.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="change-password-new").input-area-el__label Новый пароль
+      .input-area-el.u-modal__form-input
+        input(type="password" name="password_new_repeat" required value="" placeholder="Повторите")#change-password-new-repeat.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="change-password-new-repeat").input-area-el__label Повторите
+      footer.u-modal__form-footer
+        button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Сохранить
+
+.tingle-modal.u-modal--change-email
+  .u-modal__inner
+    header.u-modal__header
+      .u-modal__title Сменить эл. почту
+    form(action="#").u-modal__form
+      .input-area-el.u-modal__form-input
+        input(type="password" name="password" required value="" placeholder="Пароль")#change-email-password.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="change-email-password").input-area-el__label Пароль
+      .input-area-el.u-modal__form-input
+        input(type="email" name="email" required value="" placeholder="Новая эл. почта")#change-email-new.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="change-email-new").input-area-el__label Новая эл. почта
+      footer.u-modal__form-footer
+        button(type="submit").btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Сохранить
+
+.tingle-modal.u-modal--referral
+  .u-modal__inner
+    header.u-modal__header
+      .u-modal__title Приглашение партнёров по почте
+    .content.u-modal__description
+      p Вы можете посмотреть <a href="#">здесь</a> пример письма, который придёт вашим партнёрам
+    form(action="#").u-modal__form
+      .input-area-el.u-modal__form-input
+        input(type="email" name="email1" required value="" placeholder="Эл. почта")#referral-email-1.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="referral-email-1").input-area-el__label Эл. почта
+      .input-area-el.u-modal__form-input
+        input(type="email" name="email2" required value="" placeholder="Эл. почта")#referral-email-2.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+        label(for="referral-email-2").input-area-el__label Эл. почта
+      button(type="button").btn.btn--size-md.btn--theme-green-light.u-modal__btn-add
+        span.btn__inner
+          span.btn__title Добавить ещё партнёра
+      footer.u-modal__form-footer
+        button(type="submit").btn.btn--size-sm.btn--theme-accent.btn--width-full.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Отправить приглашение
+
+.tingle-modal.u-modal--register-access
+  .u-modal__inner
+    .u-modal__block
+      header.u-modal__header
+        .u-modal__title Регистрация<br>завершена
+      picture.u-modal__picture
+        img(src="images/modal-img-1.svg" alt="Регистрация завершена")
+      .content.u-modal__description
+        p Для активации аккаунта перейдите по ссылке, указанной в вашем письме
+      footer.u-modal__block-footer
+        button(type="button").js-modal-btn-close-register-access.btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Закрыть
+
+.tingle-modal.u-modal--referral-access
+  .u-modal__inner
+    .u-modal__block
+      header.u-modal__header
+        .u-modal__title Приглашения<br>отправлены
+      picture.u-modal__picture
+        img(src="images/modal-img-2.svg" alt="Приглашения отправлены")
+      .content.u-modal__description
+        p При регистрации каждого партнёра<br><span class="color-black">вы получите 100 токенов</span>
+      footer.u-modal__block-footer
+        button(type="button").js-modal-btn-close-referral-access.btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Закрыть
+
+.tingle-modal.u-modal--faq-access
+  .u-modal__inner
+    .u-modal__block
+      header.u-modal__header
+        .u-modal__title Спасибо<br>за вопрос
+      picture.u-modal__picture
+        img(src="images/modal-img-3.svg" alt="Спасибо за вопрос")
+      .content.u-modal__description
+        p Ответим в течении 30 минут по эл. почте
+      footer.u-modal__block-footer
+        button(type="button").js-modal-btn-close-faq-access.btn.btn--size-md.btn--theme-accent.u-modal__form-btn
+          span.btn__inner
+            span.btn__title Закрыть
+
+.tingle-modal.u-modal--premium
+  .u-modal__inner
+    .u-modal__premium
+      header.u-modal__premium-header
+        .u-modal__title Прогнозируй свою победу вместе&nbsp;с&nbsp;AiTNS
+      .js-tab-init.tab-block
+        .tab-block__inner
+          nav.tab-block__nav
+            ul.tab-block__list
+              li.tab-block__item
+                button(type="button").tab-link.is-active
+                  img(src="images/shop-card-1.svg" alt="Опыт")
+                  span(data-tab-title="Опыт") Опыт
+              li.tab-block__item
+                button(type="button").tab-link
+                  img(src="images/shop-card-2.svg" alt="Таланты")
+                  span(data-tab-title="Таланты") Таланты
+              li.tab-block__item
+                button(type="button").tab-link
+                  img(src="images/shop-card-3.svg" alt="Мотивация")
+                  span(data-tab-title="Мотивация") Мотивация
+              li.tab-block__item
+                button(type="button").tab-link
+                  img(src="images/shop-card-4.svg" alt="Стабильность")
+                  span(data-tab-title="Стабильность") Стабильность
+              li.tab-block__item
+                button(type="button").tab-link
+                  img(src="images/shop-card-6.svg" alt="Умное голосование")
+                  span(data-tab-title="Умное голосование") Умное голосование
+          .tab-block__content
+            .tab-block__content-item.is-show
+              button(type="button").js-tab-link-mobile.tab-link.is-active.tab-block__content-item-tab-link
+                img(src="images/shop-card-1.svg" alt="Опыт")
+                span(data-tab-title="Опыт") Опыт
+              .tab-block__content-item-inner
+                .content.tab-block__text
+                  p Опыт — показатель игрока, рассчитанный по уникальным алгоритмам. Чем выше, тем больше вероятность победы.<br>Данный показатель рассчитывается с учётом следующих параметров игрока:
+                  ol
+                    li Первый параметр
+                    li Второй параметр
+                    li 3 параметр
+                    li Четвертый чет параметр
+                button(type="submit").btn.btn--size-md.btn--theme-gradient-accent.tab-block__btn
+                  span.btn__inner
+                    span.btn__title Перейти к разблокировке
+            .tab-block__content-item
+              button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                img(src="images/shop-card-2.svg" alt="Таланты")
+                span(data-tab-title="Таланты") Таланты
+              .tab-block__content-item-inner
+                .content.tab-block__text
+                  p tab 2
+            .tab-block__content-item
+              button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                img(src="images/shop-card-3.svg" alt="Мотивация")
+                span(data-tab-title="Мотивация") Мотивация
+              .tab-block__content-item-inner
+                .content.tab-block__text
+                  p tab 3
+            .tab-block__content-item
+              button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                img(src="images/shop-card-4.svg" alt="Стабильность")
+                span(data-tab-title="Стабильность") Стабильность
+              .tab-block__content-item-inner
+                .content.tab-block__text
+                  p tab 4
+            .tab-block__content-item
+              button(type="button").js-tab-link-mobile.tab-link.tab-block__content-item-tab-link
+                img(src="images/shop-card-6.svg" alt="Умное голосование")
+                span(data-tab-title="Умное голосование") Умное голосование голосование
+              .tab-block__content-item-inner
+                .content.tab-block__text
+                  p tab 5

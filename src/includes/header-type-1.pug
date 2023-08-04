@@ -638,14 +638,3 @@ header.header.header--position-sticky.site__header
                                 span.u-switcher__inner
                                   span.u-switcher__title Акцент
                                   span.u-switcher__icon
-
-      script.
-        // header dropdown toggle mobile
-        const headerBtnToggle = document.querySelectorAll('.js-header-toggle');
-
-        headerBtnToggle.forEach(function(button) {
-          button.addEventListener('click', function() {
-            document.body.classList.toggle('is-hidden-mobile');
-            document.body.classList.toggle('is-open-menu-mobile');
-          });
-        });

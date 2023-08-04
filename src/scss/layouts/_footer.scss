@@ -27,7 +27,6 @@
             font-size: 0;
             flex: 0 0 62rem;
             align-self: center;
-            filter: grayscale(1);
             transition: all .4s;
             @media (max-width: $xs) {
                 margin-right: 16rem;
@@ -35,7 +34,7 @@
             &:hover {
                 text-decoration: none;
                 @media (min-width: $lg-mf) {
-                    filter: grayscale(0);
+                    opacity: .6;
                 }
             }
             img {

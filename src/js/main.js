@@ -1,4 +1,14 @@
 if (document.querySelector('.js-profile-nav')) {
+  // header dropdown toggle mobile
+  const headerBtnToggle = document.querySelectorAll('.js-header-toggle');
+
+  headerBtnToggle.forEach(function(button) {
+    button.addEventListener('click', function() {
+      document.body.classList.toggle('is-hidden-mobile');
+      document.body.classList.toggle('is-open-menu-mobile');
+    });
+  });
+
   // header profile nav dropdown
   const headerProfileBtn = document.querySelector('.js-profile-nav');
   const headerProfileNav = document.querySelector('.header__top-aside-profile');
@@ -18,6 +28,14 @@ if (document.querySelector('.js-profile-nav')) {
     }
   });
 }
+
+// banner btn close
+const closeButtonBlockBF = document.querySelector('.js-block-b-f-close');
+
+closeButtonBlockBF.addEventListener('click', () => {
+  const blockBF = closeButtonBlockBF.closest('.block-b-f');
+  blockBF.classList.add('is-hidden');
+});
 
 // btn bookmark toggle
 const bookmarkBtn = document.querySelectorAll('.js-bookmark-btn');
@@ -69,30 +87,3 @@ btnMooreTitle.forEach(function(btn) {
     this.classList.toggle('is-active');
   });
 });
-
-// input label
-const inputLabels = document.querySelectorAll('.js-input-label');
-
-function handleBlur() {
-  if (this.value !== '') {
-    this.nextElementSibling.classList.add('is-active');
-  } else {
-    this.nextElementSibling.classList.remove('is-active');
-  }
-}
-
-inputLabels.forEach(function(inputLabel) {
-  inputLabel.addEventListener('blur', handleBlur);
-});
-
-function updateInputLabels() {
-  inputLabels.forEach(function(inputLabel) {
-    if (inputLabel.value !== '') {
-      inputLabel.nextElementSibling.classList.add('is-active');
-    } else {
-      inputLabel.nextElementSibling.classList.remove('is-active');
-    }
-  });
-}
-
-updateInputLabels();

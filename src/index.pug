@@ -4,13 +4,13 @@ html(lang='ru')
 
   body
 
-    #preloader.preloader
-      img(src="images/logo-brand-type-1.svg" alt="preloader").preloader__logo
+    //- include includes/preloader.pug
     #root.site
       .site__inner
         include includes/header-type-1.pug
 
         main(role="main").site__main
+          include includes/banner.pug
           .layout-events
             .container.layout-events__container
               .layout-events__list
@@ -33,7 +33,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -79,7 +79,659 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
+                                  .d-xs-none.player-card__info-item
+                                    .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
+                                    .player-card__info-item-text R-H
+                    .event-card__body
+                      .event-card__header-btns
+                        button(type="button").js-event-card-graph-mobile.event-card__header-btns-item.event-card__header-btns-item--view
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#chart')
+                        button(type="button").js-event-card-stat-view-mobile.event-card__header-btns-item.event-card__header-btns-item--info
+                          svg.icon
+                            use(xlink:href='images/sprite.svg#info')
+                      .event-card__row
+                        .event-card__col.event-card__col--result.event-card__col--result-career
+                          .event-card__stat-imgs.event-card__stat-imgs--theme-red
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#action-icon-1')
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#action-icon-2')
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle Карьера
+                            .event-card__stat-list
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title All Matches
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 62%
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 68%
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title Decided set
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 69%
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 62%
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title Finals
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 54%
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 67%
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title Straights sets
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 32%
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 75%
+                          .event-card__stat-imgs.event-card__stat-imgs--theme-blue-light
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#action-icon-2')
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#action-icon-3')
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#action-icon-4')
+                        .event-card__col.event-card__col--result.event-card__col--result-live
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle Live
+                            .event-card__stat-list
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title 1/4 Finals
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 84%
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 62%
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title Power Oppon.
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 57%
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 89%
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title Better
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 78%
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 40%
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title STW1
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 59
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 66
+                              .event-card__stat-list-item
+                                .player-stat-card
+                                  .player-stat-card__header
+                                    .player-stat-card__title TW2
+                                  .player-stat-card__list
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm
+                                        .player-stat__count 43
+                                    .player-stat-card__list-item
+                                      .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm
+                                        .player-stat__count 64
+                        .event-card__col.event-card__col--result.event-card__col--result-stability
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-x
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-x
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--result.event-card__col--result-mastery
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-x
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-x
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                      .event-card__row.event-card__row--middle
+                        .event-card__col.event-card__col--graph.event-card__col--graph-stability
+                          .event-card__graph
+                            button(type="button").js-event-graph-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
+                            .event-card__graph-header
+                              .event-card__subtitle Стабильность
+                            .event-card__graph-body
+                              canvas#playerChart-1(style="height:23%; width:100%")
+                              #tooltip-container-1
+                        .event-card__col.event-card__col--graph.event-card__col--graph-stat
+                          .event-card__versus
+                            button(type="button").js-event-versus-btn-close.btn-close.btn-close--theme-white.btn-close--size-sm.event-card__versus-btn-close
+                              svg.icon.btn-close__icon
+                                use(xlink:href='images/sprite.svg#close')
+                            .event-card__versus-col
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 34
+                                .event-card__versus-line-title
+                                  span Подачи навылет
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 65
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 1
+                                .event-card__versus-line-title
+                                  span Двойные ошибки
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 3
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 126
+                                .event-card__versus-line-title
+                                  span % первой подачи
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 96
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 146
+                                .event-card__versus-line-title
+                                  span Очки выигр. на п.п.
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 152
+                            .event-card__versus-col
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 34
+                                .event-card__versus-line-title
+                                  span Подачи навылет
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 65
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 1
+                                .event-card__versus-line-title
+                                  span Двойные ошибки
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 3
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 126
+                                .event-card__versus-line-title
+                                  span % первой подачи
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 96
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 146
+                                .event-card__versus-line-title
+                                  span Очки выигр. на п.п.
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 152
+                            .event-card__versus-col
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 34
+                                .event-card__versus-line-title
+                                  span Подачи навылет
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 65
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 1
+                                .event-card__versus-line-title
+                                  span Двойные ошибки
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 3
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 126
+                                .event-card__versus-line-title
+                                  span % первой подачи
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 96
+                              .event-card__versus-line
+                                .player-stat.player-stat--theme-red.player-stat--result-lose.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 146
+                                .event-card__versus-line-title
+                                  span Очки выигр. на п.п.
+                                .player-stat.player-stat--theme-blue-light.player-stat--result-win.player-stat--size-sm.event-card__versus-line-stat
+                                  .player-stat__count 152
+                        .event-card__col.event-card__col--graph.event-card__col--graph-mastery
+                          .event-card__graph
+                            .event-card__graph-header
+                              .event-card__subtitle Мастерство
+                            .event-card__graph-body
+                              canvas#playerChart-2(style="height:23%; width:100%")
+                              #tooltip-container-2
+                        .event-card__middle-btns
+                          button(type="button").event-card__middle-btn.event-card__middle-btn--view
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#view')
+                          button(type="button").js-event-card-stat-view.event-card__middle-btn.event-card__middle-btn--info
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#info')
+                    footer.event-card__footer
+                      .event-card__row
+                        .event-card__col.event-card__col--graph-person.event-card__col--graph-person-first
+                          .event-card__graph-person
+                            canvas#playerChartCircle1
+                        .event-card__col.event-card__col--stat.event-card__col--stat-experience
+                          .event-card__person-stat
+                            .event-card__person-stat-header
+                              .event-card__subtitle Опыт
+                            .event-card__person-stat-list
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red(style="--stat-graph-progress: 80%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light(style="--stat-graph-progress: 60%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                        .event-card__col.event-card__col--stat.event-card__col--stat-talent
+                          .event-card__person-stat
+                            .event-card__person-stat-header
+                              .event-card__subtitle Талант
+                            .event-card__person-stat-list
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red(style="--stat-graph-progress: 10%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='10%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light(style="--stat-graph-progress: 90%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='90%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                        .event-card__col.event-card__col--stat.event-card__col--stat-motivation
+                          .event-card__person-stat
+                            .event-card__person-stat-header
+                              .event-card__subtitle Мотивация
+                            .event-card__person-stat-list
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red(style="--stat-graph-progress: 80%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light(style="--stat-graph-progress: 60%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                        .event-card__col.event-card__col--stat.event-card__col--stat-stability
+                          .event-card__person-stat
+                            .event-card__person-stat-header
+                              .event-card__subtitle Стабильность
+                            .event-card__person-stat-list
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-red(style="--stat-graph-progress: 80%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='80%', stroke-width='10', stroke='#FC8171')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                              .event-card__person-stat-list-item
+                                .stat-graph.stat-graph--size-sm.stat-graph--theme-blue-light(style="--stat-graph-progress: 60%")
+                                  pie-chart(offset='top', pull='-250').stat-graph__progress
+                                    style.
+                                      path {
+                                        stroke-linecap: round;
+                                        stroke-width: 52;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      tspan {
+                                        text-anchor: middle;
+                                        alignment-baseline: middle;
+                                        fill: black;
+                                        font-weight: bold;
+                                        font-size: 19em;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                      text {
+                                        transform: scaleX(-1);
+                                        transform-origin: initial;
+                                      }
+                                      slice1 {
+                                        text-anchor: middle;
+                                        font-size: 19;
+                                        font-family: 'Roboto', Arial, sans-serif;
+                                      }
+                                    slice(size='60%', stroke-width='10', stroke='#17C6D2')
+                                      tspan(x='50%', y='53%') $size
+                                  .stat-graph__dots
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-1
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle S
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 70%" data-progress-percent="70%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--stat.event-card__col--stat-mobile.event-card__col--stat-mobile-2
+                          .event-card__stat
+                            .event-card__stat-header
+                              .event-card__subtitle R
+                            .event-card__stat-progress-list
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-red.progress-line--dir-y
+                                  span(style="--progress-percent: 20%" data-progress-percent="20%").progress-line__current
+                                    span
+                              .event-card__stat-progress-list-card
+                                .progress-line.progress-line--theme-blue-light.progress-line--dir-y
+                                  span(style="--progress-percent: 50%" data-progress-percent="50%").progress-line__current
+                                    span
+                        .event-card__col.event-card__col--graph-person.event-card__col--graph-person-second
+                          .event-card__graph-person
+                            canvas#playerChartCircle2
+                      .event-card__footer-action
+                        .event-card__footer-action-col.event-card__footer-action-col--action.event-card__footer-action-col--action-share
+                          button(type="button").event-card__action-btn.event-card__action-btn--share
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#share')
+                        .event-card__footer-action-col.event-card__footer-action-col--vote
+                          .event-card__footer-action-vote
+                            button(type="button").btn-router.btn-router--size-sm.btn-router--theme-red.event-card__footer-action-vote-btn.event-card__footer-action-vote-btn--prev
+                              svg.icon.btn-router__icon
+                                use(xlink:href='images/sprite.svg#arrow-type-2-flip-x')
+                            .event-card__footer-action-vote-title Умное голосование
+                            button(type="button").btn-router.btn-router--size-sm.btn-router--theme-blue-light.event-card__footer-action-vote-btn.event-card__footer-action-vote-btn--next
+                              svg.icon.btn-router__icon
+                                use(xlink:href='images/sprite.svg#arrow-type-2')
+                        .event-card__footer-action-col.event-card__footer-action-col--action.event-card__footer-action-col.event-card__footer-action-col--action.event-card__footer-action-col--action-bookmark
+                          button(type="button").js-bookmark-btn.event-card__action-btn.event-card__action-btn--bookmark
+                            svg.icon
+                              use(xlink:href='images/sprite.svg#bookmark-outline')
+                .event-card.event-card--theme-white.event-card--no-auth.layout-events__list-card
+                  .event-card__auth
+                    .event-card__auth-center
+                      .title-size-4.event-card__auth-center-title Доступно после регистрации
+                      button(type="button").js-modal-register.btn.btn--size-md.btn--theme-accent.event-card__auth-center-btn
+                        span.btn__inner
+                          span.btn__title Зарегистрироваться
+                  .event-card__inner
+                    header.event-card__header
+                      .event-card__row
+                        .event-card__col.event-card__col--person.event-card__col--person-first
+                          .event-card__header-line-result.event-card__header-line-result--first.event-card__header-line-result--theme-red
+                          .player-card.player-card--dir-1.player-card--size-md.event-card__header-player
+                            .player-card__inner
+                              picture.player-card__img
+                                img(src="images/player-1.jpg" alt="Роджер Федерер")
+                              .player-card__content
+                                .player-card__name Роджер Федерер
+                                .player-card__info
+                                  .player-card__info-item
+                                    svg.icon
+                                      use(xlink:href='images/sprite.svg#cup')
+                                    .player-card__info-item-text 845<span class="color-green">+4</span>
+                                  .player-card__info-item
+                                    .player-card__info-item-text 29 <span class="color-gray">лет</span>
+                                  .d-xs-none.player-card__info-item
+                                    .player-card__info-item-text 167 <span class="color-gray">см</span>
+                                  .player-card__info-item
+                                    .player-card__info-item-text R-H
+                        .event-card__col.event-card__col--description
+                          .event-card__header-top
+                            .event-card__header-top-content
+                              .event-card__header-name Millenium Estoril Open. Estoril. Portugal. Singles. Round of 16
+                            picture.event-card__header-top-association
+                              img(src="images/atp-logo.png" alt="Millenium Estoril Open. Estoril. Portugal. Singles. Round of 16")
+                          .event-card__header-bottom
+                            .group-control.group-control--size-xxs.event-card__header-event-list
+                              .group-control__inner
+                                .group-control__item
+                                  .live-result.live-result--rounded-top.live-result--size-sm.live-result--theme-blue-light
+                                    .live-result__inner
+                                      .live-result__text 1:0 (5:7) (*40:15)
+                                .group-control__item
+                                  .live-result.live-result--rounded-top.live-result--size-sm.live-result--theme-gray
+                                    .live-result__inner
+                                      img(src="images/graph-1.svg").live-result__graph
+                                      .live-result__text 1st%
+                                      img(src="images/graph-2.svg").live-result__graph
+                                .group-control__item
+                                  .live-result.live-result--rounded-top.live-result--size-sm.live-result--theme-gray
+                                    .live-result__inner
+                                      .live-result__text 1:56 | 2:06
+                                .group-control__item
+                                  .live-result.live-result--rounded-top.live-result--size-sm.live-result--theme-gray
+                                    .live-result__inner
+                                      .live-result__text 34 | 65 | 65 | 65
+                        .event-card__col.event-card__col--person.event-card__col--person-second
+                          .event-card__header-line-result.event-card__header-line-result--second.event-card__header-line-result--theme-blue-light
+                          .player-card.player-card--dir-2.player-card--size-md.event-card__header-player
+                            .player-card__inner
+                              picture.player-card__img
+                                img(src="images/player-3.jpg" alt="Новак Джокович")
+                              .player-card__content
+                                .player-card__name Новак Джокович
+                                .player-card__info
+                                  .player-card__info-item
+                                    svg.icon
+                                      use(xlink:href='images/sprite.svg#cup')
+                                    .player-card__info-item-text 845<span class="color-green">+4</span>
+                                  .player-card__info-item
+                                    .player-card__info-item-text 29 <span class="color-gray">лет</span>
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -681,7 +1333,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -713,7 +1365,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -1307,7 +1959,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -1348,7 +2000,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -1822,7 +2474,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -1854,7 +2506,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -1992,7 +2644,7 @@ html(lang='ru')
                           .event-card__stat
                             .event-card__stat-header
                               .event-card__subtitle S
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-left.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -2009,7 +2661,7 @@ html(lang='ru')
                           .event-card__stat
                             .event-card__stat-header
                               .event-card__subtitle R
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-left.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -2456,7 +3108,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -2488,7 +3140,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -2962,7 +3614,7 @@ html(lang='ru')
                               .player-card__content
                                 .player-card__name
                                   | Роджер Федерер
-                                  span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.player-card__name-badge
+                                  span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.player-card__name-badge
                                     button(type="button").badge-info__btn ?
                                     span.badge-info__dropdown
                                       p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -2973,7 +3625,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -3012,7 +3664,7 @@ html(lang='ru')
                                 img(src="images/player-3.jpg" alt="Новак Джокович")
                               .player-card__content
                                 .player-card__name
-                                  span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.player-card__name-badge
+                                  span.badge-info.badge-info--position-top-left.badge-info--theme-gray.badge-info--size-md.player-card__name-badge
                                     button(type="button").badge-info__btn ?
                                     span.badge-info__dropdown
                                       p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -3024,7 +3676,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -3046,7 +3698,7 @@ html(lang='ru')
                           .event-card__stat
                             .event-card__stat-header
                               .event-card__subtitle Карьера
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -3106,7 +3758,7 @@ html(lang='ru')
                           .event-card__stat
                             .event-card__stat-header
                               .event-card__subtitle Live
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -3170,7 +3822,7 @@ html(lang='ru')
                           .event-card__stat
                             .event-card__stat-header
                               .event-card__subtitle S
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-left.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -3187,7 +3839,7 @@ html(lang='ru')
                           .event-card__stat
                             .event-card__stat-header
                               .event-card__subtitle R
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-left.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -3208,7 +3860,7 @@ html(lang='ru')
                                 use(xlink:href='images/sprite.svg#close')
                             .event-card__graph-header
                               .event-card__subtitle Стабильность
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -3309,7 +3961,7 @@ html(lang='ru')
                           .event-card__graph
                             .event-card__graph-header
                               .event-card__subtitle Мастерство
-                              span.badge-info.badge-info--position-top-right.badge-info--theme-gray-light.badge-info--size-md.event-card__stat-header-badge
+                              span.badge-info.badge-info--position-top-left.badge-info--theme-gray.badge-info--size-md.event-card__stat-header-badge
                                 button(type="button").badge-info__btn ?
                                 span.badge-info__dropdown
                                   p.badge-info__text Lorem ipsum dolor sit amet, consectetur adipisicing elit!
@@ -3642,7 +4294,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -3688,7 +4340,7 @@ html(lang='ru')
                                     .player-card__info-item-text 845<span class="color-green">+4</span>
                                   .player-card__info-item
                                     .player-card__info-item-text 29 <span class="color-gray">лет</span>
-                                  .player-card__info-item
+                                  .d-xs-none.player-card__info-item
                                     .player-card__info-item-text 167 <span class="color-gray">см</span>
                                   .player-card__info-item
                                     .player-card__info-item-text R-H
@@ -4267,6 +4919,8 @@ html(lang='ru')
         include includes/footer.pug
     include includes/foot.pug
 
+    include includes/modal.pug
+
     //- preloader
     script.
       window.addEventListener('load', function() {
@@ -4625,5 +5279,66 @@ html(lang='ru')
           var eventCard = this.closest('.event-card');
           document.body.classList.remove('is-hidden-mobile');
           eventCard.classList.remove('is-show-graph-mobile');
+        });
+      });
+
+    //- modal init
+    script(src="js/tingle.js?v=568532623346")
+    script.
+      // modal init
+      var modalLogin = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalLoginBtns = document.querySelectorAll('.js-modal-login');
+
+      modalLoginBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.open();
+        });
+      });
+
+      modalLogin.setContent(document.querySelector('.u-modal--login').innerHTML);
+      
+      // modal init
+      var modalRegister = new tingle.modal ({
+        cssClass: ['u-modal', 'u-modal--size-sm', 'u-modal--theme-white']
+      });
+
+      var modalRegisterBtns = document.querySelectorAll('.js-modal-register');
+
+      modalRegisterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalRegister.open();
+        });
+      });
+
+      modalRegister.setContent(document.querySelector('.u-modal--register').innerHTML);
+
+      function switchWindows(e) {
+        e.preventDefault();
+
+        var target = e.target;
+        var isRegisterActive = target.classList.contains('js-modal-register');
+
+        if (isRegisterActive) {
+          modalLogin.close();
+          modalRegister.open();
+        } else {
+          modalLogin.open();
+          modalRegister.close();
+        }
+      }
+
+      var navLinks = document.querySelectorAll('.u-modal__router a');
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', switchWindows);
+      });
+
+      var modalLoginClose = document.querySelectorAll('.js-change-password-inner');
+
+      modalLoginClose.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalLogin.close();
         });
       });

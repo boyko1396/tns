@@ -6,7 +6,7 @@ html(lang='ru')
 
     #root.site
       .site__inner
-        include includes/header-type-1.pug
+        include includes/header-type-2.pug
 
         main(role="main").site__main
           .layout-page
@@ -22,10 +22,10 @@ html(lang='ru')
                       h2.donate-layout__block-title Форма для оплаты
                       form(action="#").donate-layout__block-form
                         .input-area-el.donate-layout__block-input
-                          input(type="number" name="amount" required placeholder="")#donate-amount.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+                          input(type="number" name="amount" required placeholder="Ваша сумма")#donate-amount.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
                           label(for="donate-amount").input-area-el__label Ваша сумма
                         .input-area-el.donate-layout__block-input
-                          textarea(name="message" style="min-height: 120rem;")#donate-message.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-textarea.input-area-el__input
+                          textarea(name="message" style="min-height: 120rem;" placeholder="Ваше сообщение")#donate-message.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-textarea.input-area-el__input
                           label(for="donate-message").input-area-el__label Ваше сообщение
                         .donate-layout__block-payments-wrap
                           .donate-layout__block-payments
@@ -75,7 +75,7 @@ html(lang='ru')
                           span.btn__inner
                             span.btn__title Отправить
                         .donate-layout__block-btn
-                  .d-lg-none.row__col-4.donate-layout__col.donate-layout__col--info-aside
+                  .d-md-none.row__col-4.donate-layout__col.donate-layout__col--info-aside
                     aside.box.box--theme-white-gradient.donate-layout__aside
                       .donate-layout__aside-header
                         svg.icon.donate-layout__aside-quote-icon

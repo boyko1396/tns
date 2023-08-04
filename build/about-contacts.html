@@ -11,7 +11,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/styles.css?v=568532623346"/>
+    <link rel="stylesheet" href="css/styles.css?v=121361634636364"/>
   </head>
   <body>
     <div class="site" id="root">
@@ -903,17 +903,6 @@
                   </div>
                 </div>
               </div>
-              <script>
-                // header dropdown toggle mobile
-                const headerBtnToggle = document.querySelectorAll('.js-header-toggle');
-                
-                headerBtnToggle.forEach(function(button) {
-                  button.addEventListener('click', function() {
-                    document.body.classList.toggle('is-hidden-mobile');
-                    document.body.classList.toggle('is-open-menu-mobile');
-                  });
-                });
-              </script>
             </div>
           </div>
         </header>
@@ -925,6 +914,9 @@
                   <div class="row__col-8 about-layout__col about-layout__col--main">
                     <div class="box box--theme-white-gradient box--mobile-full about-layout__block">
                       <h1 class="about-layout__block-title">Контакты и поддержка</h1>
+                      <div class="d-md-block content about-layout__block-desc">
+                        <p>Мы предоставляем <a href="#">возможности</a>, для их приобритения мы предоставляем самые популярные платёжные системы:</p>
+                      </div>
                       <div class="about-layout__block-contacts-list">
                         <div class="contacts-card contacts-card--theme-red about-layout__block-contacts-list-item">
                           <div class="contacts-card__inner">
@@ -1026,11 +1018,11 @@
                       <div class="color-green about-layout__aside-subtitle">Задайте вопрос нам!</div>
                       <form class="about-layout__aside-form" action="#">
                         <div class="input-area-el about-layout__aside-form-login">
-                          <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="Kasbura@gmail.com" id="faq-email"/>
+                          <input class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-input input-area-el__input" type="email" name="email" required="required" value="Kasbura@gmail.com" placeholder="Ваша эл. почта" id="faq-email"/>
                           <label class="input-area-el__label" for="faq-email">Ваша эл. почта</label>
                         </div>
                         <div class="input-area-el about-layout__aside-form-message">
-                          <textarea class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-textarea input-area-el__input" name="message" required="required" style="min-height: 120rem;" id="faq-message"></textarea>
+                          <textarea class="js-input-label u-input u-input--size-md u-input--theme-white u-input--type-textarea input-area-el__input" name="message" required="required" style="min-height: 120rem;" placeholder="Ваш вопрос" id="faq-message"></textarea>
                           <label class="input-area-el__label" for="faq-message">Ваш вопрос</label>
                         </div>
                         <button class="btn btn--size-md btn--theme-accent about-layout__aside-form-btn" type="submit"><span class="btn__inner"><span class="btn__title">Отправить</span></span></button>
@@ -1045,7 +1037,7 @@
         <footer class="footer site__footer">
           <div class="footer__top">
             <div class="container footer__top-container">
-              <div class="footer__top-col-aside footer__top-col-aside--logo"><a class="footer__top-logo" href="/"><img src="images/logo-brand-type-1.svg" alt="Tscore"/></a>
+              <div class="footer__top-col-aside footer__top-col-aside--logo"><a class="footer__top-logo" href="/"><img src="images/logo-brand-type-2.svg" alt="Tscore"/></a>
                 <nav class="u-nav u-nav--main footer__top-language">
                   <ul class="u-nav__list">
                     <li class="u-nav__item"><a class="u-nav__link is-active" href="#">Ru</a></li>
@@ -1091,7 +1083,7 @@
         </footer>
       </div>
     </div>
-    <script src="js/main.js?v=568532623346"></script>
+    <script src="js/main.js?v=121361634636364"></script>
     <script>
       // collapse faq card
       const toggleButtons = document.querySelectorAll('.js-faq-card-toggle');

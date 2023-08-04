@@ -12,6 +12,11 @@
             top: 0;
         }
     }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
     &__footer {
         margin-top: auto;
     }
@@ -166,6 +171,9 @@ svg,
     &[type="search"]::-webkit-search-results-decoration {
         display: none; 
     }
+    &::placeholder {
+        color: transparent !important;
+    }
     &--type {
         &-input {
         }
@@ -180,7 +188,7 @@ svg,
             &-white {
             background: $color-white-1;
             color: $color-black-1;
-            border: 1rem solid $color-gray-1;
+            border: 1rem solid $color-blue-light-1;
             border-radius: 4rem;
             &:hover {
                 @media (min-width: $lg-mf) {
@@ -189,9 +197,6 @@ svg,
             }
             &:focus {
                 border-color: $color-black-1;
-            }
-            &::placeholder {
-                color: $color-gray-1;
             }
         }
     }
@@ -283,6 +288,7 @@ svg,
             text-transform: uppercase;
             &:hover {
                 @media (min-width: $lg-mf) {
+                    background: $color-gray-7;
                 }
             }
         }
@@ -301,6 +307,7 @@ svg,
             text-transform: uppercase;
             &:hover {
                 @media (min-width: $lg-mf) {
+                    background: $color-green-3;
                 }
             }
         }
@@ -448,7 +455,7 @@ svg,
         &-white-gray {
             background: $color-white-1;
             color: $color-black-1;
-            box-shadow: inset 0 0 0 1rem $color-gray-1;
+            box-shadow: inset 0 0 0 1rem $color-blue-light-1;
             &.is-open {
                 box-shadow: inset 0 0 0 2rem $color-black-1
             }
@@ -700,6 +707,10 @@ svg,
         max-width: 100%;
         height: auto;
     }
+    ol,
+    ul {
+        margin-left: -20rem;
+    }
 }
 
 .u-nav {
@@ -949,7 +960,6 @@ svg,
 
 .badge-info {
     display: inline-block;
-    display: none !important;
     font-size: var(--badge-info-font-size);
     position: relative;
     &--theme {
@@ -978,24 +988,21 @@ svg,
         @extend .btn-reset, .area-click;
     }
     &--theme-gray &__btn {
-        background: $color-white-1;
-        color: $color-gray-9;
-    }
-    &--theme-gray-light &__btn {
-        background: $color-white-1;
         color: $color-gray-3;
     }
     &__dropdown {
-        width: 210rem;
+        background: rgba($color-gray-2, .6);
+        backdrop-filter: blur(4px);
+        width: 160rem;
         font-weight: 500;
         border-radius: 4rem;
         position: absolute;
         transition: all .24s ease;
         pointer-events: none;
-        z-index: 1;
+        z-index: 700;
     }
     &:not(:hover) &__dropdown {
-        transform: translateY(8rem);
+        transform: translateY(6rem);
         opacity: 0;
         visibility: hidden;
     }
@@ -1003,22 +1010,22 @@ svg,
         padding: 8px;
     }
     &--position-top-right &__dropdown {
-        margin-left: 12rem;
+        margin-left: 8rem;
         top: 0;
         left: 100%;
     }
     &--position-top-left &__dropdown {
-        margin-right: 12rem;
+        margin-right: 8rem;
         top: 0;
         right: 100%;
     }
     &--position-bottom-right &__dropdown {
-        margin-left: 12rem;
+        margin-left: 8rem;
         bottom: 0;
         left: 100%;
     }
     &--position-bottom-left &__dropdown {
-        margin-right: 12rem;
+        margin-right: 8rem;
         bottom: 0;
         right: 100%;
     }
@@ -1447,15 +1454,16 @@ canvas:not(:hover) ~ #tooltip-container-2 {
     &__label {
         background: $color-white-1;
         max-width: calc(100% - 2rem);
-        margin-top: -8rem;
+        height: 1.2em;
+        margin-top: -.6em;
         padding: 1rem 11rem;
-        line-height: 16rem;
+        line-height: 1;
         display: flex;
         align-items: center;
         font-size: var(--fs-10);
         color: $color-gray-1;
         position: absolute;
-        top: 19rem;
+        top: 50%;
         left: 2rem;
         border-radius: inherit;
         transition: all .24s;
@@ -1468,14 +1476,17 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             }
         }
     }
-    &__label.is-active,
-    &__input:focus ~ &__label {
+    &__input:focus ~ &__label,
+    &__input:not(:placeholder-shown) ~ &__label {
         padding: 1rem 4rem;
         font-weight: 500;
         font-size: var(--fs-8);
         border-radius: 2rem;
         transform: translate(8rem, -20rem);
         pointer-events: none;
+    }
+    textarea ~  &__label {
+        top: 21rem;
     }
 }
 
@@ -1493,7 +1504,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         font-size: var(--fs-8);
         color: $color-gray-1;
         border: solid transparent;
-        border-width: 6rem 2rem;
+        border-width: 8rem 2rem;
         position: relative;
         z-index: 0;
         @media (max-width: $lg) {
@@ -1511,11 +1522,17 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             pointer-events: none;
             z-index: -1;
         }
+        &.is-show button {
+            @media (max-width: $lg) {
+                color: $color-black-2;
+            }
+        }
     }
     td {
         min-width: 60rem;
         padding: 12rem;
-        border: 2rem solid transparent;
+        border: solid transparent;
+        border-width: 4rem 2rem;
         position: relative;
         z-index: 0;
         @media (max-width: $lg) {
@@ -2478,17 +2495,33 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             background: $color-white-1;
             color: $color-red-2;
             box-shadow: 0 0 16rem rgba($color-red-2, .16);
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    box-shadow: 0 0 16rem 3rem rgba($color-red-2, .6);
+                }
+            }
         }
         &-blue-light {
             background: $color-white-1;
             color: $color-blue-light-2;
             box-shadow: 0 0 16px rgba($color-blue-light-2, .16);
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    box-shadow: 0 0 16px 3rem rgba($color-blue-light-2, .6);
+                }
+            }
         }
         &-gray {
             background: transparent;
             color: $color-gray-1;
             box-shadow: 0 0 16rem rgba(252,129,113, .16),
-                        inset 0 0 0 1rem $color-gray-2;
+                  inset 0 0 0 1rem $color-gray-2;
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    box-shadow: 0 0 16rem 3rem rgba(252,129,113, .6),
+                          inset 0 0 0 1rem $color-gray-2;
+                }
+            }
         }
     }
     &__icon {
@@ -2503,11 +2536,13 @@ canvas:not(:hover) ~ #tooltip-container-2 {
     --event-card-gap-md: 12rem;
     --event-card-gap-lg: 16rem;
     font-size: var(--fs-8);
+    border-radius: 2rem 2rem 0 0;
     position: relative;
     @media (max-width: $lg) {
         --event-card-gap: 8rem;
         --event-card-gap-md: 8rem;
         --event-card-gap-lg: 8rem;
+        border-radius: 4rem 4rem 0 0;
     }
     @media (max-width: $sm) {
         font-size: 10rem;
@@ -2550,7 +2585,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
                 height: auto;
                 display: flex;
                 flex-direction: column;
-                margin: calc(-1 * var(--event-card-gap) - 1rem) 8rem calc(-1 * var(--event-card-gap) - 1rem) -17rem;
+                margin: calc(-1 * var(--event-card-gap) - 1rem) 8rem calc(-1 * var(--event-card-gap) - 1rem) -18rem;
                 flex-shrink: 0;
                 position: static;
                 @media (max-width: $lg) {
@@ -2564,7 +2599,10 @@ canvas:not(:hover) ~ #tooltip-container-2 {
                     content: '';
                     position: absolute;
                     top: 0;
-                    left: 1rem;
+                    left: 0;
+                    @media (max-width: $lg) {
+                        border-top-left-radius: 4rem;
+                    }
                 }
                 &:after {
                     background: inherit;
@@ -2651,6 +2689,45 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             }
         }
     }
+    &--no-auth {
+        user-select: none;
+        pointer-events: none;
+        .event-card__inner {
+            filter: blur(2px);
+            opacity: .3;
+        }
+    }
+    &__auth {
+        width: 100%;
+        height: 100%;
+        padding: var(--gap);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: auto;
+        pointer-events: auto;
+        z-index: 1;
+        &-center {
+            background: #fff;
+            min-width: 342rem;
+            padding: 20rem;
+            text-align: center;
+            box-shadow: 0 0 16px rgba(#323232, .12);
+            border-radius: 8rem;
+            @media (max-width: $xs) {
+                max-width: 100%;
+            }
+            &-title {
+                margin: 0 0 20rem;
+                font-weight: bold;
+            }
+            &-btn {
+            }
+        }
+    }
     &__inner {
     }
     &__header {
@@ -2692,9 +2769,17 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             top: 0;
             &--first {
                 left: 0;
+                border-radius: 2rem 0 0 0;
+                @media (max-width: $lg) {
+                    border-radius: 0;
+                }
             }
             &--second {
                 right: 0;
+                border-radius: 0 2rem 0 0;
+                @media (max-width: $lg) {
+                    border-radius: 0;
+                }
             }
             &--theme {
                 &-red {
@@ -2771,6 +2856,12 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         flex-direction: column;
         border: 1rem solid $color-gray-2;
         flex-grow: 1;
+        &:first-child {
+            border-left-width: 0 !important;
+        }
+        &:last-child {
+            border-right-width: 0 !important;
+        }
         &--person {
             max-width: 23.5%;
             justify-content: center;
@@ -2864,6 +2955,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             &-mastery {
                 max-width: 50%;
                 flex-basis: 50%;
+                border-right-width: 0;
                 transition: all .3s;
                 @media (max-width: $lg) {
                     background: $color-white-1;
@@ -2975,6 +3067,16 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             @media (min-width: $lg-mf) {
                 display: none;
             }
+        }
+    }
+    .player-card--dir-1 {
+        @media (max-width: $lg) {
+            margin-left: 3rem;
+        }
+    }
+    .player-card--dir-2 {
+        @media (max-width: $lg) {
+            margin-right: 3rem;
         }
     }
     &.is-show-stat {
@@ -3318,6 +3420,18 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             display: flex;
             justify-content: space-between;
             &-item {
+                @media (max-width: $lg) {
+                    flex-grow: 1;
+                    &:not(:first-child) {
+                        margin-left: var(--event-card-gap-md);
+                    }
+                    .player-stat-card__list-item {
+                        flex-grow: 1;
+                    }
+                    .player-stat {
+                        display: flex;
+                    }
+                }
             }
         }
         &-progress-list {
@@ -3407,20 +3521,20 @@ canvas:not(:hover) ~ #tooltip-container-2 {
                 &-share {
                     position: absolute;
                     top: 4rem;
-                    right: 39rem;
+                    right: 38rem;
                     @media (max-width: $lg) {
                         position: relative;
-                        top: 0;
+                        top: -1rem;
                         right: 0;
                     }
                 }
                 &-bookmark {
                     position: absolute;
                     top: 4rem;
-                    right: 1rem;
+                    right: 0;
                     @media (max-width: $lg) {
                         position: relative;
-                        top: 0;
+                        top: -1rem;
                         right: 0;
                     }
                 }
@@ -3485,7 +3599,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             color: $color-gray-1;
             text-transform: uppercase;
             @media (max-width: $lg) {
-                margin: 2rem 4rem 0;
+                margin: 2rem 13rem 0;
                 font-weight: 900;
                 font-size: 8rem;
             }
@@ -3536,11 +3650,15 @@ canvas:not(:hover) ~ #tooltip-container-2 {
 }
 
 .layout-page {
+    width: 100%;
     padding: 32rem 0;
+    display: flex;
+    flex-grow: 1;
     @media (max-width: $lg) {
         padding: 16rem 0;
     }
     &__container {
+        flex-grow: 1;
     }
 }
 
@@ -3607,13 +3725,24 @@ canvas:not(:hover) ~ #tooltip-container-2 {
 
 .btn-close {
     @extend .btn-reset, .area-click;
+    transition: all .4s;
     cursor: pointer;
     &--theme {
         &-gray {
             color: $color-gray-1;
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    opacity: .6;
+                }
+            }
         }
         &-white {
             color: $color-white-1;
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    opacity: .6;
+                }
+            }
         }
     }
     &--size {
@@ -3809,7 +3938,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
     }
     &__close {
         display: none;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             display: block;
             position: absolute;
             top: 16rem;
@@ -3821,7 +3950,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         padding: 32rem 15rem;
         display: flex;
         flex-direction: column;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             padding: 16rem;
             flex-direction: row;
             align-items: flex-start;
@@ -3831,7 +3960,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         width: 80rem;
         height: 80px;
         margin: 0 auto 16rem;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             margin: 0 16rem 0 0;
             flex-shrink: 0;
         }
@@ -3846,7 +3975,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             padding-right: 30rem;
             flex-grow: 1;
         }
@@ -3854,14 +3983,14 @@ canvas:not(:hover) ~ #tooltip-container-2 {
     &--size-md &__picture {
         width: 120rem;
         height: 120rem;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             width: 80rem;
             height: 80rem;
         }
     }
     &__content {
         text-align: center;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             text-align: left;
         }
     }
@@ -3869,21 +3998,22 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         margin: 0 0 16rem;
         font-weight: normal;
         font-size: var(--fs-9);
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             margin-bottom: 8rem;
         }
     }
     &__text {
         margin: 0 0 30rem;
         font-weight: 500;
-        @media (max-width: $md) {
-            margin-bottom: 8rem;
+        @media (max-width: $lg) {
+            margin-bottom: 14rem;
         }
     }
     &__refferal-link {
         margin: 0 0 16rem;
         font-size: var(--fs-10);
-        @media (max-width: $md) {
+        line-height: 1.45;
+        @media (max-width: $lg) {
             font-size: 13rem;
         }
         a {
@@ -3891,6 +4021,9 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             font-size: var(--fs-8);
             text-decoration: underline;
             transition: all .22s;
+            @media (max-width: $lg) {
+                font-size: 10rem;
+            }
             &:hover {
                 @media (min-width: $lg-mf) {
                     opacity: .6;
@@ -3900,9 +4033,9 @@ canvas:not(:hover) ~ #tooltip-container-2 {
     }
     &__btn {
         width: auto;
-        margin-top: 40rem;
+        margin-top: 24rem;
         align-self: center;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             margin-top: 0;
             align-self: flex-start;
         }
@@ -3912,11 +4045,17 @@ canvas:not(:hover) ~ #tooltip-container-2 {
         padding-top: 30rem;
         display: flex;
         justify-content: center;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             padding-top: 2rem;
             justify-content: flex-start;
         }
         &-tick-line {
+            .tick-line__icon {
+                @media (max-width: $lg) {
+                    width: 48rem;
+                    height: 48rem;
+                }
+            }
         }
     }
 }
@@ -4070,9 +4209,9 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             flex-grow: 1;
         }
         &-result {
-            max-width: 31%;
-            margin: 0 15rem;
-            flex: 0 0 31%;
+            max-width: 90px;
+            margin: 0 5rem;
+            flex: 0 0 90px;
             text-align: center;
             &-major {
                 font-weight: bold;
@@ -4373,7 +4512,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             display: block;
             font-size: var(--fs-6);
             @media (max-width: $md) {
-                padding: 16rem;
+                margin-top: 2rem;
             }
         }
     }
@@ -4576,6 +4715,13 @@ canvas:not(:hover) ~ #tooltip-container-2 {
                 pointer-events: auto;
             }
         }
+        a {
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    opacity: .5;
+                }
+            }
+        }
     }
     &__form {
         &-input {
@@ -4596,7 +4742,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
             }
         }
         &-btn {
-            margin: 0 8rem -8rem 0;
+            margin: 0 8rem 8rem 0;
         }
     }
     &__title {

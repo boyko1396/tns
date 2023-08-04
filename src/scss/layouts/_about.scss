@@ -39,6 +39,12 @@
                 margin-bottom: 16rem;
             }
         }
+        &-desc {
+            margin: -10rem 0 16rem;
+            font-size: 12rem;
+            line-height: 1.6;
+            color: $color-gray-1;
+        }
         &-card {
             & + & {
                 margin-top: 2rem;

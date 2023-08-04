@@ -1,5 +1,7 @@
 .shop {
+    height: 100%;
     &__row {
+        height: 100%;
         &-col {
             &--main {
                 @media (max-width: $lg) {
@@ -55,6 +57,9 @@
 }
 
 .shop-aside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     &__overlay-mobile {
         display: none;
         @media (max-width: $lg) {
@@ -212,11 +217,14 @@
         }
     }
     &__appeal {
+        margin: auto 0 -25rem;
         display: flex;
         align-items: center;
         position: relative;
         &.is-hidden {
             display: none;
+        }
+        &-inner {
         }
         @media (max-width: $lg) {
             background: $color-white-1;

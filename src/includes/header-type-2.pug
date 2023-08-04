@@ -1,0 +1,72 @@
+header.header.header--position-sticky.site__header
+  .header__top
+    .container.header__top-container
+      button(type="button").js-header-toggle.header__top-toggle
+        span
+        span
+        span
+      a(href="/").header__top-logo
+        img(src="images/logo-brand-type-1.svg" alt="Tscore")
+      .js-header-toggle.u-overlay.header__top-dropdown-overlay
+      .header__top-dropdown
+        nav.u-nav.u-nav--main.header__top-nav
+          ul.u-nav__list
+            li.u-nav__item
+              a(href="#").u-nav__link.is-active Игры
+            li.u-nav__item
+              a(href="#").u-nav__link Рейтинги
+            li.u-nav__item
+              a(href="#").u-nav__link Хелпер
+            li.u-nav__item
+              a(href="#").u-nav__link О нас
+            li.u-nav__item
+              a(href="#").u-nav__link Донат
+        nav.u-nav.u-nav--main.header__top-nav-mobile
+          ul.u-nav__list
+            li.u-nav__item
+              a(href="#").u-nav__link О проекте
+            li.u-nav__item
+              a(href="#").u-nav__link Помощь
+            li.u-nav__item
+              a(href="#").u-nav__link Способы оплаты
+            li.u-nav__item
+              a(href="#").u-nav__link Контакты
+      .header__top-aside
+        a(href="#").btn.btn--size-xs.btn--theme-purple.header__top-aside-btn-appeal
+          span.btn__inner
+            svg.icon.btn__icon.btn__icon--dir-ltr
+              use(xlink:href='images/sprite.svg#arrow-type-1')
+            span.btn__title Go to pro
+        .header__top-aside-notification-wrap
+          button(type="button").header__top-aside-notification.header__top-aside-notification--new
+            svg.icon
+              use(xlink:href='images/sprite.svg#notification')
+            span
+        .header__top-aside-profile
+          .header__top-aside-profile-inner
+            .header__top-aside-profile-tick-list
+              .tick-line.tick-line--size-sm.tick-line--theme-gray.header__top-aside-tick-line
+                .tick-line__inner
+                  img(src="images/sprite/star-type-1-gradient.svg").tick-line__icon
+                  .tick-line__title 51
+              .tick-line.tick-line--size-sm.tick-line--theme-gray.header__top-aside-tick-line
+                .tick-line__inner
+                  img(src="images/sprite/coin-type-1-gradient.svg").tick-line__icon
+                  .tick-line__title 467
+            .header__top-aside-profile-nav
+              button(type="button").js-profile-nav.header__top-aside-profile-nav-button
+                picture.header__top-aside-profile-nav-button-picture
+                  img(src="images/avatar-1.jpg")
+                span
+          .header__top-aside-profile-dropdown
+            ul
+              li
+                a(href="#") Партнерка
+              li
+                a(href="#") Мои голосования
+              li
+                a(href="#") Как получить бонусы?
+              li
+                a(href="#") Настройки
+              li
+                a(href="#") Выйти

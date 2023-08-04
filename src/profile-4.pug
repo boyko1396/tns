@@ -6,7 +6,7 @@ html(lang='ru')
 
     #root.site
       .site__inner
-        include includes/header-type-1.pug
+        include includes/header-type-2.pug
 
         main(role="main").site__main
           .layout-page
@@ -24,7 +24,7 @@ html(lang='ru')
                             h1.title-sup__title Настройки
                         form(action="#").profile-layout__main-settings
                           .input-area-el.profile-layout__main-settings-login
-                            input(type="text" name="login" required value="Kasbura")#settings-login.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+                            input(type="text" name="login" required value="Kasbura" placeholder="Ваш ник")#settings-login.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
                             label(for="settings-login").input-area-el__label Ваш ник
                           .select-el.select-el--theme-white-gray.select-el--size-md.profile-layout__main-settings-time
                             .select-el__label Ваш часовой пояс

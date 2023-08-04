@@ -34,11 +34,11 @@
     }
     &__col-bonuses {
         & + & {
-            @media (max-width: $md) {
+            @media (max-width: $lg) {
                 margin-top: 16rem;
             }
         }
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             max-width: 100%;
             flex-basis: 100%;
         }

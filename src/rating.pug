@@ -6,7 +6,7 @@ html(lang='ru')
 
     #root.site
       .site__inner
-        include includes/header-type-1.pug
+        include includes/header-type-2.pug
 
         main(role="main").site__main
           .layout-page
@@ -52,7 +52,7 @@ html(lang='ru')
                           .rating-layout__filter-dropdown
                             form(action="#").search-form
                               .input-area-el.search-form__input
-                                input(type="search" name="q" required value="")#search-input.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
+                                input(type="search" name="q" required value="" placeholder="Быстрый поиск")#search-input.js-input-label.u-input.u-input--size-md.u-input--theme-white.u-input--type-input.input-area-el__input
                                 label(for="search-input").input-area-el__label Быстрый поиск
                               button(type="submit").search-form__btn
                                 svg.icon
