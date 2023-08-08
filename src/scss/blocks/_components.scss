@@ -318,6 +318,7 @@ svg,
             text-transform: none;
             &:hover {
                 @media (min-width: $lg-mf) {
+                    background: rgba($color-green-1, .18);
                 }
             }
         }
@@ -2580,64 +2581,34 @@ canvas:not(:hover) ~ #tooltip-container-2 {
                 position: static;
             }
             .event-card__header-line-result--first {
-                background: $color-green-1;
+                background-color: $color-green-1;
+                background-position: 50%;
+                background-size: 8rem auto;
+                background-repeat: no-repeat;
                 width: 18rem;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 margin: calc(-1 * var(--event-card-gap) - 1rem) 8rem calc(-1 * var(--event-card-gap) - 1rem) -18rem;
                 flex-shrink: 0;
+                border-top-left-radius: 4rem;
                 position: static;
                 @media (max-width: $lg) {
                     width: 14rem;
+                    margin-right: 5rem;
                     margin-left: -17rem;
                 }
                 &:before {
                     background: $color-green-1;
                     width: 4rem;
-                    height: 100%;
                     content: '';
                     position: absolute;
-                    top: 0;
+                    top: 4rem;
+                    bottom: 0;
                     left: 0;
-                    @media (max-width: $lg) {
-                        border-top-left-radius: 4rem;
-                    }
                 }
-                &:after {
-                    background: inherit;
-                    width: 322.2222222%;
-                    margin-top: 322.2222222%;
-                    margin-bottom: -322.2222222%;
-                    content: attr(data-result-game);
-                    display: block;
-                    font-weight: bold;
-                    font-size: 10rem;
-                    line-height: 18rem;
-                    color: $color-white-1;
-                    text-align: center;
-                    text-transform: uppercase;
-                    letter-spacing: .1em;
-                    transform: rotate(-90deg);
-                    transform-origin: top left;
-                    z-index: 1;
-                    @media (max-width: $lg) {
-                        width: 414.285714286%;
-                        margin-top: 414.285714286%;
-                        margin-bottom: -414.285714286%;
-                        line-height: 14rem;
-                        font-size: 10rem;
-                    }
-                    @media (max-width: $sm) {
-                        width: 357.142857143%;
-                        margin-top: 357.142857143%;
-                        margin-bottom: -357.142857143%;
-                    }
-                    @media (max-width: $xs) {
-                        width: 328.571428571%;
-                        margin-top: 328.571428571%;
-                        margin-bottom: -328.571428571%;
-                    }
+                &[data-result-game=Win] {
+                    background-image: url(../images/sprite/win-card.svg);
                 }
             }
         }
@@ -3076,7 +3047,7 @@ canvas:not(:hover) ~ #tooltip-container-2 {
     }
     .player-card--dir-2 {
         @media (max-width: $lg) {
-            margin-right: 3rem;
+            margin-right: 6rem;
         }
     }
     &.is-show-stat {
